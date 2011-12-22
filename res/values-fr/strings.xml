@@ -1492,8 +1492,8 @@
     <string name="backup_configure_account_default_summary" msgid="2436933224764745553">"Aucun compte ne stocke actuellement des données sauvegardées."</string>
     <string name="auto_restore_title" msgid="5397528966329126506">"Restaurer automatiquement"</string>
     <string name="auto_restore_summary" msgid="4235615056371993807">"Lors de la réinstallation d\'une application, restaurer les paramètres et les données sauvegardées"</string>
-    <string name="local_backup_password_title" msgid="3860471654439418822">"M. de passe sauv. ordinateur"</string>
-    <string name="local_backup_password_summary_none" msgid="4780151366296088113">"Les sauvegardes complètes sur ordinateur ne sont actuellement pas protégées."</string>
+    <string name="local_backup_password_title">"Protection sauvegardes"</string>
+    <string name="local_backup_password_summary_none">"Les sauvegardes complètes sur ordinateur ne sont actuellement pas protégées par un mot de passe."</string>
     <string name="local_backup_password_summary_change" msgid="3615162467655442441">"Sélectionnez cette option pour modifier ou supprimer le mot de passe utilisé pour les sauvegardes complètes sur ordinateur."</string>
     <string name="backup_erase_dialog_title" msgid="1027640829482174106"></string>
     <string name="backup_erase_dialog_message" msgid="7218566008912418809">"Arrêter de sauvegarder vos mots de passe Wi-Fi, vos favoris, ainsi que d\'autres paramètres et données d\'applications, et en effacer toutes les copies des serveurs Google ?"</string>
@@ -1595,25 +1595,25 @@
     <string name="hdcp_checking_dialog_title" msgid="5141305530923283">"Config. vérification HDCP"</string>
     <string name="debug_ui_category" msgid="9023948280291055349">"Interface utilisateur"</string>
     <string name="strict_mode" msgid="1938795874357830695">"Mode Strict activé"</string>
-    <string name="strict_mode_summary" msgid="142834318897332338">"Faire clignoter écran en cas de longues opérations"</string>
-    <string name="pointer_location" msgid="6084434787496938001">"Emplacement du curseur"</string>
-    <string name="pointer_location_summary" msgid="840819275172753713">"Superposition écran indiquant données actuelles"</string>
-    <string name="show_touches" msgid="1356420386500834339">"Afficher élément sélectionné"</string>
-    <string name="show_touches_summary" msgid="6684407913145150041">"Afficher repère visuel pour éléments sélectionnés"</string>
+    <string name="strict_mode_summary">"Faire clignoter l\'écran sur les opérations longues"</string>
+    <string name="pointer_location">"Emplacement du pointeur"</string>
+    <string name="pointer_location_summary">"Superposition écran indiquant la position X/Y du pointeur"</string>
+    <string name="show_touches">Points de contact</string>
+    <string name="show_touches_summary">"Afficher des repères visuels aux emplacements touchés"</string>
     <string name="show_screen_updates" msgid="8282711794220426931">"Afficher mises à jour écran"</string>
-    <string name="show_screen_updates_summary" msgid="1716122382094924596">"Faire clignoter les mises à jour sur l\'écran"</string>
-    <string name="show_cpu_usage" msgid="2389212910758076024">"Afficher mém. CPU utilisée"</string>
-    <string name="show_cpu_usage_summary" msgid="2113341923988958266">"Superposition écran indiquant mémoire CPU utilisée"</string>
+    <string name="show_screen_updates_summary" msgid="1716122382094924596">"Faire clignoter les éléments mis à jour sur l\'écran"</string>
+    <string name="show_cpu_usage" msgid="2389212910758076024">"Utilisation CPU"</string>
+    <string name="show_cpu_usage_summary" msgid="2113341923988958266">"Superposition écran indiquant l\'utilisation de la mémoire et du CPU"</string>
     <string name="force_hw_ui" msgid="6426383462520888732">"Forcer le rendu GPU"</string>
-    <string name="force_hw_ui_summary" msgid="8642000962902609976">"Utiliser accélération matérielle 2D dans applis"</string>
+    <string name="force_hw_ui_summary">"Utiliser l\'accélération matérielle 2D dans toutes les applications"</string>
     <string name="window_animation_scale_title" msgid="6162587588166114700">"Échelle animation fenêtres"</string>
     <string name="transition_animation_scale_title" msgid="387527540523595875">"Échelle anim. transitions"</string>
     <string name="debug_applications_category" msgid="4206913653849771549">"Applications"</string>
     <string name="immediately_destroy_activities" msgid="8366775083630234121">"Ne pas conserver activités"</string>
     <string name="immediately_destroy_activities_summary" msgid="3592221124808773368">"Supprimer immédiatement les activités abandonnées"</string>
-    <string name="app_process_limit_title" msgid="4280600650253107163">"Limite processus arr.-plan"</string>
-    <string name="show_all_anrs" msgid="28462979638729082">"Afficher tous les messages \"L\'application ne répond pas\""</string>
-    <string name="show_all_anrs_summary" msgid="641908614413544127">"Afficher \"L\'application ne répond plus\" pour applis en arrière-plan"</string>
+    <string name="app_process_limit_title">"Limite processus arr.plan"</string>
+    <string name="show_all_anrs">Tous les messages ANR</string>
+    <string name="show_all_anrs_summary">"Afficher aussi \"L\'application ne répond plus\" pour les applications en arrière-plan"</string>
     <string name="data_usage_summary_title" msgid="3804110657238092929">"Consommation des données"</string>
     <string name="data_usage_cycle" msgid="5652529796195787949">"Cycle de consommation"</string>
     <string name="data_usage_menu_roaming" msgid="8042359966835203296">"Autoriser itinérance"</string>

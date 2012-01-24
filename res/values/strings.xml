@@ -1449,7 +1449,7 @@
     <!-- About device screen, version of kernel. -->
     <string name="kernel_version">Kernel version</string>
     <!-- About device screen, version of modification of Android. -->
-    <string name="mod_version">CyanogenMod version</string>
+    <string name="mod_version">IceColdSandwich version</string>
     <string name="mod_version_default">Unknown</string>
     <!-- About device screen, build number. -->
     <string name="build_number">Build number</string>

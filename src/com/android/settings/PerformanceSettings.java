@@ -49,7 +49,7 @@ public class PerformanceSettings extends SettingsPreferenceFragment
 
     private static final String DISABLE_BOOTANIMATION_PERSIST_PROP = "persist.sys.nobootanimation";
 
-    private static final String DISABLE_BOOTANIMATION_DEFAULT = "0";
+    private static final String DISABLE_BOOTANIMATION_DEFAULT = "1";
 
     private CheckBoxPreference mUseDitheringPref;
 

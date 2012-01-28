@@ -914,7 +914,7 @@
         <item>1</item>
         <item>0</item>
     </string-array>
-    
+
     <string-array name="entries_heapsize">
         <item>12m</item>
         <item>16m</item>
@@ -932,7 +932,7 @@
         <item>48m</item>
 	<item>64m</item>
     </string-array>
-    
+
     <string-array name="pref_zram_size_entries">
         <item>Disabled</item>
         <item>10%</item>
@@ -946,7 +946,7 @@
         <item>18</item>
         <item>26</item>
     </string-array>
-    
+
     <string-array name="entries_status_bar_am_pm">
         <item>Normal</item>
         <item>Small</item>
@@ -982,7 +982,7 @@
         <item>1</item>
         <item>2</item>
     </string-array>
-    
+
     <string-array name="lockscreen_delay_entries">
         <item>Immediately</item>
         <item>1s</item>
@@ -1007,9 +1007,8 @@
         <item>300000</item>
         <item>600000</item>
         <item>1800000</item>
-    </string-array>   
-    
-     
+    </string-array>
+
     <!-- **** CYANOGENMOD EDITS END **** -->    
 
 </resources>

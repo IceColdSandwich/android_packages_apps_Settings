@@ -681,6 +681,10 @@
     <string name="navigation_bar_title">Enable/Disable Navigation Bar</string>
     <!-- Sound & display settings screen, setting option summary to change whether navigation bar is shown -->
     <string name="navigation_bar_summary">(Requires reboot)</string>
+    <!-- Strings for Lockscreen Settings -->
+    <string name="title_pref_lockscreen_quad_targets">Quad Targets</string>
+    <string name="summary_pref_lockscreen_quad_targets">Adds Phone and Messaging shortcuts on the lock screen</string>
+    <string name="lockscreen_title">Lockscreen Style</string>
 
     <!-- Backlight #CM -->
     <string name="backlight_title">Automatic backlight</string>

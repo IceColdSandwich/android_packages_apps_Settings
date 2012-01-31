@@ -52,6 +52,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_ACCELEROMETER = "accelerometer";
     private static final String KEY_NOTIFICATION_PULSE = "notification_pulse";
     private static final String KEY_NAVIGATION_BAR = "navigation_bar";
+    private static final String QUAD_TARGETS = "pref_lockscreen_quad_targets";
+    CheckBoxPreference mQuadTargets;
 
     private CheckBoxPreference mAccelerometer;
     private CheckBoxPreference mNotificationPulse;
@@ -111,6 +113,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 Settings.System.NAVIGATION_BAR_VISIBLE, 0) == 1);
             mNavigationBar.setOnPreferenceChangeListener(this);
         }
+
+	mQuadTargets = (CheckBoxPreference) prefSet.findPreference(QUAD_TARGETS);
+	mQuadTargets.setChecked(Settings.System.getInt(getActivity()
+	    .getContentResolver(), Settings.System.LOCKSCREEN_QUAD_TARGETS,
+	    0) == 1);
     }
 
     private void updateTimeoutPreferenceDescription(long currentTimeout) {
@@ -222,6 +229,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(getContentResolver(), Settings.System.NAVIGATION_BAR_VISIBLE,
                     value ? 1 : 0);
             return true;
+	} else if (preference == mQuadTargets) {
+	    Settings.System.putInt(getActivity().getContentResolver(),
+	    	Settings.System.LOCKSCREEN_QUAD_TARGETS,
+		((CheckBoxPreference) preference).isChecked() ? 1 : 0);
+	    return true;
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }

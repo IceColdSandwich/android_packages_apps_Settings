@@ -51,4 +51,12 @@
             android:title="@string/navigation_bar_title"
             android:summary="@string/navigation_bar_summary" />
 
+    <!-- Lockscreen Style -->
+    <PreferenceCategory android:title="@string/lockscreen_title">
+        <CheckBoxPreference	
+	    android:key="pref_lockscreen_quad_targets"
+	    android:title="@string/title_pref_lockscreen_quad_targets"
+	    android:summary="@string/summary_pref_lockscreen_quad_targets" />
+    </PreferenceCategory>
+
 </PreferenceScreen>

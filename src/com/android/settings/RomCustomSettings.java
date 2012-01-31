@@ -18,10 +18,10 @@ import android.util.Log;
 public class RomCustomSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
     private static final String QUAD_TARGETS = "pref_lockscreen_quad_targets";
-
     CheckBoxPreference mQuadTargets;
 
-
+    private static final String PREF_VOLUME_WAKE = "volume_wake";
+    CheckBoxPreference mVolumeWake;
 
 
     @Override
@@ -30,15 +30,21 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
         addPreferencesFromResource(R.xml.rom_custom_settings);
         PreferenceScreen prefSet = getPreferenceScreen();
 
-   
-
-        
-
-        
+        mVolumeWake = (CheckBoxPreference) findPreference(PREF_VOLUME_WAKE);
+        mVolumeWake.setChecked(Settings.System.getInt(getActivity()
+                .getContentResolver(), Settings.System.VOLUME_WAKE_SCREEN,	
+                0) == 1);
     }
 
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         boolean value;
+	if (preference == mVolumeWake) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.VOLUME_WAKE_SCREEN,
+                ((CheckBoxPreference) preference).isChecked() ? 1 : 0);	
+            return true;
+	}
+
 	return false;
     }
 

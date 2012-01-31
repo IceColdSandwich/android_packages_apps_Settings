@@ -46,4 +46,9 @@
             android:title="@string/notification_pulse_title"
             android:persistent="false" />
 
+	<CheckBoxPreference
+            android:key="navigation_bar"
+            android:title="@string/navigation_bar_title"
+            android:summary="@string/navigation_bar_summary" />
+
 </PreferenceScreen>

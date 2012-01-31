@@ -700,15 +700,11 @@
     <string name="battery_types">Battery Types</string>
 
     <!-- Customizations Headers -->
-    <string name="navigation_bar_title">Navigation Bar</string>
     <string name="miscellaneous_title">Miscellaneous Tweaks</string>
-    <string name="lockscreen_title">Lockscreen Style</string>
     <string name="lockscreen_title">Lockscreen Settings</string>
     <string name="lockscreen_options">Lockscreen Options</string>
     <string name="interface_settings_title">UI Customization</string>
-    <string name="system_settings_title">System Settings</string>
     <string name="brightness_settings_title">Automatic Backlight</string>
-    <string name="performance_settings_title">CPU Performance</string>
     <string name="widgets_settings_title">Notification Power Widget</string>
     <string name="navigation_bar_prefs_title">Navigation Bar</string>
 

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/rom_customization_title"
+    android:key="rom_customization">
+
+    <!-- Lockscreen Settings -->
+    <PreferenceCategory android:title="@string/lockscreen_title">
+	<Preference
+	    android:key="lockscreen_settings"
+	    android:title="@string/lockscreen_options">
+			
+	    <intent
+		android:action="android.intent.action.MAIN"
+		android:targetClass="com.android.settings.Lockscreens"
+		android:targetPackage="com.android.settings" />
+	
+	</Preference>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
+

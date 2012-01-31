@@ -1379,6 +1379,15 @@
                 android:resource="@id/wireless_settings" />
         </activity>
 
+	<!-- Lockscreen Settings Intent -->
+        <activity
+            android:label="Lockscreen Settings"
+            android:name=".Lockscreens" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
         <receiver android:name=".widget.SettingsAppWidgetProvider"
                 android:label="@string/gadget_title"
                 android:exported="false"

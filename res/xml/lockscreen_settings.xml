@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<CheckBoxPreference
+		android:key="pref_lockscreen_quad_targets"
+		android:title="@string/title_pref_lockscreen_quad_targets"
+		android:summary="@string/summary_pref_lockscreen_quad_targets" />
+
+	<Preference
+		android:key="sms_picker"
+		android:title="@string/sms_picker_title"
+		android:summary="@string/sms_picker_summary" />
+
+</PreferenceScreen>
+

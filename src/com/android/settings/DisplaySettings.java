@@ -114,7 +114,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             mNavigationBar.setOnPreferenceChangeListener(this);
         }
 
-	mQuadTargets = (CheckBoxPreference) prefSet.findPreference(QUAD_TARGETS);
+	mQuadTargets = (CheckBoxPreference) findPreference(QUAD_TARGETS);
 	mQuadTargets.setChecked(Settings.System.getInt(getActivity()
 	    .getContentResolver(), Settings.System.LOCKSCREEN_QUAD_TARGETS,
 	    0) == 1);

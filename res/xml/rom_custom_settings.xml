@@ -22,6 +22,20 @@
     	    android:title="@string/volume_wake_title"	
     	    android:summary="@string/volume_wake_summary" />
 
+	</PreferenceCategory>
+
+        <ListPreference
+            android:key="clock_style"
+            android:entries="@array/clock_entries"
+            android:entryValues="@array/clock_values"
+            android:title="@string/clock_style_title" />
+
+        <ListPreference
+            android:key="clock_am_pm"
+            android:entries="@array/am_pm_entries"
+            android:entryValues="@array/am_pm_values"
+            android:title="@string/am_pm_style_title" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>

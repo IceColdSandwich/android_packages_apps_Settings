@@ -34,6 +34,10 @@
             android:entryValues="@array/am_pm_values"
             android:title="@string/am_pm_style_title" />
 
+        <Preference
+            android:key="carrier_text"
+            android:title="@string/carrier_text" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>

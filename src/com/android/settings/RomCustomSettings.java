@@ -2,6 +2,8 @@ package com.android.settings;
 import com.android.settings.R;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
@@ -12,6 +14,8 @@ import android.preference.PreferenceScreen;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
+import android.text.Spannable;
+import android.widget.EditText;
 import android.util.Log;
 
 
@@ -27,6 +31,10 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
     private static final String PREF_CLOCK_STYLE = "clock_style";
     private ListPreference mAmPmStyle;
     private ListPreference mClockStyle;
+
+    private static final String PREF_CARRIER_TEXT = "carrier_text";
+    private Preference mCarrier;
+    String mCarrierText = null;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -51,6 +59,18 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
         mVolumeWake.setChecked(Settings.System.getInt(getActivity()
                 .getContentResolver(), Settings.System.VOLUME_WAKE_SCREEN,	
                 0) == 1);
+
+        mCarrier = (Preference) prefSet.findPreference(PREF_CARRIER_TEXT);
+        updateCarrierText();
+    }
+
+    private void updateCarrierText() {
+        mCarrierText = Settings.System.getString(getContentResolver(), Settings.System.CUSTOM_CARRIER_TEXT);
+        if (mCarrierText == null) {
+            mCarrier.setSummary("Upon changing you will need to data wipe to get back stock. Requires reboot.");
+        } else {
+            mCarrier.setSummary(mCarrierText);
+        }
     }
 
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
@@ -60,7 +80,26 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
             Settings.System.VOLUME_WAKE_SCREEN,
                 ((CheckBoxPreference) preference).isChecked() ? 1 : 0);	
             return true;
-	}
+	} else if (preference == mCarrier) {
+            AlertDialog.Builder ad = new AlertDialog.Builder(getActivity());
+            ad.setTitle("Custom Carrier Text");
+            ad.setMessage("Enter new carrier text here");
+            final EditText text = new EditText(getActivity());
+            text.setText(mCarrierText != null ? mCarrierText : "");
+            ad.setView(text);
+            ad.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int whichButton) {
+                    String value = ((Spannable) text.getText()).toString();
+                    Settings.System.putString(getActivity().getContentResolver(), Settings.System.CUSTOM_CARRIER_TEXT, value);
+                    updateCarrierText();
+                }
+            });
+            ad.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int whichButton) {
+                }
+            });
+            ad.show();
+        }
 
 	return false;
     }

@@ -703,6 +703,9 @@
     <!-- Battery Chooser -->
     <string name="battery_types">Battery Types</string>
 
+    <!-- Custom Carrier Text -->
+    <string name="carrier_text">Custom Carrier Text</string>
+
     <!-- Customizations Headers -->
     <string name="miscellaneous_title">Miscellaneous Tweaks</string>
     <string name="lockscreen_title">Lockscreen Settings</string>

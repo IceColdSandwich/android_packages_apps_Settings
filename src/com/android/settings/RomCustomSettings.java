@@ -89,7 +89,7 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
 		((CheckBoxPreference) preference).isChecked() ? 1 : 0);
 	    return true;
 
-	} else if{ (preference == mVolumeWake) {
+	} else if (preference == mVolumeWake) {
             Settings.System.putInt(getActivity().getContentResolver(),
             Settings.System.VOLUME_WAKE_SCREEN,
                 ((CheckBoxPreference) preference).isChecked() ? 1 : 0);	

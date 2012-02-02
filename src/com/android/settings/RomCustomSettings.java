@@ -21,6 +21,9 @@ import android.util.Log;
 
 public class RomCustomSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
+    private static final String PREF_VOLUME_MUSIC = "volume_music_controls";
+    CheckBoxPreference mVolumeMusic;
+
     private static final String QUAD_TARGETS = "pref_lockscreen_quad_targets";
     CheckBoxPreference mQuadTargets;
 
@@ -41,6 +44,11 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.rom_custom_settings);
         PreferenceScreen prefSet = getPreferenceScreen();
+
+        mVolumeMusic = (CheckBoxPreference) prefSet.findPreference(PREF_VOLUME_MUSIC);
+        mVolumeMusic.setChecked(Settings.System.getInt(getActivity()
+            .getContentResolver(), Settings.System.VOLUME_MUSIC_CONTROLS,
+            0) == 1);
 
         mClockStyle = (ListPreference) prefSet.findPreference(PREF_CLOCK_STYLE);
         mAmPmStyle = (ListPreference) prefSet.findPreference(PREF_CLOCK_DISPLAY_STYLE);
@@ -75,11 +83,18 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
 
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         boolean value;
-	if (preference == mVolumeWake) {
+	if (preference == mVolumeMusic) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.VOLUME_MUSIC_CONTROLS,
+		((CheckBoxPreference) preference).isChecked() ? 1 : 0);
+	    return true;
+
+	} else if{ (preference == mVolumeWake) {
             Settings.System.putInt(getActivity().getContentResolver(),
             Settings.System.VOLUME_WAKE_SCREEN,
                 ((CheckBoxPreference) preference).isChecked() ? 1 : 0);	
             return true;
+
 	} else if (preference == mCarrier) {
             AlertDialog.Builder ad = new AlertDialog.Builder(getActivity());
             ad.setTitle("Custom Carrier Text");

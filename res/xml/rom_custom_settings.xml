@@ -17,6 +17,11 @@
 	
 	</Preference>
 
+	<CheckBoxPreference	
+	    android:key="volume_music_controls"	
+	    android:title="@string/volume_music_controls_title"	
+	    android:summary="@string/volume_music_controls_summary" />
+
   	<CheckBoxPreference	
     	    android:key="volume_wake"	
     	    android:title="@string/volume_wake_title"	

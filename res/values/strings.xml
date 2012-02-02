@@ -686,6 +686,10 @@
     <string name="volume_wake_title">Volume wake</string>
     <string name="volume_wake_summary">Tapping the volume keys while your phone is off</string>
 
+    <!-- Strings for Volume button music controls -->
+    <string name="volume_music_controls_title">Volume music controls</string>
+    <string name="volume_music_controls_summary">Long press volume buttons to skip tracks</string>
+
     <!-- Strings for Lockscreen Settings -->
     <string name="title_pref_lockscreen_quad_targets">Quad Targets</string>
     <string name="summary_pref_lockscreen_quad_targets">Adds Phone and Messaging shortcuts on the lock screen</string>

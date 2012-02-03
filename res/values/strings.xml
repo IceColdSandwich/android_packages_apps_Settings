@@ -691,7 +691,7 @@
     <string name="volume_music_controls_summary">Long press volume buttons to skip tracks</string>
 
     <!-- Strings for Lockscreen Settings -->
-    <string name="title_pref_lockscreen_quad_targets">Quad Targets</string>
+    <string name="title_pref_lockscreen_quad_targets">4-Way Lockscreen</string>
     <string name="summary_pref_lockscreen_quad_targets">Adds Phone and Messaging shortcuts on the lock screen</string>
     <string name="sms_picker_title">Custom SMS app</string>
     <string name="sms_picker_summary">Choose a custom app to launch when the SMS toggle is opened</string>
@@ -705,7 +705,13 @@
     <string name="am_pm_style_title">AM PM style</string>
 
     <!-- Battery Chooser -->
-    <string name="battery_types">Battery Types</string>
+    <string name="battery_types">Battery Style</string>
+    <string name="hide_battery">Hide Battery Icon</string>
+    <string name="battery_bar">Battery Bar</string>
+    <string name="battery_bar_color">Battery Bar Color</string>
+
+    <string name="dialog_color_picker">Color picker</string>
+    <string name="press_color_to_apply">Press on color to apply</string>
 
     <!-- Custom Carrier Text -->
     <string name="carrier_text">Custom Carrier Text</string>
@@ -715,9 +721,6 @@
     <string name="lockscreen_title">Lockscreen Settings</string>
     <string name="lockscreen_options">Lockscreen Options</string>
     <string name="interface_settings_title">UI Customization</string>
-    <string name="brightness_settings_title">Automatic Backlight</string>
-    <string name="widgets_settings_title">Notification Power Widget</string>
-    <string name="navigation_bar_prefs_title">Navigation Bar</string>
 
     <!-- Backlight #CM -->
     <string name="backlight_title">Automatic backlight</string>

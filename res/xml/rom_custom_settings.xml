@@ -4,28 +4,24 @@
     android:title="@string/rom_customization_title"
     android:key="rom_customization">
 
-    <!-- Lockscreen Settings -->
-    <PreferenceCategory android:title="@string/lockscreen_title">
-	<Preference
-	    android:key="lockscreen_settings"
-	    android:title="@string/lockscreen_options">
-			
-	    <intent
-		android:action="android.intent.action.MAIN"
-		android:targetClass="com.android.settings.Lockscreens"
-		android:targetPackage="com.android.settings" />
-	
-	</Preference>
 
-	<CheckBoxPreference	
-	    android:key="volume_music_controls"	
-	    android:title="@string/volume_music_controls_title"	
-	    android:summary="@string/volume_music_controls_summary" />
+    <!-- Interface Customization -->
+    <PreferenceCategory android:title="@string/interface_settings_title">
 
-  	<CheckBoxPreference	
-    	    android:key="volume_wake"	
-    	    android:title="@string/volume_wake_title"	
-    	    android:summary="@string/volume_wake_summary" />
+   	<ListPreference
+            android:key="battery_style"
+            android:entries="@array/battery_entries"
+            android:entryValues="@array/battery_values"
+            android:title="@string/battery_types" />
+
+        <CheckBoxPreference
+            android:key="battery_bar"
+            android:title="@string/battery_bar" />
+
+	<net.margaritov.preference.colorpicker.ColorPickerPreference
+		android:key="battery_bar_color" 
+		android:title="@string/battery_bar_color" 
+		android:defaultValue="#ffffff" />
 
         <ListPreference
             android:key="clock_style"
@@ -38,11 +34,33 @@
             android:entries="@array/am_pm_entries"
             android:entryValues="@array/am_pm_values"
             android:title="@string/am_pm_style_title" />
+    </PreferenceCategory>
 
-        <Preference
-            android:key="carrier_text"
-            android:title="@string/carrier_text" />
+    <!-- Lockscreen Settings -->
+    <PreferenceCategory android:title="@string/lockscreen_title">
+	<Preference
+	    android:key="lockscreen_settings"
+	    android:title="@string/lockscreen_options">
+			
+	    <intent
+		android:action="android.intent.action.MAIN"
+		android:targetClass="com.android.settings.Lockscreens"
+		android:targetPackage="com.android.settings" />
+	
+	</Preference>
+    </PreferenceCategory>
 
+    <!-- Miscellaneous Tweaks -->
+    <PreferenceCategory android:title="@string/miscellaneous_title">
+	<CheckBoxPreference	
+	    android:key="volume_music_controls"	
+	    android:title="@string/volume_music_controls_title"	
+	    android:summary="@string/volume_music_controls_summary" />
+
+  	<CheckBoxPreference	
+    	    android:key="volume_wake"	
+    	    android:title="@string/volume_wake_title"	
+    	    android:summary="@string/volume_wake_summary" />
     </PreferenceCategory>
 
 </PreferenceScreen>

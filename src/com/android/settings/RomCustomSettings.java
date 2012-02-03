@@ -18,6 +18,9 @@ import android.text.Spannable;
 import android.widget.EditText;
 import android.util.Log;
 
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
+
+
 
 public class RomCustomSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
@@ -38,6 +41,15 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
     private static final String PREF_CARRIER_TEXT = "carrier_text";
     private Preference mCarrier;
     String mCarrierText = null;
+
+    private static final String BATTERY_STYLE = "battery_style";
+    private static final String BATTERY_BAR = "battery_bar";
+    private static final String BATTERY_BAR_COLOR = "battery_bar_color";
+    private ListPreference mBatteryStyle;
+    private CheckBoxPreference mBattBar;
+    private ColorPickerPreference mBattBarColor;
+
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -63,13 +75,34 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
         mClockStyle.setValueIndex(clockVal);
         mClockStyle.setOnPreferenceChangeListener(this);
 
+	mBatteryStyle = (ListPreference) prefSet.findPreference(BATTERY_STYLE);
+        int battVal = Settings.System.getInt(getContentResolver(),
+                Settings.System.BATTERY_PERCENTAGES, 1);
+        mBatteryStyle.setValueIndex(battVal);
+        mBatteryStyle.setOnPreferenceChangeListener(this);
+
         mVolumeWake = (CheckBoxPreference) findPreference(PREF_VOLUME_WAKE);
         mVolumeWake.setChecked(Settings.System.getInt(getActivity()
                 .getContentResolver(), Settings.System.VOLUME_WAKE_SCREEN,	
                 0) == 1);
 
+        mBattBar = (CheckBoxPreference) prefSet.findPreference(BATTERY_BAR);
+        mBattBar.setChecked(Settings.System.getInt(getContentResolver(),
+            Settings.System.STATUSBAR_BATTERY_BAR, 0) == 1);
+
+        mBattBarColor = (ColorPickerPreference) prefSet.findPreference(BATTERY_BAR_COLOR);
+        mBattBarColor.setOnPreferenceChangeListener(this);
+        mBattBarColor.setEnabled(mBattBar.isChecked());
+
         mCarrier = (Preference) prefSet.findPreference(PREF_CARRIER_TEXT);
         updateCarrierText();
+    }
+
+    private void updateBatteryBarToggle(boolean bool){
+        if (bool)
+            mBattBarColor.setEnabled(true);
+        else
+            mBattBarColor.setEnabled(false);
     }
 
     private void updateCarrierText() {
@@ -93,6 +126,12 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
             Settings.System.putInt(getActivity().getContentResolver(),
             Settings.System.VOLUME_WAKE_SCREEN,
                 ((CheckBoxPreference) preference).isChecked() ? 1 : 0);	
+            return true;
+
+        } else if (preference == mBattBar) {
+            value = mBattBar.isChecked();
+            Settings.System.putInt(getContentResolver(),
+                Settings.System.STATUSBAR_BATTERY_BAR, value ? 1 : 0);
             return true;
 
 	} else if (preference == mCarrier) {
@@ -131,7 +170,20 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
             Settings.System.putInt(getContentResolver(),
                 Settings.System.STATUS_BAR_CLOCK, val);
             return true;
-	}
+	} else if (preference == mBatteryStyle) {
+            int val = Integer.valueOf((String) newValue);
+            Settings.System.putInt(getContentResolver(),
+                Settings.System.BATTERY_PERCENTAGES, val);
+            return true;
+        } else if (preference == mBattBarColor) {
+            String hexColor = ColorPickerPreference.convertToARGB(Integer.valueOf(String.valueOf(newValue)));
+            preference.setSummary(hexColor);
+            int color = ColorPickerPreference.convertToColorInt(hexColor);
+            Settings.System.putInt(getContentResolver(),
+                Settings.System.STATUSBAR_BATTERY_BAR_COLOR, color);
+            return true;
+        }
+
         return false;
     }
 

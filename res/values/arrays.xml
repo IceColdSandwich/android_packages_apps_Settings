@@ -739,13 +739,15 @@
 		<item>1</item>
 		<item>2</item>
 		<item>3</item>
+		<item>4</item>
 	</string-array>
 
 	<string-array name="battery_entries">
 		<item>Stock AOSP (no %)</item>
-		<item>Gummy Fat Battery</item>
+		<item>Stock w/ offset %</item>
 		<item>Gummy Bar Battery</item>
 		<item>Circle Battery</item>
+		<item>Hide Battery</item>
 	</string-array>
 
     <!-- **** CYANOGENMOD EDITS START **** -->

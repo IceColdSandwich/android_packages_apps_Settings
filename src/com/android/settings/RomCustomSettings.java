@@ -132,6 +132,10 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
             Settings.System.putInt(getContentResolver(),
                 Settings.System.STATUSBAR_BATTERY_BAR, value ? 1 : 0);
             return true;
+	} else if (preference == mUseBLN) {
+            value = mUseBLN.isChecked();
+            Settings.System.putInt(getContentResolver(), Settings.System.NOTIFICATION_BUTTON_BACKLIGHT, value ? 1 : 0);
+            return true;
 	} else if (preference == mCarrier) {
             AlertDialog.Builder ad = new AlertDialog.Builder(getActivity());
             ad.setTitle("Custom Carrier Text");

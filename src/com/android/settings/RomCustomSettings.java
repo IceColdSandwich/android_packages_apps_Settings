@@ -134,7 +134,7 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
             return true;
 	} else if (preference == mUseBLN) {
             value = mUseBLN.isChecked();
-            Settings.System.putInt(getContentResolver(), Settings.System.NOTIFICATION_BUTTON_BACKLIGHT, value ? 1 : 0);
+            Settings.System.putInt(getContentResolver(), Settings.System.NOTIFICATION_USE_BUTTON_BACKLIGHT, value ? 1 : 0);
             return true;
 	} else if (preference == mCarrier) {
             AlertDialog.Builder ad = new AlertDialog.Builder(getActivity());

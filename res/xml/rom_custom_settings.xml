@@ -4,6 +4,21 @@
     android:title="@string/rom_customization_title"
     android:key="rom_customization">
 
+    <!-- Lockscreen Settings -->
+    <PreferenceCategory android:title="@string/lockscreen_title">
+	<Preference
+	    android:key="lockscreen_settings"
+	    android:title="@string/lockscreen_options">
+			
+	    <intent
+		android:action="android.intent.action.MAIN"
+		android:targetClass="com.android.settings.Lockscreens"
+		android:targetPackage="com.android.settings" />
+	
+	</Preference>
+
+    </PreferenceCategory>
+
 
     <!-- Interface Customization -->
     <PreferenceCategory android:title="@string/interface_settings_title">
@@ -38,21 +53,6 @@
         <Preference
             android:key="carrier_text"
             android:title="@string/carrier_text" />
-
-    </PreferenceCategory>
-
-    <!-- Lockscreen Settings -->
-    <PreferenceCategory android:title="@string/lockscreen_title">
-	<Preference
-	    android:key="lockscreen_settings"
-	    android:title="@string/lockscreen_options">
-			
-	    <intent
-		android:action="android.intent.action.MAIN"
-		android:targetClass="com.android.settings.Lockscreens"
-		android:targetPackage="com.android.settings" />
-	
-	</Preference>
 
     </PreferenceCategory>
 

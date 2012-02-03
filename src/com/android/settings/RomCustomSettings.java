@@ -20,27 +20,16 @@ import android.util.Log;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
-
-
 public class RomCustomSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
     private static final String PREF_VOLUME_MUSIC = "volume_music_controls";
-    CheckBoxPreference mVolumeMusic;
-
     private static final String QUAD_TARGETS = "pref_lockscreen_quad_targets";
-    CheckBoxPreference mQuadTargets;
-
-    private static final String PREF_VOLUME_WAKE = "volume_wake";
-    CheckBoxPreference mVolumeWake;
-
     private static final String PREF_CLOCK_DISPLAY_STYLE = "clock_am_pm";
     private static final String PREF_CLOCK_STYLE = "clock_style";
+    CheckBoxPreference mVolumeMusic;
+    CheckBoxPreference mQuadTargets;
     private ListPreference mAmPmStyle;
     private ListPreference mClockStyle;
-
-    private static final String PREF_CARRIER_TEXT = "carrier_text";
-    private Preference mCarrier;
-    String mCarrierText = null;
 
     private static final String BATTERY_STYLE = "battery_style";
     private static final String BATTERY_BAR = "battery_bar";
@@ -49,7 +38,12 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
     private CheckBoxPreference mBattBar;
     private ColorPickerPreference mBattBarColor;
 
+    private static final String PREF_VOLUME_WAKE = "volume_wake";
+    CheckBoxPreference mVolumeWake;
 
+    private static final String PREF_CARRIER_TEXT = "carrier_text";
+    private Preference mCarrier;
+    String mCarrierText = null;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -96,6 +90,7 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
 
         mCarrier = (Preference) prefSet.findPreference(PREF_CARRIER_TEXT);
         updateCarrierText();
+	
     }
 
     private void updateBatteryBarToggle(boolean bool){
@@ -121,19 +116,16 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
                 Settings.System.VOLUME_MUSIC_CONTROLS,
 		((CheckBoxPreference) preference).isChecked() ? 1 : 0);
 	    return true;
-
 	} else if (preference == mVolumeWake) {
             Settings.System.putInt(getActivity().getContentResolver(),
             Settings.System.VOLUME_WAKE_SCREEN,
                 ((CheckBoxPreference) preference).isChecked() ? 1 : 0);	
             return true;
-
         } else if (preference == mBattBar) {
             value = mBattBar.isChecked();
             Settings.System.putInt(getContentResolver(),
                 Settings.System.STATUSBAR_BATTERY_BAR, value ? 1 : 0);
             return true;
-
 	} else if (preference == mCarrier) {
             AlertDialog.Builder ad = new AlertDialog.Builder(getActivity());
             ad.setTitle("Custom Carrier Text");
@@ -155,7 +147,7 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
             ad.show();
         }
 
-	return false;
+        return false;
     }
 
     @Override

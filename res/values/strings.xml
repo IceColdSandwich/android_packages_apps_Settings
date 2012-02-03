@@ -710,8 +710,15 @@
     <string name="battery_bar">Battery Bar</string>
     <string name="battery_bar_color">Battery Bar Color</string>
 
-    <string name="dialog_color_picker">Color picker</string>
-    <string name="press_color_to_apply">Press on color to apply</string>
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Color Picker</string>
+    <string name="press_color_to_apply">Press on Color to apply</string>   
+    <string name="arrow_right">→</string> 
+    <string name="arrow_down">↓</string>
+    <string name="hex">Hex:</string>
+    <string name="hex_hint">#FF000000</string>
+    <string name="set">Set</string>
+    <string name="ics_color">ICS</string>
 
     <!-- Custom Carrier Text -->
     <string name="carrier_text">Custom Carrier Text</string>

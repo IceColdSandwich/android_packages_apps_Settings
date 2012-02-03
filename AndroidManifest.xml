@@ -1382,7 +1382,8 @@
 	<!-- Lockscreen Settings Intent -->
         <activity
             android:label="Lockscreen Settings"
-            android:name=".Lockscreens" >
+            android:name=".Lockscreens" 
+	    android:screenOrientation="portrait" >
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>

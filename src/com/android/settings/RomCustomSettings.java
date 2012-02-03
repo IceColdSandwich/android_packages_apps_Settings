@@ -40,6 +40,9 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
 
     private static final String PREF_VOLUME_WAKE = "volume_wake";
     CheckBoxPreference mVolumeWake;
+    
+    private static final String NOTIFICATION_BUTTON_BACKLIGHT = "notification_button_backlight";
+    private CheckBoxPreference mUseBLN;
 
     private static final String PREF_CARRIER_TEXT = "carrier_text";
     private Preference mCarrier;
@@ -90,7 +93,10 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
 
         mCarrier = (Preference) prefSet.findPreference(PREF_CARRIER_TEXT);
         updateCarrierText();
-	
+
+	mUseBLN = (CheckBoxPreference) prefSet.findPreference(NOTIFICATION_BUTTON_BACKLIGHT);
+	mUseBLN.setChecked(Settings.System.getInt(getContentResolver(),
+            Settings.System.NOTIFICATION_USE_BUTTON_BACKLIGHT, 0) == 1);
     }
 
     private void updateBatteryBarToggle(boolean bool){

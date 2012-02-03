@@ -59,6 +59,11 @@
     <!-- Miscellaneous Tweaks -->
     <PreferenceCategory android:title="@string/miscellaneous_title">
 
+	<CheckBoxPreference
+		android:key="notification_button_backlight"
+		android:title="@string/notification_button_backlight_title"
+		android:summary="@string/notification_button_backlight_summary" />
+
 	<CheckBoxPreference	
 	    android:key="volume_music_controls"	
 	    android:title="@string/volume_music_controls_title"	

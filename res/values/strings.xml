@@ -723,11 +723,16 @@
     <!-- Custom Carrier Text -->
     <string name="carrier_text">Custom Carrier Text</string>
 
+    <!-- Custom Notification Settings -->
+    <string name="notification_button_backlight_title">Use BLN</string>
+    <string name="notification_button_backlight_summary">Whether to turn on the softkey backlight when a new notification goes in. Uses slightly more power in standby if LED is turned on!</string>
+
     <!-- Customizations Headers -->
     <string name="miscellaneous_title">Miscellaneous Tweaks</string>
     <string name="lockscreen_title">Lockscreen Settings</string>
     <string name="lockscreen_options">Lockscreen Options</string>
     <string name="interface_settings_title">UI Customization</string>
+    <string name="notification_title">Notification Settings</string>
 
     <!-- Backlight #CM -->
     <string name="backlight_title">Automatic backlight</string>

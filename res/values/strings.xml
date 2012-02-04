@@ -624,6 +624,8 @@
     <string name="volume_media_description">Music, video, games, &amp; other media</string>
     <!-- Volume description for ringtone and notification volume -->
     <string name="volume_ring_description">Ringtone &amp; notifications</string>
+    <!-- Volume description for ringtone volume -->
+    <string name="volume_ring_only_description">Ringtones</string>
     <!-- Volume description for notification volume -->
     <string name="volume_notification_description">Notifications</string>
     <!-- Volume description for alarm volume -->
@@ -733,6 +735,7 @@
     <string name="lockscreen_options">Lockscreen Options</string>
     <string name="interface_settings_title">UI Customization</string>
     <string name="notification_title">Notification Settings</string>
+    <string name="link_volume_ringtones">Link volumes</string>
 
     <!-- Backlight #CM -->
     <string name="backlight_title">Automatic backlight</string>
@@ -4114,4 +4117,5 @@ found in the list of installed apps.</string>
     <string name="additional_system_update_settings_list_item_title">Additional system updates</string>
 
 </resources>
+
 

@@ -741,6 +741,7 @@
 	<item>3</item>
 	<item>4</item>
 	<item>5</item>
+	<item>6</item>
     </string-array>
 
     <string-array name="battery_entries">
@@ -748,7 +749,8 @@
 	<item>Stock w/ offset %</item>
 	<item>Gummy Bar Battery</item>
 	<item>Circle Battery</item>
-	<item>Honeycomb style</item>		
+	<item>Honeycomb</item>		
+	<item>GenX</item>	
 	<item>Hide Battery</item>
     </string-array>
 

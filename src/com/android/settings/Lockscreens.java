@@ -30,6 +30,7 @@ public class Lockscreens extends Activity {
 
         private static final String QUAD_TARGETS = "pref_lockscreen_quad_targets";
         private static final String PREF_SMS_PICKER = "sms_picker";
+	private static final String PREF_USER_OVERRIDE = "lockscreen_user_timeout_override";
 
         CheckBoxPreference mQuadTargets;
 
@@ -38,6 +39,7 @@ public class Lockscreens extends Activity {
         private Preference mCurrentCustomActivityPreference;
         private String mCurrentCustomActivityString;
         private String mSmsIntentUri;
+	CheckBoxPreference mLockScreenTimeoutUserOverride;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -57,6 +59,12 @@ public class Lockscreens extends Activity {
 
             mSmsIntentUri = Settings.System.getString(getActivity().getContentResolver(),
                     Settings.System.LOCKSCREEN_CUSTOM_SMS_INTENT);
+
+	mLockScreenTimeoutUserOverride = (CheckBoxPreference) findPreference(PREF_USER_OVERRIDE);
+
+        mLockScreenTimeoutUserOverride.setChecked(Settings.Secure.getInt(getActivity()
+                .getContentResolver(), Settings.Secure.LOCK_SCREEN_LOCK_USER_OVERRIDE,
+                0) == 1);
         }
 
         @Override
@@ -72,6 +80,11 @@ public class Lockscreens extends Activity {
                 mCurrentCustomActivityString = Settings.System.LOCKSCREEN_CUSTOM_SMS_INTENT;
                 mPicker.pickShortcut();
                 return true;
+	    } else if (preference == mLockScreenTimeoutUserOverride) {
+                Settings.Secure.putInt(getActivity().getContentResolver(),
+                	Settings.Secure.LOCK_SCREEN_LOCK_USER_OVERRIDE,
+                	((CheckBoxPreference) preference).isChecked() ? 1 : 0);
+            return true;
             }
 
             return super.onPreferenceTreeClick(preferenceScreen, preference);

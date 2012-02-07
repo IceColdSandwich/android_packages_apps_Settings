@@ -15,11 +15,6 @@
 		android:targetClass="com.android.settings.Lockscreens"
 		android:targetPackage="com.android.settings" />
 
-	<CheckBoxPreference
-		android:key="lockscreen_user_timeout_override"
-		android:title="@string/title_lockscreen_user_timeout_override"
-		android:summary="@string/summary_lockscreen_user_timeout_override" />
-	
 	</Preference>
 
     </PreferenceCategory>

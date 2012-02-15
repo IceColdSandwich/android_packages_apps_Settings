@@ -54,6 +54,11 @@
             android:key="carrier_text"
             android:title="@string/carrier_text" />
 
+	<CheckBoxPreference
+			android:key="rotate_180"
+			android:title="@string/rotate_180_title"
+			android:summary="@string/rotate_180_summary" />
+
     </PreferenceCategory>
 
     <!-- Miscellaneous Tweaks -->

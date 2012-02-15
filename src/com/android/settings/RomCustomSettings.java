@@ -44,6 +44,9 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
     private static final String NOTIFICATION_BUTTON_BACKLIGHT = "notification_button_backlight";
     private CheckBoxPreference mUseBLN;
 
+    private static final String PREF_180 = "rotate_180";
+    CheckBoxPreference mAllow180Rotation;
+
     private static final String PREF_CARRIER_TEXT = "carrier_text";
     private Preference mCarrier;
     String mCarrierText = null;
@@ -94,6 +97,10 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
         mCarrier = (Preference) prefSet.findPreference(PREF_CARRIER_TEXT);
         updateCarrierText();
 
+	mAllow180Rotation = (CheckBoxPreference) findPreference(PREF_180);
+        mAllow180Rotation.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
+            Settings.System.ACCELEROMETER_ROTATION_ANGLES, (1 | 2 | 8)) == (1 | 2 | 4 | 8));
+
 	mUseBLN = (CheckBoxPreference) prefSet.findPreference(NOTIFICATION_BUTTON_BACKLIGHT);
 	mUseBLN.setChecked(Settings.System.getInt(getContentResolver(),
             Settings.System.NOTIFICATION_USE_BUTTON_BACKLIGHT, 0) == 1);
@@ -131,6 +138,12 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
             value = mBattBar.isChecked();
             Settings.System.putInt(getContentResolver(),
                 Settings.System.STATUSBAR_BATTERY_BAR, value ? 1 : 0);
+            return true;
+	} else if (preference == mAllow180Rotation) {
+            boolean checked = ((CheckBoxPreference) preference).isChecked();
+            Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.ACCELEROMETER_ROTATION_ANGLES, checked ? (1 | 2 | 4 | 8)
+                    : (1 | 2 | 8));
             return true;
 	} else if (preference == mUseBLN) {
             value = mUseBLN.isChecked();

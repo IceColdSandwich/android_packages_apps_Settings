@@ -65,9 +65,14 @@
     <PreferenceCategory android:title="@string/miscellaneous_title">
 
 	<CheckBoxPreference
-		android:key="notification_button_backlight"
-		android:title="@string/notification_button_backlight_title"
-		android:summary="@string/notification_button_backlight_summary" />
+	    android:key="notification_button_backlight"
+	    android:title="@string/notification_button_backlight_title"
+	    android:summary="@string/notification_button_backlight_summary" />
+
+	<CheckBoxPreference
+	    android:key="status_bar_brightness_toggle"
+            android:title="@string/title_status_bar_brightness_toggle"
+            android:summary="@string/summary_status_bar_brightness_toggle" />
 
 	<CheckBoxPreference	
 	    android:key="volume_music_controls"	

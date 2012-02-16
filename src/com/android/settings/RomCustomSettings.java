@@ -3,6 +3,7 @@ import com.android.settings.R;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -50,6 +51,9 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
     private static final String PREF_CARRIER_TEXT = "carrier_text";
     private Preference mCarrier;
     String mCarrierText = null;
+
+    private static final String PREF_BRIGHTNESS_TOGGLE = "status_bar_brightness_toggle";
+    CheckBoxPreference mStatusBarBrightnessToggle;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -104,6 +108,11 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
 	mUseBLN = (CheckBoxPreference) prefSet.findPreference(NOTIFICATION_BUTTON_BACKLIGHT);
 	mUseBLN.setChecked(Settings.System.getInt(getContentResolver(),
             Settings.System.NOTIFICATION_USE_BUTTON_BACKLIGHT, 0) == 1);
+
+	mStatusBarBrightnessToggle = (CheckBoxPreference) findPreference(PREF_BRIGHTNESS_TOGGLE);
+        mStatusBarBrightnessToggle.setChecked(Settings.System.getInt(mContext
+                .getContentResolver(), Settings.System.STATUS_BAR_BRIGHTNESS_TOGGLE,
+                1) == 1);
     }
 
     private void updateBatteryBarToggle(boolean bool){
@@ -149,6 +158,12 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
             value = mUseBLN.isChecked();
             Settings.System.putInt(getContentResolver(), Settings.System.NOTIFICATION_USE_BUTTON_BACKLIGHT, value ? 1 : 0);
             return true;
+	} else if (preference == mStatusBarBrightnessToggle) {
+            Log.e("LOL", "m");
+            Settings.System.putInt(mContext.getContentResolver(),
+                    Settings.System.STATUS_BAR_BRIGHTNESS_TOGGLE,
+                    ((CheckBoxPreference) preference).isChecked() ? 1 : 0);
+            return true; 
 	} else if (preference == mCarrier) {
             AlertDialog.Builder ad = new AlertDialog.Builder(getActivity());
             ad.setTitle("Custom Carrier Text");

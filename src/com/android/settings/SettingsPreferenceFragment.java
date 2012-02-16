@@ -20,6 +20,7 @@ import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.Fragment;
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -34,13 +35,15 @@ import android.widget.Button;
 public class SettingsPreferenceFragment extends PreferenceFragment implements DialogCreatable {
 
     private static final String TAG = "SettingsPreferenceFragment";
+    protected Context mContext;
 
     private SettingsDialogFragment mDialogFragment;
 
     @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-    }
+    public void onCreate(Bundle savedInstanceState) {
+         mContext = getActivity().getApplicationContext();
+         super.onCreate(savedInstanceState);
+     }
 
     /*
      * The name is intentionally made different from Activity#finish(), so that

@@ -104,6 +104,13 @@
     	    android:summary="@string/volume_wake_summary" />
 
 	<ListPreference
+	    android:entries="@array/rotation_animation_delay_entries"
+	    android:entryValues="@array/rotation_animation_delay_values"
+	    android:key="rotation_animation_delay"
+	    android:title="@string/rotation_animation_delay_title"
+	    android:summary="@string/rotation_animation_delay_summary" />
+
+	<ListPreference
 	    android:entries="@array/lcd_density_entries"
 	    android:entryValues="@array/lcd_density_entries"
 	    android:key="lcd_density"

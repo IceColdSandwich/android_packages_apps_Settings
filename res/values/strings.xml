@@ -750,6 +750,8 @@
     <string name="summary_status_bar_brightness_toggle">Slide finger slowly across statusbar to adjust brightness setting</string>
     <string name="lcd_density_title">LCD Density</string>
     <string name="lcd_density_summary">unknown</string>
+    <string name="rotation_animation_delay_title">Rotation delay</string>
+    <string name="rotation_animation_delay_summary">The number of milliseconds for which the device posture must be stable before an orientation change occurs. 50 ms default.</string>
 
     <!-- Backlight #CM -->
     <string name="backlight_title">Automatic backlight</string>

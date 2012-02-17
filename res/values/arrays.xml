@@ -814,7 +814,32 @@
 	<item>220</item>
 	<item>230</item>
 	<item>240</item>
-	</string-array>
+    </string-array>
+
+<!-- animation rotation -->
+    <string-array name="rotation_animation_delay_entries">
+	<item>10 ms</item>
+	<item>25 ms</item>
+	<item>50 ms</item>
+	<item>75 ms</item>
+	<item>100 ms</item>
+	<item>150 ms</item>
+	<item>200 ms</item>
+	<item>250 ms</item>
+	<item>300 ms</item>
+    </string-array>
+
+    <string-array name="rotation_animation_delay_values">
+	<item>10</item>
+	<item>25</item>
+	<item>50</item>
+	<item>75</item>
+	<item>100</item>
+	<item>150</item>
+	<item>200</item>
+	<item>250</item>
+	<item>300</item>
+    </string-array>
 
     <!-- **** CYANOGENMOD EDITS START **** -->
     <!-- Arrays required by Automatic Backlight. -->

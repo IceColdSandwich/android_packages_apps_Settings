@@ -21,9 +21,12 @@ import android.text.Spannable;
 import android.widget.EditText;
 import android.widget.Toast;
 import android.util.Log;
+import android.widget.NumberPicker;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 import com.android.internal.app.ShutdownThread;
+import com.android.settings.utils.CMDProcessor;
+import com.android.settings.utils.Helpers;
 
 public class RomCustomSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
@@ -35,6 +38,9 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
     CheckBoxPreference mQuadTargets;
     private ListPreference mAmPmStyle;
     private ListPreference mClockStyle;
+
+    private static final String PREF_ROTATION_ANIMATION = "rotation_animation_delay";
+    ListPreference mAnimationRotationDelay;
 
     private static final String BATTERY_STYLE = "battery_style";
     private static final String PREF_BATT_BAR = "battery_bar_list";
@@ -138,6 +144,12 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
 	mUseBLN = (CheckBoxPreference) prefSet.findPreference(NOTIFICATION_BUTTON_BACKLIGHT);
 	mUseBLN.setChecked(Settings.System.getInt(getContentResolver(),
             Settings.System.NOTIFICATION_USE_BUTTON_BACKLIGHT, 0) == 1);
+
+	mAnimationRotationDelay = (ListPreference) findPreference(PREF_ROTATION_ANIMATION);
+            mAnimationRotationDelay.setOnPreferenceChangeListener(this);
+            mAnimationRotationDelay.setValue(Settings.System.getInt(getActivity()
+                    .getContentResolver(), Settings.System.ACCELEROMETER_ROTATION_SETTLE_TIME,
+                    50) + "");
 
 	String currentProperty = SystemProperties.get("ro.sf.lcd_density");
         if (currentProperty == null)
@@ -272,6 +284,11 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
             Toast.makeText(getActivity().getApplicationContext(), "Reboot to see changes",
                     Toast.LENGTH_LONG).show();
             preference.setSummary((String) newValue);
+            return true;
+	} else if (preference == mAnimationRotationDelay) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.ACCELEROMETER_ROTATION_SETTLE_TIME,
+                    Integer.parseInt((String) newValue));
             return true;
         }
 

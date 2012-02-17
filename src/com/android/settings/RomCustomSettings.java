@@ -6,7 +6,9 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.SystemProperties;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -17,9 +19,11 @@ import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
 import android.text.Spannable;
 import android.widget.EditText;
+import android.widget.Toast;
 import android.util.Log;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
+import com.android.internal.app.ShutdownThread;
 
 public class RomCustomSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
@@ -44,6 +48,8 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
     ListPreference mBatteryBarThickness;
     CheckBoxPreference mBatteryBarChargingAnimation;
     private ColorPickerPreference mBattBarColor;
+
+    ListPreference mLcdDensity;
 
     private static final String PREF_VOLUME_WAKE = "volume_wake";
     CheckBoxPreference mVolumeWake;
@@ -132,6 +138,16 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
 	mUseBLN = (CheckBoxPreference) prefSet.findPreference(NOTIFICATION_BUTTON_BACKLIGHT);
 	mUseBLN.setChecked(Settings.System.getInt(getContentResolver(),
             Settings.System.NOTIFICATION_USE_BUTTON_BACKLIGHT, 0) == 1);
+
+	String currentProperty = SystemProperties.get("ro.sf.lcd_density");
+        if (currentProperty == null)
+            currentProperty = "0";
+        mLcdDensity = (ListPreference) findPreference("lcd_density");
+        mLcdDensity.setSummary(currentProperty);
+        mLcdDensity.setOnPreferenceChangeListener(this);
+        mLcdDensity.setValue(Settings.System.getInt(getActivity()
+                .getContentResolver(), Settings.System.ACCELEROMETER_ROTATION_SETTLE_TIME,
+                Integer.parseInt(currentProperty)) + "");
 
 	mStatusBarBrightnessToggle = (CheckBoxPreference) findPreference(PREF_BRIGHTNESS_TOGGLE);
         mStatusBarBrightnessToggle.setChecked(Settings.System.getInt(mContext
@@ -247,6 +263,15 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
             int color = ColorPickerPreference.convertToColorInt(hexColor);
             Settings.System.putInt(getContentResolver(),
                 Settings.System.STATUSBAR_BATTERY_BAR_COLOR, color);
+            return true;
+	} else if (preference == mLcdDensity) {
+            Helpers.getMount("rw");
+            new CMDProcessor().su.runWaitFor("busybox sed -i 's|ro.sf.lcd_density=.*|"
+                    + "ro.sf.lcd_density" + "=" + newValue + "|' " + "/system/build.prop");
+            Helpers.getMount("ro");
+            Toast.makeText(getActivity().getApplicationContext(), "Reboot to see changes",
+                    Toast.LENGTH_LONG).show();
+            preference.setSummary((String) newValue);
             return true;
         }
 

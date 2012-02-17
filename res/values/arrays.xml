@@ -804,6 +804,18 @@
 	<item>4</item>
     </string-array>
 
+    <string-array name="lcd_density_entries">
+	<item>160</item>	
+	<item>170</item>
+	<item>180</item>
+	<item>190</item>
+	<item>200</item>
+	<item>210</item>
+	<item>220</item>
+	<item>230</item>
+	<item>240</item>
+	</string-array>
+
     <!-- **** CYANOGENMOD EDITS START **** -->
     <!-- Arrays required by Automatic Backlight. -->
     <string-array name="entries_light_filter_window">

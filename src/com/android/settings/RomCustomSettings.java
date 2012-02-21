@@ -33,10 +33,16 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
     private ListPreference mClockStyle;
 
     private static final String BATTERY_STYLE = "battery_style";
-    private static final String BATTERY_BAR = "battery_bar";
+    private static final String PREF_BATT_BAR = "battery_bar_list";
+    private static final String PREF_BATT_BAR_STYLE = "battery_bar_style";
     private static final String BATTERY_BAR_COLOR = "battery_bar_color";
+    private static final String PREF_BATT_BAR_WIDTH = "battery_bar_thickness";
+    private static final String PREF_BATT_ANIMATE = "battery_bar_animate";
     private ListPreference mBatteryStyle;
-    private CheckBoxPreference mBattBar;
+    ListPreference mBattBar;
+    ListPreference mBatteryBarStyle;
+    ListPreference mBatteryBarThickness;
+    CheckBoxPreference mBatteryBarChargingAnimation;
     private ColorPickerPreference mBattBarColor;
 
     private static final String PREF_VOLUME_WAKE = "volume_wake";
@@ -90,13 +96,31 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
                 .getContentResolver(), Settings.System.VOLUME_WAKE_SCREEN,	
                 0) == 1);
 
-        mBattBar = (CheckBoxPreference) prefSet.findPreference(BATTERY_BAR);
-        mBattBar.setChecked(Settings.System.getInt(getContentResolver(),
-            Settings.System.STATUSBAR_BATTERY_BAR, 0) == 1);
+        mBattBar = (ListPreference) findPreference(PREF_BATT_BAR);
+        mBattBar.setOnPreferenceChangeListener(this);
+        mBattBar.setValue((Settings.System.getInt(getActivity()
+		.getContentResolver(), Settings.System.STATUSBAR_BATTERY_BAR,
+		0)) + "");
+
+	mBatteryBarStyle = (ListPreference) findPreference(PREF_BATT_BAR_STYLE);
+        mBatteryBarStyle.setOnPreferenceChangeListener(this);
+        mBatteryBarStyle.setValue((Settings.System.getInt(getActivity()
+                .getContentResolver(), Settings.System.STATUSBAR_BATTERY_BAR_STYLE,
+                0)) + "");
+
+	mBatteryBarChargingAnimation = (CheckBoxPreference) findPreference(PREF_BATT_ANIMATE);
+        mBatteryBarChargingAnimation.setChecked(Settings.System.getInt(getActivity()
+                .getContentResolver(), Settings.System.STATUSBAR_BATTERY_BAR_ANIMATE,
+                0) == 1);
+
+        mBatteryBarThickness = (ListPreference) findPreference(PREF_BATT_BAR_WIDTH);
+        mBatteryBarThickness.setOnPreferenceChangeListener(this);
+        mBatteryBarThickness.setValue((Settings.System.getInt(getActivity()
+                .getContentResolver(), Settings.System.STATUSBAR_BATTERY_BAR_THICKNESS,
+                1)) + "");
 
         mBattBarColor = (ColorPickerPreference) prefSet.findPreference(BATTERY_BAR_COLOR);
         mBattBarColor.setOnPreferenceChangeListener(this);
-        mBattBarColor.setEnabled(mBattBar.isChecked());
 
         mCarrier = (Preference) prefSet.findPreference(PREF_CARRIER_TEXT);
         updateCarrierText();
@@ -143,12 +167,7 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
             Settings.System.VOLUME_WAKE_SCREEN,
                 ((CheckBoxPreference) preference).isChecked() ? 1 : 0);	
             return true;
-        } else if (preference == mBattBar) {
-            value = mBattBar.isChecked();
-            Settings.System.putInt(getContentResolver(),
-                Settings.System.STATUSBAR_BATTERY_BAR, value ? 1 : 0);
-            return true;
-	} else if (preference == mAllow180Rotation) {
+        } else if (preference == mAllow180Rotation) {
             boolean checked = ((CheckBoxPreference) preference).isChecked();
             Settings.System.putInt(getActivity().getContentResolver(),
                 Settings.System.ACCELEROMETER_ROTATION_ANGLES, checked ? (1 | 2 | 4 | 8)
@@ -195,6 +214,23 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
             Settings.System.putInt(getContentResolver(),
                 Settings.System.STATUS_BAR_AM_PM, statusBarAmPm);
             return true;
+	} else if (preference == mBattBar) {
+            int val = Integer.parseInt((String) newValue);
+            return Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.STATUSBAR_BATTERY_BAR, val);
+        } else if (preference == mBatteryBarStyle) {
+            int val = Integer.parseInt((String) newValue);
+            return Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.STATUSBAR_BATTERY_BAR_STYLE, val);
+        } else if (preference == mBatteryBarThickness) {
+            int val = Integer.parseInt((String) newValue);
+            return Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.STATUSBAR_BATTERY_BAR_THICKNESS, val);
+	} else if (preference == mBatteryBarChargingAnimation) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+	    Settings.System.STATUSBAR_BATTERY_BAR_ANIMATE,
+                ((CheckBoxPreference) preference).isChecked() ? 1 : 0);
+                return true;
         } else if (preference == mClockStyle) {
             int val = Integer.valueOf((String) newValue);
             Settings.System.putInt(getContentResolver(),

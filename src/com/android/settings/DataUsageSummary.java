@@ -1761,7 +1761,7 @@ public class DataUsageSummary extends Fragment {
             final long limitBytes = editor.getPolicyLimitBytes(template);
 
             bytesPicker.setMaxValue(Integer.MAX_VALUE);
-            if (warningBytes != WARNING_DISABLED && limitBytes > 0) {
+            if (warningBytes != WARNING_DISABLED) {
                 bytesPicker.setMinValue((int) (warningBytes / MB_IN_BYTES) + 1);
             } else {
                 bytesPicker.setMinValue(0);

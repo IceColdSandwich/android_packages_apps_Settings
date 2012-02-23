@@ -53,7 +53,6 @@
                 android:layout_marginTop="8dip"
                 android:textColor="#d88d3a"
                 android:text="@string/data_usage_label_foreground" />
-
             <TextView
                 android:id="@+id/app_foreground"
                 android:layout_width="match_parent"
@@ -65,7 +64,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dip"
                 android:text="@string/data_usage_label_background" />
-
             <TextView
                 android:id="@+id/app_background"
                 android:layout_width="match_parent"

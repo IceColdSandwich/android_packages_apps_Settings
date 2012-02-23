@@ -51,15 +51,15 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
     private static final String KEY_TERMS = "terms";
     private static final String KEY_LICENSE = "license";
     private static final String KEY_COPYRIGHT = "copyright";
+    private static final String KEY_SYSTEM_UPDATE_SETTINGS = "system_update_settings";
     private static final String PROPERTY_URL_SAFETYLEGAL = "ro.url.safetylegal";
     private static final String KEY_KERNEL_VERSION = "kernel_version";
     private static final String KEY_BUILD_NUMBER = "build_number";
     private static final String KEY_DEVICE_MODEL = "device_model";
     private static final String KEY_BASEBAND_VERSION = "baseband_version";
     private static final String KEY_FIRMWARE_VERSION = "firmware_version";
-
+    private static final String KEY_UPDATE_SETTING = "additional_system_update_settings";
     private static final String KEY_MOD_VERSION = "mod_version";
-    private static final String KEY_MOD_BUILD_DATE = "build_date";
 
     long[] mHits = new long[3];
 
@@ -74,9 +74,9 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
         setValueSummary(KEY_BASEBAND_VERSION, "gsm.version.baseband");
         setStringSummary(KEY_DEVICE_MODEL, Build.MODEL + getMsvSuffix());
         setStringSummary(KEY_BUILD_NUMBER, Build.DISPLAY);
+        setStringSummary(KEY_MOD_VERSION, Build.MODVERSION);
         findPreference(KEY_KERNEL_VERSION).setSummary(getFormattedKernelVersion());
-        setValueSummary(KEY_MOD_VERSION, "ro.modversion");
-        setValueSummary(KEY_MOD_BUILD_DATE, "ro.build.date");
+        
 
         // Remove Safety information preference if PROPERTY_URL_SAFETYLEGAL is not set
         removePreferenceIfPropertyMissing(getPreferenceScreen(), "safetylegal",
@@ -102,6 +102,21 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
                 Utils.UPDATE_PREFERENCE_FLAG_SET_TITLE_TO_MATCHING_ACTIVITY);
         Utils.updatePreferenceToSpecificActivityOrRemove(act, parentPreference, KEY_TEAM,
                 Utils.UPDATE_PREFERENCE_FLAG_SET_TITLE_TO_MATCHING_ACTIVITY);
+
+        // These are contained by the root preference screen
+        parentPreference = getPreferenceScreen();
+        Utils.updatePreferenceToSpecificActivityOrRemove(act, parentPreference,
+                KEY_SYSTEM_UPDATE_SETTINGS,
+                Utils.UPDATE_PREFERENCE_FLAG_SET_TITLE_TO_MATCHING_ACTIVITY);
+        Utils.updatePreferenceToSpecificActivityOrRemove(act, parentPreference, KEY_CONTRIBUTORS,
+                Utils.UPDATE_PREFERENCE_FLAG_SET_TITLE_TO_MATCHING_ACTIVITY);
+
+        // Read platform settings for additional system update setting
+        //boolean isUpdateSettingAvailable =
+        //        getResources().getBoolean(R.bool.config_additional_system_update_setting_enable);
+        //if (isUpdateSettingAvailable == false) {
+            getPreferenceScreen().removePreference(findPreference(KEY_UPDATE_SETTING));
+        //}
     }
 
     @Override
@@ -182,9 +197,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
                 "\\w+\\s+" + /* ignore: version */
                 "([^\\s]+)\\s+" + /* group 1: 2.6.22-omap1 */
                 "\\(([^\\s@]+(?:@[^\\s.]+)?)[^)]*\\)\\s+" + /* group 2: (xxxxxx@xxxxx.constant) */
-//                "\\((?:[^(]*\\([^)]*\\))?[^)]*\\)\\s+" + /* ignore: (gcc ..) */
-                //"(gcc" followed by anything up to two consecutive ")" separated by only white space (which seems to be the norm)
-                "(?:\\(gcc.*\\)\\s+\\))?\\s+" +
+                "\\((?:[^(]*\\([^)]*\\))?[^)]*\\)\\s+" + /* ignore: (gcc ..) */
                 "([^\\s]+)\\s+" + /* group 3: #26 */
                 "(?:PREEMPT\\s+)?" + /* ignore: PREEMPT (optional) */
                 "(.+)"; /* group 4: date */

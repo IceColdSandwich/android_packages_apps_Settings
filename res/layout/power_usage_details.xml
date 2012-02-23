@@ -18,7 +18,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
     <LinearLayout
         android:id="@+id/all_details"
         android:layout_width="match_parent"
@@ -87,7 +86,5 @@
             <!-- Insert detail items here -->
 
         </LinearLayout>
-
     </LinearLayout>
-
 </ScrollView>

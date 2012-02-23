@@ -44,13 +44,11 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
-
             <LinearLayout
                 android:orientation="horizontal"
                 android:baselineAlignedChildIndex="0"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
                 <TextView android:id="@+id/name"
                     android:layout_width="0px"
                     android:layout_height="wrap_content"
@@ -61,7 +59,6 @@
                     android:singleLine="true"
                     android:ellipsize="marquee"
                     android:layout_marginBottom="2dip" />
-
                 <TextView android:id="@+id/size"
                     android:layout_gravity="center_vertical|right"
                     android:layout_width="wrap_content"
@@ -69,15 +66,12 @@
                     android:layout_weight="0"
                     android:singleLine="true"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
-
             </LinearLayout>
-
             <LinearLayout
                 android:orientation="horizontal"
                 android:baselineAlignedChildIndex="0"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
                 <TextView android:id="@+id/description"
                     android:layout_gravity="center_vertical|left"
                     android:layout_width="0px"
@@ -87,7 +81,6 @@
                     android:singleLine="true"
                     android:ellipsize="marquee"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
-
                 <TextView android:id="@+id/uptime"
                     android:layout_gravity="center_vertical|right"
                     android:layout_width="wrap_content"
@@ -95,11 +88,7 @@
                     android:layout_weight="0"
                     android:singleLine="true"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
-
             </LinearLayout>
-
         </LinearLayout>
-
     </LinearLayout>
-
 </LinearLayout>

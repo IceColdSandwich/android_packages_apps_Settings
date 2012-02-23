@@ -73,6 +73,9 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
     private static final String PREF_BRIGHTNESS_TOGGLE = "status_bar_brightness_toggle";
     CheckBoxPreference mStatusBarBrightnessToggle;
 
+    ListPreference mDbmStyletyle;
+    ColorPickerPreference mColorPicker;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -165,6 +168,15 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
         mStatusBarBrightnessToggle.setChecked(Settings.System.getInt(mContext
                 .getContentResolver(), Settings.System.STATUS_BAR_BRIGHTNESS_TOGGLE,
                 1) == 1);
+
+	mDbmStyletyle = (ListPreference) findPreference("signal_style");
+        mDbmStyletyle.setOnPreferenceChangeListener(this);
+        mDbmStyletyle.setValue(Integer.toString(Settings.System.getInt(getActivity()
+                .getContentResolver(), Settings.System.STATUSBAR_SIGNAL_TEXT,
+                0)));
+
+        mColorPicker = (ColorPickerPreference) findPreference("signal_color");
+        mColorPicker.setOnPreferenceChangeListener(this);
     }
 
     private void updateBatteryBarToggle(boolean bool){
@@ -210,7 +222,7 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
             Settings.System.putInt(mContext.getContentResolver(),
                     Settings.System.STATUS_BAR_BRIGHTNESS_TOGGLE,
                     ((CheckBoxPreference) preference).isChecked() ? 1 : 0);
-            return true; 
+            return true;
 	} else if (preference == mCarrier) {
             AlertDialog.Builder ad = new AlertDialog.Builder(getActivity());
             ad.setTitle("Custom Carrier Text");
@@ -289,6 +301,23 @@ public class RomCustomSettings extends SettingsPreferenceFragment implements OnP
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.ACCELEROMETER_ROTATION_SETTLE_TIME,
                     Integer.parseInt((String) newValue));
+            return true;
+	} else if (preference == mDbmStyletyle) {
+
+            int val = Integer.parseInt((String) newValue);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUSBAR_SIGNAL_TEXT, val);
+            return true;
+
+        } else if (preference == mColorPicker) {
+            String hex = ColorPickerPreference.convertToARGB(Integer.valueOf(String
+                    .valueOf(newValue)));
+            preference.setSummary(hex);
+
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUSBAR_SIGNAL_TEXT_COLOR, intHex);
+
             return true;
         }
 

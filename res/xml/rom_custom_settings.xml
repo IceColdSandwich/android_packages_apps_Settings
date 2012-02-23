@@ -74,9 +74,20 @@
             android:title="@string/carrier_text" />
 
 	<CheckBoxPreference
-			android:key="rotate_180"
-			android:title="@string/rotate_180_title"
-			android:summary="@string/rotate_180_summary" />
+	    android:key="rotate_180"
+	    android:title="@string/rotate_180_title"
+	    android:summary="@string/rotate_180_summary" />
+
+	<ListPreference
+	    android:entries="@array/signal_style_entries"
+	    android:entryValues="@array/signal_style_values"
+	    android:key="signal_style"
+	    android:title="@string/signal_style" />
+
+	<net.margaritov.preference.colorpicker.ColorPickerPreference
+	    android:key="signal_color"
+	    android:title="@string/signal_color_title"
+	    android:defaultValue="@android:color/holo_blue_light" />
 
     </PreferenceCategory>
 

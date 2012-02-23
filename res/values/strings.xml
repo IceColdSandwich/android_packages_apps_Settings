@@ -753,6 +753,12 @@
     <string name="rotation_animation_delay_title">Rotation delay</string>
     <string name="rotation_animation_delay_summary">The number of milliseconds for which the device posture must be stable before an orientation change occurs. 50 ms default.</string>
 
+    <!-- dBm Settings -->
+    <string name="signal">Signal</string>
+    <string name="header_summary_signal">Signal dBm text</string>
+    <string name="signal_style">Signal Text Style</string>
+    <string name="signal_color_title">Signal color</string>
+
     <!-- Backlight #CM -->
     <string name="backlight_title">Automatic backlight</string>
     <string name="backlight_summary">Tweak levels and filtering</string>

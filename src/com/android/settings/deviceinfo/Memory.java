@@ -29,7 +29,6 @@ import android.os.Environment;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.os.ServiceManager;
-import android.os.SystemProperties;
 import android.os.storage.IMountService;
 import android.os.storage.StorageEventListener;
 import android.os.storage.StorageManager;
@@ -53,8 +52,6 @@ public class Memory extends SettingsPreferenceFragment {
     private static final int DLG_ERROR_UNMOUNT = 2;
 
     private static final int MENU_ID_USB = Menu.FIRST;
-    /* Since this is hidden when useless, it should be the last */
-    private static final int MENU_ID_STORAGE = Menu.FIRST +1;
 
     private Resources mResources;
 
@@ -71,9 +68,6 @@ public class Memory extends SettingsPreferenceFragment {
 
     private StorageVolumePreferenceCategory mInternalStorageVolumePreferenceCategory;
     private StorageVolumePreferenceCategory[] mStorageVolumePreferenceCategories;
-
-    private boolean mMassStorageEnabled = false;
-    private final boolean mHasSwitchableStorage = !SystemProperties.get("ro.vold.switchablepair","").isEmpty();
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -99,7 +93,7 @@ public class Memory extends SettingsPreferenceFragment {
 
         StorageVolume[] storageVolumes = mStorageManager.getVolumeList();
         // mass storage is enabled if primary volume supports it
-        mMassStorageEnabled = (storageVolumes.length > 0
+        boolean massStorageEnabled = (storageVolumes.length > 0
                 && storageVolumes[0].allowMassStorage());
         int length = storageVolumes.length;
         mStorageVolumePreferenceCategories = new StorageVolumePreferenceCategory[length];
@@ -113,8 +107,7 @@ public class Memory extends SettingsPreferenceFragment {
         }
 
         // only show options menu if we are not using the legacy USB mass storage support
-        // or if we need the mountpoints switcher
-        setHasOptionsMenu(!mMassStorageEnabled || mHasSwitchableStorage);
+        setHasOptionsMenu(!massStorageEnabled);
     }
 
     @Override
@@ -170,15 +163,9 @@ public class Memory extends SettingsPreferenceFragment {
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        if (!mMassStorageEnabled) {
-            menu.add(Menu.NONE, MENU_ID_USB, 0, R.string.storage_menu_usb)
+        menu.add(Menu.NONE, MENU_ID_USB, 0, R.string.storage_menu_usb)
                 //.setIcon(com.android.internal.R.drawable.stat_sys_data_usb)
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
-        }
-        if (mHasSwitchableStorage) {
-            menu.add(Menu.NONE, MENU_ID_STORAGE, 0, R.string.storage_menu_storage)
-                .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
-        }
     }
 
     @Override
@@ -193,17 +180,6 @@ public class Memory extends SettingsPreferenceFragment {
                             this, 0);
                 } else {
                     startFragment(this, UsbSettings.class.getCanonicalName(), -1, null);
-                }
-                return true;
-            case MENU_ID_STORAGE:
-                if (getActivity() instanceof PreferenceActivity) {
-                    ((PreferenceActivity) getActivity()).startPreferencePanel(
-                            StorageSettings.class.getCanonicalName(),
-                            null,
-                            R.string.storage_title_storage, null,
-                            this, 0);
-                } else {
-                    startFragment(this, StorageSettings.class.getCanonicalName(), -1, null);
                 }
                 return true;
         }

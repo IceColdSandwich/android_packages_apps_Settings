@@ -14,15 +14,21 @@
      limitations under the License.
 -->
 
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-        android:title="@string/location_settings_title">
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/anonymous_statistics_title"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <PreferenceCategory
-            android:title="@string/storage_layout" />
+    <CheckBoxPreference
+        android:key="pref_enable_reporting"
+        android:title="@string/enable_reporting_title" />
 
-    <CheckBoxPreference android:key="pref_switch_storage"
-        android:title="@string/storage_switch_title"
-        android:summaryOn="@string/pref_switch_storage_summary_on"
-        android:summaryOff="@string/pref_switch_storage_summary_off" />
+    <PreferenceScreen
+        android:title="@string/preview_data_title"
+        android:fragment="com.android.settings.cmstats.PreviewData" />
+
+    <Preference
+        android:key="pref_view_stats"
+        android:title="@string/view_stats_title" />
 
 </PreferenceScreen>

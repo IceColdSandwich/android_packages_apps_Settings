@@ -158,9 +158,8 @@ public class LocationSettings extends SettingsPreferenceFragment
                     updateLocationToggles();
                 }
             };
+            mContentQueryMap.addObserver(mSettingsObserver);
         }
-
-        mContentQueryMap.addObserver(mSettingsObserver);
     }
 
     @Override
@@ -222,7 +221,7 @@ public class LocationSettings extends SettingsPreferenceFragment
             // activity will be restated and the new value re-read, so the checkbox will get its
             // new value then.
             return false;
-        }  else if (preference == mGPSBTPref) { 
+        }  else if (preference == mGPSBTPref) {
             String oldPref = Settings.System.getString(getContentResolver(),
                     Settings.Secure.EXTERNAL_GPS_BT_DEVICE);
             String newPref = value == null ? "0" : (String) value;
@@ -230,15 +229,15 @@ public class LocationSettings extends SettingsPreferenceFragment
             Settings.System.putString(getContentResolver(), Settings.Secure.EXTERNAL_GPS_BT_DEVICE,
                     newPref);
             if (!oldPref.equals(newPref) && ("0".equals(oldPref) || "0".equals(newPref)) ) {
-                LocationManager locationManager = 
+                LocationManager locationManager =
                     (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
                 locationManager.setGPSSource(newPref);
                 // Show msg to inform user that source has been switched
-                Toast.makeText(this.getActivity(), 
-                		getResources().getString(R.string.location_gps_source_notification),
-                		Toast.LENGTH_LONG).show();
-            }        
-        } 
+                Toast.makeText(this.getActivity(),
+                        getResources().getString(R.string.location_gps_source_notification),
+                        Toast.LENGTH_LONG).show();
+            }
+        }
         return true;
     }
 }

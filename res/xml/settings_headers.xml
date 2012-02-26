@@ -60,13 +60,6 @@
     <!-- INTERFACE -->
     <header android:title="@string/header_category_interface" />
 
-    <!-- Customization settings -->
-    <header
-	android:id="@+id/rom_customization"
-	android:fragment="com.android.settings.RomCustomSettings"
-        android:icon="@drawable/ic_tab_selected_all"
-        android:title="@string/rom_customization_title" />
-
     <!-- Launcher -->
     <header
         android:id="@+id/launcher_settings"

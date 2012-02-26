@@ -26,7 +26,7 @@
             android:key="location_gps"
             android:title="@string/location_gps"
             android:summary="@string/location_street_level"/>
-        
+
         <!-- GPS Source pref -->
         <ListPreference android:key="location_gps_source"
             android:dialogTitle="@string/location_gps_source_title"

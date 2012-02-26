@@ -32,11 +32,6 @@
         android:summary="@string/memory_management_summary" />
 
     <CheckBoxPreference
-        android:key="pref_disable_bootanimation"
-        android:title="@string/pref_disable_bootanimation_title"
-        android:summary="@string/pref_disable_bootanimation_summary" />
-
-    <CheckBoxPreference
         android:key="pref_use_dithering"
         android:title="@string/pref_use_dithering_title"
         android:summary="@string/pref_use_dithering_summary" />
@@ -45,12 +40,5 @@
         android:key="pref_use_16bpp_alpha"
         android:title="@string/pref_use_16bpp_alpha_title"
         android:summary="@string/pref_use_16bpp_alpha_summary" />
-
-    <ListPreference android:key="pref_scrollingcache"
-        android:dialogTitle="@string/pref_scrollingcache_title"
-        android:title="@string/pref_scrollingcache_title"
-        android:summary="@string/pref_scrollingcache_summary"
-        android:entries="@array/entries_scrollingcache"
-        android:entryValues="@array/values_scrollingcache" />
 
 </PreferenceScreen>

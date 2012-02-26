@@ -16,6 +16,11 @@
 
 package com.android.settings;
 
+import static android.os.BatteryManager.BATTERY_STATUS_UNKNOWN;
+import static android.provider.Telephony.Intents.SPN_STRINGS_UPDATED_ACTION;
+
+import com.android.internal.telephony.TelephonyIntents;
+
 import android.app.Dialog;
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
@@ -26,6 +31,7 @@ import android.media.AudioManager;
 import android.media.AudioSystem;
 import android.net.Uri;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -33,8 +39,10 @@ import android.preference.VolumePreference;
 import android.provider.Settings;
 import android.provider.Settings.System;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
@@ -43,49 +51,49 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 /**
- * Special preference type that allows configuration of both the ring volume and notification
- * volume.
+ * Special preference type that allows configuration of both the ring volume and
+ * notification volume.
  */
 public class RingerVolumePreference extends VolumePreference {
     private static final String TAG = "RingerVolumePreference";
     private static final int MSG_RINGER_MODE_CHANGED = 101;
 
-    private SeekBarVolumizer[] mSeekBarVolumizer;
+    private SeekBarVolumizer [] mSeekBarVolumizer;
 
     // These arrays must all match in length and order
     private static final int[] SEEKBAR_ID = new int[] {
-            R.id.media_volume_seekbar,
-            R.id.ringer_volume_seekbar,
-            R.id.notification_volume_seekbar,
-            R.id.alarm_volume_seekbar
+        R.id.media_volume_seekbar,
+        R.id.ringer_volume_seekbar,
+        R.id.notification_volume_seekbar,
+        R.id.alarm_volume_seekbar
     };
 
     private static final int[] SEEKBAR_TYPE = new int[] {
-            AudioManager.STREAM_MUSIC,
-            AudioManager.STREAM_RING,
-            AudioManager.STREAM_NOTIFICATION,
-            AudioManager.STREAM_ALARM
+        AudioManager.STREAM_MUSIC,
+        AudioManager.STREAM_RING,
+        AudioManager.STREAM_NOTIFICATION,
+        AudioManager.STREAM_ALARM
     };
 
     private static final int[] CHECKBOX_VIEW_ID = new int[] {
-            R.id.media_mute_button,
-            R.id.ringer_mute_button,
-            R.id.notification_mute_button,
-            R.id.alarm_mute_button
+        R.id.media_mute_button,
+        R.id.ringer_mute_button,
+        R.id.notification_mute_button,
+        R.id.alarm_mute_button
     };
 
     private static final int[] SEEKBAR_MUTED_RES_ID = new int[] {
-            com.android.internal.R.drawable.ic_audio_vol_mute,
-            com.android.internal.R.drawable.ic_audio_ring_notif_mute,
-            com.android.internal.R.drawable.ic_audio_notification_mute,
-            com.android.internal.R.drawable.ic_audio_alarm_mute
+        com.android.internal.R.drawable.ic_audio_vol_mute,
+        com.android.internal.R.drawable.ic_audio_ring_notif_mute,
+        com.android.internal.R.drawable.ic_audio_notification_mute,
+        com.android.internal.R.drawable.ic_audio_alarm_mute
     };
 
     private static final int[] SEEKBAR_UNMUTED_RES_ID = new int[] {
-            com.android.internal.R.drawable.ic_audio_vol,
-            com.android.internal.R.drawable.ic_audio_ring_notif,
-            com.android.internal.R.drawable.ic_audio_notification,
-            com.android.internal.R.drawable.ic_audio_alarm
+        com.android.internal.R.drawable.ic_audio_vol,
+        com.android.internal.R.drawable.ic_audio_ring_notif,
+        com.android.internal.R.drawable.ic_audio_notification,
+        com.android.internal.R.drawable.ic_audio_alarm
     };
 
     private ImageView[] mCheckBoxes = new ImageView[SEEKBAR_MUTED_RES_ID.length];
@@ -129,8 +137,8 @@ public class RingerVolumePreference extends VolumePreference {
     private BroadcastReceiver mRingModeChangedReceiver;
     private AudioManager mAudioManager;
 
-    // private SeekBarVolumizer mNotificationSeekBarVolumizer;
-    // private TextView mNotificationVolumeTitle;
+    //private SeekBarVolumizer mNotificationSeekBarVolumizer;
+    //private TextView mNotificationVolumeTitle;
 
     public RingerVolumePreference(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -139,13 +147,13 @@ public class RingerVolumePreference extends VolumePreference {
         setStreamType(AudioManager.STREAM_RING);
 
         setDialogLayoutResource(R.layout.preference_dialog_ringervolume);
-        // setDialogIcon(R.drawable.ic_settings_sound);
+        //setDialogIcon(R.drawable.ic_settings_sound);
 
         mSeekBarVolumizer = new SeekBarVolumizer[SEEKBAR_ID.length];
 
         mAudioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
     }
-    
+
     private static int getCurrentMutableStreams(Context c) {
         final int defaultMuteStreams = ((1 << AudioSystem.STREAM_RING)|(1 << AudioSystem.STREAM_NOTIFICATION)|
                 (1 << AudioSystem.STREAM_SYSTEM)|(1 << AudioSystem.STREAM_SYSTEM_ENFORCED));
@@ -236,7 +244,7 @@ public class RingerVolumePreference extends VolumePreference {
                         ringerDesc.setText(R.string.volume_ring_description);
                         Toast.makeText(
                                 getContext(),
-                                "Make sure to change your volume to re-set your notification volume to match your ringtone volume.",
+                                R.string.link_volume_ringtones_toast,
                                 Toast.LENGTH_LONG).show();
                     } else {
                         Settings.System
@@ -287,8 +295,7 @@ public class RingerVolumePreference extends VolumePreference {
 
         if (!positiveResult) {
             for (SeekBarVolumizer vol : mSeekBarVolumizer) {
-                if (vol != null)
-                    vol.revertVolume();
+                if (vol != null) vol.revertVolume();
             }
         }
         cleanup();
@@ -299,8 +306,7 @@ public class RingerVolumePreference extends VolumePreference {
         super.onActivityStop();
 
         for (SeekBarVolumizer vol : mSeekBarVolumizer) {
-            if (vol != null)
-                vol.stopSample();
+            if (vol != null) vol.stopSample();
         }
     }
 
@@ -321,8 +327,7 @@ public class RingerVolumePreference extends VolumePreference {
     protected void onSampleStarting(SeekBarVolumizer volumizer) {
         super.onSampleStarting(volumizer);
         for (SeekBarVolumizer vol : mSeekBarVolumizer) {
-            if (vol != null && vol != volumizer)
-                vol.stopSample();
+            if (vol != null && vol != volumizer) vol.stopSample();
         }
     }
 
@@ -383,7 +388,7 @@ public class RingerVolumePreference extends VolumePreference {
     }
 
     private static class SavedState extends BaseSavedState {
-        VolumeStore[] mVolumeStore;
+        VolumeStore [] mVolumeStore;
 
         public SavedState(Parcel source) {
             super(source);
@@ -420,13 +425,13 @@ public class RingerVolumePreference extends VolumePreference {
 
         public static final Parcelable.Creator<SavedState> CREATOR =
                 new Parcelable.Creator<SavedState>() {
-                    public SavedState createFromParcel(Parcel in) {
-                        return new SavedState(in);
-                    }
+            public SavedState createFromParcel(Parcel in) {
+                return new SavedState(in);
+            }
 
-                    public SavedState[] newArray(int size) {
-                        return new SavedState[size];
-                    }
-                };
+            public SavedState[] newArray(int size) {
+                return new SavedState[size];
+            }
+        };
     }
 }

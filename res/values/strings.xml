@@ -630,6 +630,9 @@
     <string name="volume_notification_description">Notifications</string>
     <!-- Volume description for alarm volume -->
     <string name="volume_alarm_description">Alarms</string>
+    <string name="link_volume_ringtones">Link volumes</string>
+    <string name="link_volume_ringtones_toast">Make sure to change your volume to re-set your notification volume to match your ringtone volume.</string>
+    <string name="link_volume_mutes">Link mute states</string>
 
     <!-- Display settings --><skip/>
     <!-- Sound & display settings screen, section header for settings related to display -->
@@ -679,85 +682,6 @@
     <string name="summary_font_size" translatable="false">%1$s</string>
     <!-- [CHAR LIMIT=40] Sound & display settings screen, title of dialog for picking font size -->
     <string name="dialog_title_font_size">Font size</string>
-    <!-- Sound & display settings screen, setting option name to change whether navigation bar is shown -->
-    <string name="navigation_bar_title">Enable/Disable Navigation Bar</string>
-    <!-- Sound & display settings screen, setting option summary to change whether navigation bar is shown -->
-    <string name="navigation_bar_summary">(Requires reboot)</string>
-
-    <!-- Strings for Volume wake control -->
-    <string name="volume_wake_title">Volume wake</string>
-    <string name="volume_wake_summary">Tapping the volume keys while your phone is off</string>
-
-    <!-- Strings for Volume button music controls -->
-    <string name="volume_music_controls_title">Volume music controls</string>
-    <string name="volume_music_controls_summary">Long press volume buttons to skip tracks</string>
-
-    <!-- Strings for Lockscreen Settings -->
-    <string name="title_pref_lockscreen_quad_targets">4-Way Lockscreen</string>
-    <string name="summary_pref_lockscreen_quad_targets">Adds Phone and Messaging shortcuts on the lock screen</string>
-    <string name="sms_picker_title">Custom SMS app</string>
-    <string name="sms_picker_summary">Choose a custom app to launch when the SMS toggle is opened</string>
-    <string name="use_custom_app_title">Use custom application</string>
-    <string name="use_custom_app_summary">Use custom application instead of the recent applications dialog</string>
-    <string name="select_custom_app_title">Select custom application</string>
-    <string name="group_applications">Applications</string>
-
-    <!-- Strings for Clock Settings -->
-    <string name="clock_style_title">Clock style</string>
-    <string name="am_pm_style_title">AM PM style</string>
-
-    <!-- Battery Chooser -->
-    <string name="battery_types">Battery Style</string>
-    <string name="hide_battery">Hide Battery Icon</string>
-    <string name="battery_bar">Battery bar location</string>
-    <string name="battery_bar_color">Battery Bar Color</string>
-    <string name="battery_bar_cat">Battery bar options</string>
-    <string name="battery_bar_style_title">Battery bar style</string>
-    <string name="battery_bar_thickness_title">Battery bar thickness</string>
-    <string name="battery_bar_animate_title">Charging animation</string>
-    <string name="battery_bar_animate_summary">The charging animation may result in a poor user experience. Enable at your own discretion.</string>
-
-    <!-- Color Picker -->
-    <string name="dialog_color_picker">Color Picker</string>
-    <string name="press_color_to_apply">Press on Color to apply</string>   
-    <string name="arrow_right">→</string> 
-    <string name="arrow_down">↓</string>
-    <string name="hex">Hex:</string>
-    <string name="hex_hint">#FF000000</string>
-    <string name="set">Set</string>
-    <string name="ics_color">ICS</string>
-
-    <!-- Custom Carrier Text -->
-    <string name="carrier_text">Custom Carrier Text</string>
-
-    <!-- Custom Notification Settings -->
-    <string name="notification_button_backlight_title">Use BLN</string>
-    <string name="notification_button_backlight_summary">Whether to turn on the softkey backlight when a new notification goes in. Uses slightly more power in standby if LED is turned on!</string>
-
-    <!-- Customizations Headers -->
-    <string name="miscellaneous_title">Miscellaneous Tweaks</string>
-    <string name="lockscreen_title">Lockscreen Settings</string>
-    <string name="lockscreen_options">Lockscreen Options</string>
-    <string name="interface_settings_title">UI Customization</string>
-    <string name="notification_title">Notification Settings</string>
-    <string name="link_volume_ringtones">Link volumes</string>
-    <string name="link_volume_mutes">Link mute states</string>
-    <string name="title_lockscreen_user_timeout_override">Wait to lock screen</string>
-    <string name="summary_lockscreen_user_timeout_override">Use Android\'s timeout setting after you manually turn the screen off. The default behavior is to use the delay only when the screen times out by itself.</string>
-    <string name="rotate_180_title">Allow 180° rotation</string>
-    <string name="rotate_180_summary">Allow your device to rotate upsidedown!</string>
-    <string name="title_status_bar_brightness_toggle">Enable brightness control</string>
-    <string name="summary_status_bar_brightness_toggle">Slide finger slowly across statusbar to adjust brightness setting</string>
-    <string name="lcd_density_title">LCD Density</string>
-    <string name="lcd_density_summary">unknown</string>
-    <string name="rotation_animation_delay_title">Rotation delay</string>
-    <string name="rotation_animation_delay_summary">The number of milliseconds for which the device posture must be stable before an orientation change occurs. 50 ms default.</string>
-
-    <!-- dBm Settings -->
-    <string name="signal">Signal</string>
-    <string name="header_summary_signal">Signal dBm text</string>
-    <string name="signal_style">Signal Text Style</string>
-    <string name="signal_color_title">Signal color</string>
 
     <!-- Backlight #CM -->
     <string name="backlight_title">Automatic backlight</string>
@@ -805,9 +729,6 @@
 <!-- INTERFACE Settings #CM -->
     <!-- Settings main menu category heading. Interface (Launcher, Themes, System). [CHAR LIMIT=40] -->
     <string name="header_category_interface">INTERFACE</string>
-
-    <!-- Customization Settings -->
-    <string name="rom_customization_title">Customizations</string>
     
     <!-- Launcher settings #CM -->
     <string name="launcher_settings_title">Launcher</string>
@@ -823,9 +744,9 @@
     <string name="notification_drawer_title">Notification drawer</string>
 
     <!-- Combined Bar #CM -->
-    <string name="combined_bar_title">Combined Bar</string>
-    <string name="combined_bar_auto_hide_title">Auto Hide</string>
-    <string name="combined_bar_auto_hide_summary">Allow Combined Bar to hide when showing a fullscreen app</string>
+    <string name="combined_bar_title">Combined bar</string>
+    <string name="combined_bar_auto_hide_title">Auto hide</string>
+    <string name="combined_bar_auto_hide_summary">Allow combined bar to hide when showing a fullscreen app</string>
 
     <!-- Power Widget #CM -->
     <string name="power_widget_title">Power widget</string>
@@ -842,13 +763,13 @@
     <string name="title_widget_order">Widget button order</string>
     <string name="summary_widget_order">Select the order of the buttons in the power widget</string>
     <string name="title_buttons">Buttons</string>
-    <string name="title_toggle_wifi">Toggle Wifi</string>
+    <string name="title_toggle_wifi">Toggle Wi-Fi</string>
     <string name="title_toggle_bluetooth">Toggle Bluetooth</string>
     <string name="title_toggle_gps">Toggle GPS</string>
     <string name="title_toggle_sound">Toggle Sound</string>
     <string name="title_toggle_brightness">Toggle Brightness</string>
     <string name="title_toggle_sync">Toggle Sync</string>
-    <string name="title_toggle_wifiap">Toggle Wifi AP</string>
+    <string name="title_toggle_wifiap">Toggle Wi-Fi AP</string>
     <string name="title_toggle_screentimeout">Toggle Screentimeout</string>
     <string name="title_toggle_mobiledata">Toggle Mobiledata</string>
     <string name="title_toggle_lockscreen">Toggle Lockscreen</string>
@@ -860,8 +781,8 @@
     <string name="title_toggle_media_play_pause">Media: Toggle Play/Pause</string>
     <string name="title_toggle_media_previous">Media: Skip to Previous</string>
     <string name="title_toggle_media_next">Media: Skip to Next</string>
+    <string name="title_toggle_lte">Toggle LTE</string>
     <string name="title_toggle_wimax">Toggle WiMAX</string>
-    <string name="title_toggle_bln">Toggle BLN</string>
     <string name="title_button_modes">Button modes</string>
     <string name="pref_brightness_mode_title">Brightness modes</string>
     <string name="pref_brightness_mode_summary">Choose how the brightness button changes modes</string>
@@ -881,15 +802,15 @@
     <string name="pref_flash_mode_summary">Choose High / Death Ray</string>
 
     <!-- Power Widget, Haptic feedback #CM -->
-    <string name="expanded_haptic_feedback_title">Haptic Feedback</string>
-    <string name="expanded_haptic_feedback_summary">Enable/Disable haptic feedback.</string>
+    <string name="expanded_haptic_feedback_title">Haptic feedback</string>
+    <string name="expanded_haptic_feedback_summary">Enable/disable haptic feedback</string>
 
     <!-- Status bar #CM -->
     <string name="status_bar_title">Status bar</string>
     <string name="status_bar_clock_title">Clock</string>
     <string name="status_bar_general_title">General</string>
     <string name="status_bar_show_clock_title">Show clock</string>
-    <string name="status_bar_show_clock_summary">Show the clock in the Status bar</string>
+    <string name="status_bar_show_clock_summary">Show the clock in the status bar</string>
     <string name="status_bar_am_pm_title">AM/PM style</string>
     <string name="status_bar_am_pm_summary">Display style of AM/PM next to clock</string>
     <string name="status_bar_battery_title">Battery status style</string>
@@ -1435,10 +1356,6 @@
     <string name="cpu_set_on_boot">Set on boot</string>
     <string name="cpu_set_on_boot_summary">Restore the processor settings on boot</string>
 
-    <!-- Performance Settings : Disable bootanimation -->
-    <string name="pref_disable_bootanimation_title">Disable boot animation</string>
-    <string name="pref_disable_bootanimation_summary">Don\'t show the boot animation for faster boot</string>
-
     <!-- Memory Management -->
     <string name="memory_management_title">Memory management</string>
     <string name="memory_management_summary">Customize the usage of memory to alter system performance</string>
@@ -1462,14 +1379,6 @@
     <!-- Performance Settings : 16bpp Alpha -->
     <string name="pref_use_16bpp_alpha_title">16bit transparency</string>
     <string name="pref_use_16bpp_alpha_summary">Better graphics performance, but lower quality and may cause visual artifacts (requires reboot)</string>
-
-    <!-- Performance Settings : Scrolling Cache -->
-    <string name="pref_scrollingcache_title">Scrolling cache</string>
-    <string name="pref_scrollingcache_summary">Scrolling cache may improve scrolling performance at the cost of memory</string>
-    <string name="pref_scrollingcache_force_enable">Force enable</string>
-    <string name="pref_scrollingcache_default_enable">Default enable</string>
-    <string name="pref_scrollingcache_default_disable">Default disable</string>
-    <string name="pref_scrollingcache_force_disable">Force disable</string>
 
     <!-- About Device -->
     <!-- Status -->
@@ -1537,9 +1446,27 @@
 
     <!-- Anonymous Statistics #CM -->
     <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
-    <string name="anonymous_statistics_settings_title">Anonymous statistics</string>
-    <!-- About device screen, list item summary. Takes the user to the screen about opting in or out of anonymous statistics. -->
-    <string name="anonymous_statistics_settings_summary">Help make CyanogenMod better by opting into anonymous statistics reporting</string>
+    <string name="anonymous_statistics_title">CyanogenMod Statistics</string>
+    <string name="anonymous_statistics_summary">Help make CyanogenMod better by opting into anonymous statistics reporting</string>
+    <string name="anonymous_statistics_warning_title">About</string>
+    <string name="anonymous_statistics_warning">Opting into CyanogenMod Statistics will allow non-personal data to be submitted to the
+        developers of CyanogenMod to track unique installations across devices. The information submitted includes an unique identifier,
+        which does not compromise your privacy or personal data. The data is submitted during each boot.\n\nFor an example of the data that is submitted, tap on Preview Data.</string>
+    <string name="enable_reporting_title">Enable reporting</string>
+    <string name="preview_data_title">Preview data</string>
+    <string name="preview_data_summary">%s</string>
+    <string name="view_stats_title">View stats</string>
+    <string name="anonymous_learn_more">Learn more</string>
+
+    <!-- Anonymous Statistics - Notification -->
+    <string name="anonymous_notification_desc">Enable or Disable CyanogenMod Statistics</string>
+
+    <!-- Anonymous Statistics - Preview -->
+    <string name="preview_id_title">Unique ID</string>
+    <string name="preview_device_title">Device</string>
+    <string name="preview_version_title">Version</string>
+    <string name="preview_country_title">Country</string>
+    <string name="preview_carrier_title">Carrier</string>
 
     <!-- About device screen, model of device. -->
     <string name="model_number">Model number</string>
@@ -1550,7 +1477,7 @@
     <!-- About device screen, version of kernel. -->
     <string name="kernel_version">Kernel version</string>
     <!-- About device screen, version of modification of Android. -->
-    <string name="mod_version">IceColdSandwich version</string>
+    <string name="mod_version">CyanogenMod version</string>
     <string name="mod_version_default">Unknown</string>
     <!-- About device screen, build number. -->
     <string name="build_number">Build number</string>
@@ -2084,6 +2011,10 @@
     <!-- The title of the activity to adjust proxy settings -->
     <string name="proxy_settings_label">Proxy settings</string>
 
+    <!-- ======================================================================================= -->
+    <!-- NEW STUFF -->
+    <!-- ======================================================================================= -->
+
     <!-- Button label for generic cancel action -->
     <string name="cancel">Cancel</string>
 
@@ -2289,20 +2220,6 @@
     <!-- Storage setting. Summary for PTP checkbox [CHAR LIMIT=NONE]-->
     <string name="usb_label_installer_cd">"Install file-transfer tools"</string>
 
-    <!-- Storage setting. Menu option for generic storage settings [CHAR LIMIT=30]-->
-    <string name="storage_menu_storage">Storage configuration</string>
-    <!-- Storage setting. Title for generic storage settings [CHAR LIMIT=30]-->
-    <string name="storage_title_storage">Storage configuration</string>
-    <!-- Storage setting. Storage layout setup [CHAR LIMIT=30]-->
-    <string name="storage_layout">Layout configuration</string>
-
-    <!-- Storage layout Settings : Switch storage mountpoints -->
-    <string name="storage_switch_title">Use internal storage</string>
-    <string name="pref_switch_storage_summary_on">Using expanded internal storage for apps and media</string>
-    <string name="pref_switch_storage_summary_off">Using SD Card for apps and media</string>
-    <string name="pref_storage_switch_unavailable">This device doesn\'t have expanded internal storage</string>
-
-
     <!-- Phone info screen, section titles: -->
     <string name="battery_status_title">Battery status</string>
     <!-- Phone info screen, section titles: -->
@@ -2503,9 +2420,9 @@
     <string name="use_location_summary">Let Google use your location to improve search results and other services</string>
     <!-- GPS Source selection -->
     <string name="location_gps_source_title">GPS source</string>
-    <string name="location_gps_source_summary">Choose to use either an external Bluetooth GPS antenna or the internal GPS antenna as location provider</string>
+    <string name="location_gps_source_summary">Use external bluetooth gps mouse instead of internal as location provider</string>
     <string name="location_gps_source_notification_title">Alert</string>
-    <string name="location_gps_source_notification">The GPS source has been switched! GPS will be disabled. Please re-enable before use!</string>
+    <string name="location_gps_source_notification">GPS source has been switched! GPS will be disabled. Please re-enable before use!</string>
 
     <!-- About --> <skip />
     <!-- Main settings screen, setting title for the user to go into the About phone screen -->
@@ -3080,10 +2997,10 @@ found in the list of installed apps.</string>
     <!-- Setting checkbox summary for Whether to enable USB debugging support on the phone -->
     <string name="enable_adb_summary">Allow Android debug mode, the adb interface on USB (or on network)</string>
     <!-- Setting checkbox title for Whether debugging should run over TCP/IP. -->
-    <string name="adb_over_network">ADB over Network</string>
-    <string name="adb_over_network_summary">Enable TCP/IP debugging over Network interfaces (Wi-Fi, Usb networks). This setting is reset on reboot</string>
+    <string name="adb_over_network">ADB over network</string>
+    <string name="adb_over_network_summary">Enable TCP/IP debugging over network interfaces (Wi-Fi, USB networks). This setting is reset on reboot</string>
     <!-- Warning for Adb over Network -->
-    <string name="adb_over_network_warning">WARNING: When ADB over Network is enabled, your phone is open for intrusions on all connected networks, including GSM data network !\n\nOnly use this feature when you are connected on trusted networks.\n\nDo you really want to enable this function?</string>
+    <string name="adb_over_network_warning">WARNING: When ADB over network is enabled, your phone is open for intrusions on all connected networks, including GSM data network !\n\nOnly use this feature when you are connected on trusted networks.\n\nDo you really want to enable this function?</string>
     <!-- Development settings: title for the field that shows the "App ID" development identifier
          for this device. [CHAR LIMIT=40] -->
     <string name="verifier_device_identifier">Development device ID</string>
@@ -4148,6 +4065,9 @@ found in the list of installed apps.</string>
     "system_update_settings_list_item_title" in this project. [CHAR LIMIT=25] -->
     <string name="additional_system_update_settings_list_item_title">Additional system updates</string>
 
+    <!-- Wakeup options -->
+    <string name="display_category_wakeup_options_title">Wakeup options</string>
+    <string name="pref_volume_wake_title">Volume rocker wake</string>
+    <string name="pref_volume_wake_summary">Pressing the volume up/down wakes the device. Intended for devices with hard to press power key</string>
+
 </resources>
-
-

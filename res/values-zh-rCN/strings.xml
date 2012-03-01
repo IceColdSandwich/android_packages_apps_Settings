@@ -20,7 +20,6 @@
     <string name="no" msgid="6731231425810196216">"无"</string>
     <string name="device_info_default" msgid="7847265875578739287">"未知"</string>
     <string name="header_category_wireless_networks" msgid="4944823405420438623">"无线和网络"</string>
-    <string name="header_category_cyanogenmod">CM设置</string>
     <string name="header_category_device" msgid="5781174212691167553">"设备"</string>
     <string name="header_category_personal" msgid="6225932173498802187">"个人"</string>
     <string name="header_category_system" msgid="2073558547468647128">"系统"</string>
@@ -784,11 +783,10 @@
     <string name="status_bar_toggle_brightness">亮度控制</string>
     <string name="status_bar_toggle_brightness_summary">允许滑动状态栏以调整亮度</string>
     <string name="status_bar_toggle_info">亮度自动调整已启用</string>
-    <string name="status_bar_cm_signal_text_title">替代的信号显示</string>
-    <string name="status_bar_cm_signal_text_summary">显示信号的dBm数值而不是条状图示</string>
-    <string name="status_bar_cm_signal_text_show_bars">信号条状图示</string>
-    <string name="status_bar_cm_signal_text_show_text">信号文字</string>
-    <string name="status_bar_cm_signal_text_show_text_dbm">信号文字、dBm</string>
+    <string name="status_bar_signal_text_title">替代的信号显示</string>
+    <string name="status_bar_signal_text_summary">显示信号的dBm数值而不是条状图示</string>
+    <string name="status_bar_signal_text_show_bars">信号条状图示</string>
+    <string name="status_bar_signal_text_show_text">信号文字</string>
     <!-- Lock screen #CM -->
     <string name="lock_screen_title">锁屏界面</string>
     <!-- Lock Screen -->
@@ -831,9 +829,6 @@
     <!--<string name="cpu_max_freq_summary">%s</string>-->
     <string name="cpu_set_on_boot">启动时设置</string>
     <string name="cpu_set_on_boot_summary">在启动时恢复CPU设置</string>
-    <!-- Performance Settings : Disable bootanimation -->
-    <string name="pref_disable_bootanimation_title">禁用开机动画</string>
-    <string name="pref_disable_bootanimation_summary">禁用开机动画以便快速开机</string>
     <!-- Memory Management -->
     <string name="memory_management_title">内存管理</string>
     <string name="memory_management_summary">自定义内存使用来改变系统性能</string>
@@ -880,6 +875,30 @@
     <string name="device_info_settings" product="default" msgid="475872867864762157">"手机状态"</string>
     <string name="system_update_settings_list_item_title" msgid="3342887311059985961">"系统更新"</string>
     <string name="system_update_settings_list_item_summary" msgid="3853057315907710747"></string>
+    <!-- Donate #CM -->
+    <!-- About device screen, list item title. Takes the user to the screen about how to donate to the CyanogenMod Project. -->
+    <string name="donate_settings_title">捐助</string>
+    <!-- About device screen, list item summary. Takes the user to the screen about how to donate to the CyanogenMod Project. -->
+    <!-- skip 'donate_settings_summary' translation -->
+    <!-- Anonymous Statistics #CM -->
+    <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
+    <string name="anonymous_statistics_title">CyanogenMod 统计</string>
+    <string name="anonymous_statistics_summary">开启匿名统计报告使 CyanogenMod 变得更好</string>
+    <string name="anonymous_statistics_warning_title">关于</string>
+    <string name="anonymous_statistics_warning">开启 CyanogenMod 统计将允许非个人数据提交到 CyanogeMod 开发者以便跟踪跨设备的唯一安装。提交的信息包含一个唯一的标识符，而不会涉及你的隐私和个人数据。该数据在每次启动时都会被提交。\n\n作为被提交数据的一个实例，请点击预览数据。</string>
+    <string name="enable_reporting_title">开启报告</string>
+    <string name="preview_data_title">预览数据</string>
+    <!-- skip 'preview_data_summary' translation -->
+    <string name="view_stats_title">查看统计</string>
+    <string name="anonymous_learn_more">查看更多</string>
+    <!-- Anonymous Statistics - Notification -->
+    <string name="anonymous_notification_desc">开启或禁用 CyanogenMod 统计</string>
+    <!-- Anonymous Statistics - Preview -->
+    <string name="preview_id_title">唯一 ID</string>
+    <string name="preview_device_title">设备</string>
+    <string name="preview_version_title">版本</string>
+    <string name="preview_country_title">国家</string>
+    <string name="preview_carrier_title">运营商</string>
     <string name="firmware_version" msgid="4801135784886859972">"Android 版本"</string>
     <string name="model_number" msgid="3765737700545384794">"型号"</string>
     <string name="baseband_version" msgid="1848990160763524801">"基带版本"</string>
@@ -1789,4 +1808,8 @@
     <string name="backup_pw_cancel_button_text" msgid="8845630125391744615">"取消"</string>
     <string name="percentage" msgid="5866131581207788624">"<xliff:g id="NUMBER">%d</xliff:g>%%"</string>
     <string name="additional_system_update_settings_list_item_title" msgid="214987609894661992">"其他系统更新"</string>
+    <!-- Wakeup options -->
+    <string name="display_category_wakeup_options_title">唤醒选项</string>
+    <string name="pref_volume_wake_title">音量键唤醒</string>
+    <string name="pref_volume_wake_summary">按下音量 上键/下键 唤醒设备。专门针对那些按下电源键比较困难的设备</string>
 </resources>

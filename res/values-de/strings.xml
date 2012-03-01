@@ -1717,11 +1717,10 @@
     <string name="status_bar_toggle_brightness">Helligkeitsregler</string>
     <string name="status_bar_toggle_brightness_summary">Änderung der Helligkeit durch Wischen über die Statusleiste</string>
     <string name="status_bar_toggle_info">Automatische Helligkeit ist aktiviert</string>
-    <string name="status_bar_cm_signal_text_title">Signalstärke in dBm</string>
-    <string name="status_bar_cm_signal_text_summary">Anzeige der Mobilfunk-Signalstärke in dBm statt der Balkenanzeige</string>
-    <string name="status_bar_cm_signal_text_show_bars">Nur Balken</string>
-    <string name="status_bar_cm_signal_text_show_text">Signalstärke (nur Wert)</string>
-    <string name="status_bar_cm_signal_text_show_text_dbm">Signalstärke inkl. „dBm“</string>
+    <string name="status_bar_signal_text_title">Signalstärke in dBm</string>
+    <string name="status_bar_signal_text_summary">Anzeige der Mobilfunk-Signalstärke in dBm statt der Balkenanzeige</string>
+    <string name="status_bar_signal_text_show_bars">Nur Balken</string>
+    <string name="status_bar_signal_text_show_text">Signalstärke (nur Wert)</string>
 
     <!-- Lock screen #CM -->
     <string name="lock_screen_title">Bildschirmsperre</string>
@@ -1762,10 +1761,6 @@
     <string name="cpu_max_freq_summary">%s</string>
     <string name="cpu_set_on_boot">Beim Booten einstellen</string>
     <string name="cpu_set_on_boot_summary">Prozessoreinstellungen beim Bootvorgang wiederherstellen</string>
-
-    <!-- Performance Settings : Disable bootanimation -->
-    <string name="pref_disable_bootanimation_title">Boot-Animation deaktivieren</string>
-    <string name="pref_disable_bootanimation_summary">Boot-Animation zur Beschleunigung des Systemstarts deaktivieren</string>
 
     <!-- Memory Management -->
     <string name="memory_management_title">Speicherverwaltung</string>

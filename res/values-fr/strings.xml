@@ -698,6 +698,11 @@
     <string name="ll_bad_levels">Les niveaux doivent être croissants</string>
     <string name="ll_num_levels">Nombre de niveaux</string>
 
+    <!-- Display Settings, Wakeup options -->
+    <string name="display_category_wakeup_options_title">Sortie de veille</string>
+    <string name="pref_volume_wake_title">Eveil par boutons Volume</string>
+    <string name="pref_volume_wake_summary">Permet de rallumer l\'appareil à l\'aide des boutons de volume.</string>
+
     <!-- Advanced, Device specific (DeviceParts) settings #CM -->
     <string name="advanced_settings_title">Options spécifiques</string>
 
@@ -792,15 +797,13 @@
     <string name="status_bar_toggle_brightness">Rétroéclairage</string>
     <string name="status_bar_toggle_brightness_summary">Ajustement de la luminosité en glissant dans la barre</string>
     <string name="status_bar_toggle_info">Le rétroéclairage automatique est activé</string>
-    <string name="status_bar_cm_signal_text_title">Signal GSM alternatif</string>
-    <string name="status_bar_cm_signal_text_summary">Afficher les dBm au lieu de l\'icône de signal</string>
-    <string name="status_bar_cm_signal_text_show_bars">Icône</string>
-    <string name="status_bar_cm_signal_text_show_text">Texte</string>
-    <string name="status_bar_cm_signal_text_show_text_dbm">Texte+dBm</string>
+    <string name="status_bar_signal_text_title">Signal GSM alternatif</string>
+    <string name="status_bar_signal_text_summary">Afficher les dBm au lieu de l\'icône de signal</string>
+    <string name="status_bar_signal_text_show_bars">Icône</string>
+    <string name="status_bar_signal_text_show_text">Texte</string>
 
     <!-- Lock screen #CM -->
     <string name="lock_screen_title">Ecran de verrouillage</string>
-    <!-- Lock Screen -->
 
     <!-- Profiles settings #CM -->
     <string name="profiles_settings_title">Profils</string>
@@ -834,8 +837,6 @@
     <!-- Performance Settings #CM -->
     <string name="performance_settings_warning_title">ATTENTION !</string>
     <string name="performance_settings_warning">Les options présentes ici altèrent les performances du système, en bien ou en mal.\nElles ont des comportements différents selon les appareils et sont disponibles pour expérimentation.\nNous vous demandons de ne pas soumettre de rapport de bug à propos de celles-ci.</string>
-    <string name="pref_disable_bootanimation_title">Pas d\'animation de boot</string>
-    <string name="pref_disable_bootanimation_summary">Ne pas afficher l\'animation pour démarrer plus rapidement</string>
     <string name="pref_use_dithering_title">Activer le tramage</string>
     <string name="pref_use_dithering_summary">Le tramage (dithering) améliore la qualité des images sur certains écrans au détriment des performances (nécessite un redémarrage)</string>
     <string name="pref_use_16bpp_alpha_title">Transparence 16 bits</string>

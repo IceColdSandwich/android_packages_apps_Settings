@@ -682,6 +682,8 @@
     <string name="summary_font_size" translatable="false">%1$s</string>
     <!-- [CHAR LIMIT=40] Sound & display settings screen, title of dialog for picking font size -->
     <string name="dialog_title_font_size">Font size</string>
+    <!-- Display settings screen, battery light repeat pulsing title -->
+    <string name="battery_pulse_title">Pulse low battery light</string>
 
     <!-- Backlight #CM -->
     <string name="backlight_title">Automatic backlight</string>
@@ -806,6 +808,7 @@
     <string name="expanded_haptic_feedback_summary">Enable/disable haptic feedback</string>
 
     <!-- Status bar #CM -->
+    <string name="combined_status_bar_title">@string/status_bar_title</string>
     <string name="status_bar_title">Status bar</string>
     <string name="status_bar_clock_title">Clock</string>
     <string name="status_bar_general_title">General</string>
@@ -818,11 +821,11 @@
     <string name="status_bar_toggle_brightness">Brightness control</string>
     <string name="status_bar_toggle_brightness_summary">Allows adjusting of brightness by sliding across statusbar</string>
     <string name="status_bar_toggle_info">Automatic brightness is enabled</string>
-    <string name="status_bar_cm_signal_text_title">Alternate signal display</string>
-    <string name="status_bar_cm_signal_text_summary">Show dBm value instead of signal bars</string>
-    <string name="status_bar_cm_signal_text_show_bars">Signal bars</string>
-    <string name="status_bar_cm_signal_text_show_text">Signal text</string>
-    <string name="status_bar_cm_signal_text_show_text_dbm">Signal text w/dBm</string>
+    <string name="status_bar_signal_text_title">Signal status style</string>
+    <string name="status_bar_signal_text_summary">Display style of signal status</string>
+    <string name="status_bar_signal_text_show_bars">Icon (default)</string>
+    <string name="status_bar_signal_text_show_text">Text</string>
+    <string name="status_bar_signal_text_hidden">Hidden</string>
 
     <!-- Lock screen #CM -->
     <string name="lock_screen_title">Lock screen</string>
@@ -2011,10 +2014,6 @@
     <!-- The title of the activity to adjust proxy settings -->
     <string name="proxy_settings_label">Proxy settings</string>
 
-    <!-- ======================================================================================= -->
-    <!-- NEW STUFF -->
-    <!-- ======================================================================================= -->
-
     <!-- Button label for generic cancel action -->
     <string name="cancel">Cancel</string>
 
@@ -2420,9 +2419,9 @@
     <string name="use_location_summary">Let Google use your location to improve search results and other services</string>
     <!-- GPS Source selection -->
     <string name="location_gps_source_title">GPS source</string>
-    <string name="location_gps_source_summary">Use external bluetooth gps mouse instead of internal as location provider</string>
+    <string name="location_gps_source_summary">Choose to use either an external Bluetooth GPS antenna or the internal GPS antenna as location provider</string>
     <string name="location_gps_source_notification_title">Alert</string>
-    <string name="location_gps_source_notification">GPS source has been switched! GPS will be disabled. Please re-enable before use!</string>
+    <string name="location_gps_source_notification">The GPS source has been switched! GPS will be disabled. Please re-enable before use!</string>
 
     <!-- About --> <skip />
     <!-- Main settings screen, setting title for the user to go into the About phone screen -->

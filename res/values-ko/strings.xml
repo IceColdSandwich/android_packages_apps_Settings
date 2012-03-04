@@ -1586,4 +1586,7 @@
     <string name="mod_version">모드 버전</string>
     <string name="link_volume_ringtones">알림음 연동</string>
     <string name="link_volume_mutes">Link mute states</string>
+    <!-- Volume description for ringtone volume -->
+    <string name="volume_ring_only_description">벨소리</string>
+
 </resources>

@@ -1583,7 +1583,7 @@
     <!-- additianal part for icecoldsandwich -->
     <string name="quick_links_title">커스텀 롬</string>
     <string name="rom_control_title">롬 설정</string>
-    <string name="mod_version">모드 버전</string>
+    <string name="mod_version">IceColdSandwich version</string>
     <string name="link_volume_ringtones">알림음 연동</string>
     <string name="link_volume_mutes">Link mute states</string>
     <!-- Volume description for ringtone volume -->

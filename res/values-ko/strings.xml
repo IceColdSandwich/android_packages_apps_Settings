@@ -1579,4 +1579,14 @@
     <string name="backup_pw_cancel_button_text" msgid="8845630125391744615">"취소"</string>
     <string name="percentage" msgid="5866131581207788624">"<xliff:g id="NUMBER">%d</xliff:g>%%"</string>
     <string name="additional_system_update_settings_list_item_title" msgid="214987609894661992">"추가 시스템 업데이트"</string>
+
+    <!-- additianal part for icecoldsandwich -->
+    <string name="quick_links_title">커스텀 롬</string>
+    <string name="rom_control_title">롬 설정</string>
+    <string name="mod_version">IceColdSandwich version</string>
+    <string name="link_volume_ringtones">알림음 연동</string>
+    <string name="link_volume_mutes">Link mute states</string>
+    <!-- Volume description for ringtone volume -->
+    <string name="volume_ring_only_description">벨소리</string>
+
 </resources>

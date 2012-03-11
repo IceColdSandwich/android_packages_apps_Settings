@@ -1136,6 +1136,11 @@
     <string name="development_settings_summary" msgid="1815795401632854041">"Définir les options pour le développement de l\'application"</string>
     <string name="enable_adb" msgid="7982306934419797485">"Débogage USB"</string>
     <string name="enable_adb_summary" msgid="4881186971746056635">"Mode débogage lorsqu\'un câble USB est connecté"</string>
+    <!-- Setting checkbox title for Whether debugging should run over TCP/IP. -->
+   <string name="adb_over_network">ADB par le réseau</string>
+   <string name="adb_over_network_summary">Activer le débogage TCP/IP à travers le réseau(Wi-Fi, réseaux Usb). Ce paramètre est réinitialisé au redémarrage</string>
+   <!-- Warning for Adb over Network -->
+   <string name="adb_over_network_warning">ATTENTION: Si ADB à travers le réseau est activé, votre téléphone est vulnérable aux intrusions sur tous les réseaux connectés, y compris le réseau de données GSM !\n\nN\'utilisez cette fonctionnalié que si vous êtes connecté à des réseaux certifiés.\n\nVoulez-vous vraiment activer cette fonctionnalité?</string>
     <string name="verifier_device_identifier" msgid="5079997701152411060">"ID appareil de développement"</string>
     <string name="verifier_device_identifier_not_available" msgid="1272065992066977324">"Informations sur l\'appareil non disponibles."</string>
     <string name="keep_screen_on" msgid="1146389631208760344">"Rester activé"</string>

@@ -1130,8 +1130,13 @@
     <string name="builtin_keyboard_settings_summary" msgid="2392531685358035899">"물리적 키보드 설정"</string>
     <string name="development_settings_title" msgid="215179176067683667">"개발자 옵션"</string>
     <string name="development_settings_summary" msgid="1815795401632854041">"앱 개발 옵션 설정"</string>
-    <string name="enable_adb" msgid="7982306934419797485">"USB 디버깅"</string>
-    <string name="enable_adb_summary" msgid="4881186971746056635">"USB가 연결된 경우 디버그 모드"</string>
+    <string name="enable_adb" msgid="7982306934419797485">"안드로이드 디버깅"</string>
+    <string name="enable_adb_summary" msgid="4881186971746056635">"USB(또는 네트워크)가 연결된 경우 디버그 모드"</string>
+    <!-- Setting checkbox title for Whether debugging should run over TCP/IP. -->
+    <string name="adb_over_network">네트워크를 통한 ADB</string>
+    <string name="adb_over_network_summary">네트워크(Wi-Fi, USB)를 통한 TCP/IP 디버깅을 활성화 합니다. 이 설정은 시스템 재시작시 리셋됨</string>
+    <!-- Warning for Adb over Network -->
+    <string name="adb_over_network_warning">경고: Network를 통한 ADB가 활성화 되었을 때, 당신의 폰은 GSM을 포함한 모든 연결된 네트워크에게 개방됩니다 !\n\n신뢰할 수 있는 네트워크에 연결되었을 때만 사용하세요.\n\n정말 이 기능을 사용하시겠습니까?</string>
     <string name="verifier_device_identifier" msgid="5079997701152411060">"개발 장치 ID"</string>
     <string name="verifier_device_identifier_not_available" msgid="1272065992066977324">"기기 정보가 없습니다."</string>
     <string name="keep_screen_on" msgid="1146389631208760344">"켜진 상태로 유지"</string>
@@ -1595,6 +1600,7 @@
     <string name="volume_ring_only_description">벨소리</string>
     
     <!-- Display | Backlight -->
+    <string name="backlight_title">커스텀 백라이트 설정</string>
     <string name="backlight_settings">자동 백라이트</string>
     <string name="backlight_settings_title">자동 백라이트</string>
     <string name="backlight_summary">밝기 단계와 필터 조절</string>
@@ -1619,8 +1625,8 @@
     
     <!-- Light sensor levels -->
     <string name="ll_title">조도 센서 단계</string>
-    <string name="ll_header_upper">이상</string>
-    <string name="ll_header_lower">이하</string>
+    <string name="ll_header_upper">까지</string>
+    <string name="ll_header_lower">부터</string>
     <string name="ll_header_lcd">화면</string>
     <string name="ll_header_btn">버튼</string>
     <string name="ll_header_kb">키보드</string>

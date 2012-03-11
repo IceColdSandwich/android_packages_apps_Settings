@@ -1157,9 +1157,6 @@
             </intent-filter>
         </activity>
 
-
-
-
         <!-- Development settings -->
 
         <activity android:name="DebugIntentSender" android:label="@string/debug_intent_sender_label">
@@ -1347,6 +1344,17 @@
             android:launchMode="singleTop"
             android:theme="@style/CryptKeeperBlankTheme"
         />
+
+
+        <activity android:name=".profiles.ProfilesSettings" />
+
+        <activity android:name=".profiles.ProfileConfig" />
+
+        <activity android:name=".profiles.AppGroupList" />
+
+        <activity android:name=".profiles.AppGroupConfig" />
+
+        <activity android:name=".profiles.ProfileGroupConfig" />
 
         <!-- Pseudo-activity used to provide an intent-filter entry point to encryption settings -->
         <activity android:name="Settings$CryptKeeperSettingsActivity"

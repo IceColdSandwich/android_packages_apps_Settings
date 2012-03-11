@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!-- 
 /*
 **
@@ -30,34 +30,34 @@
     <item msgid="8392017019801393511">"Tous"</item>
   </string-array>
   <string-array name="screen_timeout_entries">
-    <item msgid="3342301044271143016">"15 secondes"</item>
-    <item msgid="8881760709354815449">"30 secondes"</item>
-    <item msgid="7589406073232279088">"1 minute"</item>
-    <item msgid="7001195990902244174">"2 minutes"</item>
-    <item msgid="7489864775127957179">"5 minutes"</item>
-    <item msgid="2314124409517439288">"10 minutes"</item>
-    <item msgid="6864027152847611413">"30 minutes"</item>
+    <item msgid="3342301044271143016">"15 secondes"</item>
+    <item msgid="8881760709354815449">"30 secondes"</item>
+    <item msgid="7589406073232279088">"1 minute"</item>
+    <item msgid="7001195990902244174">"2 minutes"</item>
+    <item msgid="7489864775127957179">"5 minutes"</item>
+    <item msgid="2314124409517439288">"10 minutes"</item>
+    <item msgid="6864027152847611413">"30 minutes"</item>
   </string-array>
   <string-array name="dream_timeout_entries">
     <item msgid="3149294732238283185">"Jamais"</item>
-    <item msgid="2194151041885903260">"15 secondes"</item>
-    <item msgid="5892295237131074341">"30 secondes"</item>
-    <item msgid="3538441365970038213">"1 minute"</item>
-    <item msgid="412343871668955639">"2 minutes"</item>
-    <item msgid="5076853889688991690">"5 minutes"</item>
-    <item msgid="1903860996174927898">"10 minutes"</item>
-    <item msgid="6415509612413178727">"30 minutes"</item>
+    <item msgid="2194151041885903260">"15 secondes"</item>
+    <item msgid="5892295237131074341">"30 secondes"</item>
+    <item msgid="3538441365970038213">"1 minute"</item>
+    <item msgid="412343871668955639">"2 minutes"</item>
+    <item msgid="5076853889688991690">"5 minutes"</item>
+    <item msgid="1903860996174927898">"10 minutes"</item>
+    <item msgid="6415509612413178727">"30 minutes"</item>
   </string-array>
   <string-array name="lock_after_timeout_entries">
     <item msgid="8929270399652145290">"Immédiatement"</item>
-    <item msgid="6736512735606834431">"5 secondes"</item>
-    <item msgid="8044619388267891375">"15 secondes"</item>
-    <item msgid="1822002388249545488">"30 secondes"</item>
-    <item msgid="8538071621211916519">"1 minute"</item>
-    <item msgid="5663439580228932882">"2 minutes"</item>
-    <item msgid="49888496216106852">"5 minutes"</item>
-    <item msgid="9002737361305019353">"10 minutes"</item>
-    <item msgid="4322676235684793329">"30 minutes"</item>
+    <item msgid="6736512735606834431">"5 secondes"</item>
+    <item msgid="8044619388267891375">"15 secondes"</item>
+    <item msgid="1822002388249545488">"30 secondes"</item>
+    <item msgid="8538071621211916519">"1 minute"</item>
+    <item msgid="5663439580228932882">"2 minutes"</item>
+    <item msgid="49888496216106852">"5 minutes"</item>
+    <item msgid="9002737361305019353">"10 minutes"</item>
+    <item msgid="4322676235684793329">"30 minutes"</item>
   </string-array>
   <string-array name="entries_font_size">
     <item msgid="8166647333858618801">"Petite"</item>
@@ -128,9 +128,9 @@
     <item msgid="2330782789550628803">"Hors de portée"</item>
   </string-array>
   <string-array name="bluetooth_visibility_timeout_entries">
-    <item msgid="8151962652413645395">"Deux minutes"</item>
-    <item msgid="8675215713017289017">"Cinq minutes"</item>
-    <item msgid="477015974247590543">"Une heure"</item>
+    <item msgid="8151962652413645395">"Deux minutes"</item>
+    <item msgid="8675215713017289017">"Cinq minutes"</item>
+    <item msgid="477015974247590543">"Une heure"</item>
     <item msgid="5198271470953124739">"Aucun délai"</item>
   </string-array>
   <string-array name="wifi_signal">
@@ -151,8 +151,8 @@
   </string-array>
   <string-array name="wifi_frequency_band_entries">
     <item msgid="624340809384223320">"Automatique"</item>
-    <item msgid="6670588712989942178">"5 GHz uniquement"</item>
-    <item msgid="2715516524973207876">"2,4 GHz uniquement"</item>
+    <item msgid="6670588712989942178">"5 GHz uniquement"</item>
+    <item msgid="2715516524973207876">"2,4 GHz uniquement"</item>
   </string-array>
   <string-array name="usage_stats_display_order_types">
     <item msgid="2100172576767439288">"Temps d\'utilisation"</item>
@@ -253,9 +253,9 @@
     <item msgid="3401625457385943795">"Limite standard"</item>
     <item msgid="4071574792028999443">"Aucun processus en arrière-plan"</item>
     <item msgid="4810006996171705398">"Un processus maximum"</item>
-    <item msgid="8586370216857360863">"Deux processus maximum"</item>
-    <item msgid="836593137872605381">"Trois processus maximum"</item>
-    <item msgid="7899496259191969307">"Quatre processus maximum"</item>
+    <item msgid="8586370216857360863">"Deux processus maximum"</item>
+    <item msgid="836593137872605381">"Trois processus maximum"</item>
+    <item msgid="7899496259191969307">"Quatre processus maximum"</item>
   </string-array>
   <string-array name="vpn_types_long">
     <item msgid="2732002039459078847">"VPN PPTP"</item>
@@ -276,4 +276,136 @@
   <string-array name="location_entries_gps_source">
     <item>Utiliser le GPS interne</item>
   </string-array>
-</resources>
+
+    <string-array name="location_values_gps_source" translatable="false">
+        <item>0</item>
+    </string-array>
+
+    <!-- Arrays requred by Automatic Backlight -->
+    <string-array name="entries_light_filter_window">
+        <item>2 s</item>
+        <item>5 s</item>
+        <item>10 s</item>
+        <item>20 s</item>
+        <item>30 s</item>
+        <item>60 s</item>
+    </string-array>
+
+    <string-array name="values_light_filter_window" translatable="false">
+        <item>2000</item>
+        <item>5000</item>
+        <item>10000</item>
+        <item>20000</item>
+        <item>30000</item>
+        <item>60000</item>
+    </string-array>
+
+    <string-array name="entries_light_filter_reset">
+        <item>Disabled</item>
+        <item>400 lux</item>
+        <item>500 lux</item>
+        <item>600 lux</item>
+        <item>700 lux</item>
+        <item>800 lux</item>
+        <item>900 lux</item>
+        <item>1000 lux</item>
+        <item>1500 lux</item>
+        <item>2000 lux</item>
+        <item>2500 lux</item>
+    </string-array>
+
+    <string-array name="values_light_filter_reset" translatable="false">
+        <item>-1</item>
+        <item>400</item>
+        <item>500</item>
+        <item>600</item>
+        <item>700</item>
+        <item>800</item>
+        <item>900</item>
+        <item>1000</item>
+        <item>1500</item>
+        <item>2000</item>
+        <item>2500</item>
+    </string-array>
+
+    <string-array name="entries_light_filter_interval">
+        <item>0.5 s</item>
+        <item>1 s</item>
+        <item>2 s</item>
+        <item>5 s</item>
+        <item>10 s</item>
+    </string-array>
+
+    <string-array name="values_light_filter_interval" translatable="false">
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>5000</item>
+        <item>10000</item>
+    </string-array>
+
+    <string-array name="entries_light_levels_dim">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>8</item>
+        <item>10</item>
+        <item>12</item>
+        <item>14</item>
+        <item>16</item>
+        <item>18</item>
+        <item>20 (défaut)</item>
+        <item>22</item>
+        <item>24</item>
+        <item>26</item>
+    </string-array>
+
+    <string-array name="values_light_levels_dim" translatable="false">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>8</item>
+        <item>10</item>
+        <item>12</item>
+        <item>14</item>
+        <item>16</item>
+        <item>18</item>
+        <item>20</item>
+        <item>22</item>
+        <item>24</item>
+        <item>26</item>
+    </string-array>
+
+    <string-array name="entries_light_decrease_hysteresis">
+        <item>0 %</item>
+        <item>10 %</item>
+        <item>20 %</item>
+        <item>30 %</item>
+        <item>40 %</item>
+        <item>50 %</item>
+        <item>60 %</item>
+        <item>70 %</item>
+        <item>80 %</item>
+        <item>90 %</item>
+    </string-array>
+
+    <string-array name="values_light_decrease_hysteresis" translatable="false">
+        <item>0</item>
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+        <item>60</item>
+        <item>70</item>
+        <item>80</item>
+        <item>90</item>
+    </string-array>
+
+  </resources>

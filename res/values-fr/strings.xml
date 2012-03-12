@@ -157,6 +157,9 @@
     <string name="bluetooth_phonebook_request" msgid="457033227379858269">"Demande de répertoire"</string>
     <string name="bluetooth_pb_acceptance_dialog_text" msgid="5203107624986011263">"%1$s souhaite accéder à vos contacts et à l\'historique de vos appels. Autoriser l\'accès à %2$s ?"</string>
     <string name="bluetooth_pb_remember_choice" msgid="2901499974259177202">"Ne plus me demander"</string>
+
+	
+
     <string name="date_and_time" msgid="4114084177056654663">"Paramètres d\'heure et de date"</string>
     <string name="date_time_12_hour_sample" msgid="3259617262618020574">"1:00 pm"</string>
     <string name="date_time_24_hour_sample" msgid="8916857570746212357">"13:00"</string>
@@ -188,6 +191,7 @@
     <string name="proxy_error_empty_host_set_port" msgid="2451694104858226781">"Le champ Port doit rester vide si le champ Hôte n\'est pas renseigné."</string>
     <string name="proxy_error_invalid_port" msgid="2671425042711054494">"Le port indiqué n\'est pas valide."</string>
     <string name="proxy_warning_limited_support" msgid="7229337138062837422">"Le proxy HTTP est utilisé par le navigateur, mais ne peut pas l\'être par les autres applications."</string>
+	
     <string name="radio_info_signal_location_label" msgid="16475158265551708">"Emplacement :"</string>
     <string name="radio_info_neighboring_location_label" msgid="2385625674055934880">"CID voisin :"</string>
     <string name="radio_info_data_attempts_label" msgid="1731106244577323381">"Tentatives :"</string>
@@ -254,6 +258,7 @@
     <string name="sd_card_settings_label" product="default" msgid="5743100901106177102">"Carte SD"</string>
     <string name="proxy_settings_label" msgid="3271174136184391743">"Paramètres proxy"</string>
     <string name="cancel" msgid="6859253417269739139">"Annuler"</string>
+    <string name="ok">Ok</string>
     <string name="settings_label" msgid="1626402585530130914">"Paramètres"</string>
     <string name="settings_label_launcher" msgid="8344735489639482340">"Paramètres"</string>
     <string name="settings_shortcut" msgid="3936651951364030415">"Raccourci vers les paramètres"</string>
@@ -1635,6 +1640,129 @@
     <string name="ll_bad_levels">Les niveaux doit être augmentés</string>
     <string name="ll_num_levels">Définir le nombre de niveaux</string>
 
+
+	    <!-- ======================================================================================= -->
+    <!-- NEW STUFF -->
+    <!-- ======================================================================================= -->
+    <!-- Quiet hours #CM -->
+    <string name="quiet_hours_title">Mode Veille</string>
+    <string name="quiet_hours_summary">Afficher ou changer les heures pendant lesquelles l\'appareil doit être silencieux.</string>
+    <string name="quiet_hours_note_title">Remarque</string>
+    <string name="quiet_hours_note_summary">Les appels entrant se comporteront comme d\'habitude pendant la période de veille</string>
+    <string name="quiet_hours_enabled">Activer le mode Veille</string>
+    <string name="quiet_hours_enabled_on">Le mode Veille sera appliqué</string>
+    <string name="quiet_hours_enabled_off">Les notifications fonctionneront normalement</string>
+    <string name="quiet_hours_start">Début du mode Veille</string>
+    <string name="quiet_hours_start_summary">Début de l\'exécution du mode Veille</string>
+    <string name="quiet_hours_end">Fin du mode Veille</string>
+    <string name="quiet_hours_end_summary">Fin de l\'exécution du mode Veille</string>
+    <string name="quiet_hours_mute">Notifications en mode Muet</string>
+    <string name="quiet_hours_mute_on">Aucun son n\'est audible</string>
+    <string name="quiet_hours_mute_off">Les sons seront joués normalement</string>
+    <string name="quiet_hours_still">Désactiver les vibrations</string>
+    <string name="quiet_hours_still_on">L\'appareil ne vibrera pas</string>
+    <string name="quiet_hours_still_off">L\'appareil vibrera normalement</string>
+    <string name="quiet_hours_dim">Désactiver le témoin de notification</string>
+    <string name="quiet_hours_dim_on">Le témoin de notification sera éteint</string>
+    <string name="quiet_hours_dim_off">Le témoin de notification s\'allumera normalement</string>
+    <string name="quiet_hours_haptic">Désactiver le retour haptique</string>
+    <string name="quiet_hours_haptic_on">Le retour haptique sera désactivé</string>
+    <string name="quiet_hours_haptic_off">Le retour haptique fonctionnera normalement</string>
+
+<!-- PERSONAL Settings -->
+    <!-- Settings main menu category heading. Personal (Accounts, security, language, backup...). [CHAR LIMIT=40] -->
+
+    <!-- Profiles settings #CM -->
+    <string name="profiles_settings_title">Profils</string>
+    <string name="profiles_general_title">Général</string>
+    <string name="profiles_add">Ajouter</string>
+    <string name="profile_menu_delete">Supprimer</string>
+    <string name="profile_settings_title">Profil</string>
+
+    <!-- Add Profile -->
+    <string name="add_profile_dialog_title">Créer un nouveau profil</string>
+    <string name="profile_name_title">Nom du profil</string>
+    <string name="profile_profile_name_prompt">Saisir un nom pour le nouveau profil</string>
+    <string name="menu_new_profile">Nouveau profil</string>
+    <string name="menu_new_profile_summary">Ajouter et configurer un nouveau profil</string>
+    <string name="new_profile_name">&lt;nouveau profil&gt;</string>
+
+    <!-- Rename Profile Dialog  -->
+    <string name="rename_profile_dialog_title">Renommer le profil</string>
+    <string name="duplicate_profile_name">Ce nom de profil existe déjà!</string>
+
+    <!-- Reset Profiles -->
+    <string name="profile_reset_title">Réinitialiser</string>
+    <string name="profile_reset_message">Voulez-vous supprimer tous les profils utilisateur créés ainsi que les groupes d\'applications et restaurer les réglages par défaut?</string>
+
+    <!-- Delete confimation messages -->
+    <string name="profile_delete_confirm">Voulez-vous vraiment supprimer ce profil?</string>
+    <string name="profile_app_delete_confirm">Voulez-vous vraiment retirer cette application?</string>
+    <string name="profile_cannot_delete">Vous ne pouvez pas supprimer le profil actif</string>
+
+    <!-- Profile Config screen PreferenceGroup titles -->
+    <string name="profile_connectionoverrides_title">Neutraliser les connexions</string>
+    <string name="profile_volumeoverrides_title">Neutraliser les volumes</string>
+    <string name="connection_state_disabled">Désactiver</string>
+    <string name="connection_state_enabled">Activer</string>
+    <string name="volume_override_summary">Définir</string>
+
+    <!-- Menu item for managing profiles -->
+    <string name="profile_profiles_manage">Profils</string>
+    <string name="profile_profile_manage">Gérer le profil</string>
+    <string name="profile_applist_manage">Liste des applications</string>
+    <string name="profile_appgroups_manage">Gérer les groupes d\'applications</string>
+    <string name="profile_appgroup_manage">Profil</string>
+
+    <!-- Profile settings screen, section header for settings related to notification profiles -->
+    <string name="profile_settings">Paramètres du profil</string>
+    <string name="profile_name">Nom</string>
+
+    <!-- Profile Settings sound modes labels -->
+    <string name="sound_mode">Mode Notification</string>
+    <string name="ringer_mode">Mode Sonnerie</string>
+    <string name="lights_mode">Mode Luminosité</string>
+    <string name="vibrate_mode">Mode Vibreur</string>
+    <string name="choose_soundtone">Choisir la tonalité de notification</string>
+    <string name="choose_ringtone">Choisir la sonnerie</string>
+
+    <!-- Sound settings screen, setting option name to pick ringtone (a list dialog comes up)-->
+    <string name="soundtone_title">Son de notification</string>
+    <string name="soundtone_summary">""</string>
+
+    <!-- Title for application group setting screen -->
+    <string name="profile_appgroup_title">Groupe d\'applications: %s</string>
+    <string name="profile_appgroups_title">Groupe d\'applications</string>
+    <string name="profile_applist_title">Applications</string>
+    <string name="profile_new_appgroup">Nouveau groupe d\'applications</string>
+    <string name="profile_delete_appgroup">Supprimer ce groupe d\'applications</string>
+    <string name="profile_appgroup_name_prompt">Entrer un nom pour le nouveau groupe d\'applications</string>
+    <string name="profile_add_app">Ajouter l\'application</string>
+    <string name="profile_delete_app">Supprimer l\'application</string>
+
+    <!-- Add application dialog box title -->
+    <string name="profile_choose_app">Choisir l\'application</string>
+    <string name="profile_settings_header">Paramètres du profil</string>
+
+    <!-- Connection override toggles (not all are used at this time ) -->
+    <string name="possibleButtons">Boutons possibles</string>
+    <string name="toggleWifi">Wi-Fi</string>
+    <string name="toggleWifiAp">Hotspots Wi-Fi</string>
+    <string name="toggleBluetooth">Bluetooth</string>
+    <string name="toggleGPS">GPS</string>
+    <string name="toggleData">Données réseau mobile</string>
+    <string name="toggleSync">Sync données</string>
+    <string name="toggle2g3g">2G/3G</string>
+    <string name="toggleSound">Sonnerie</string>
+    <string name="toggleBrightness">Luminosité</string>
+    <string name="toggleAutoRotate">Orientation</string>
+    <string name="toggleScreenTimeout">Mise en veille écran</string>
+    <string name="toggleAirplane">Mode Avion</string>
+    <string name="toggleFlashlight">Torche</string>
+    <string name="toggleLockScreen">Ecran de verrouillage</string>
+    <string name="toggleWimax">WiMAX</string>
+	
+	
 	<string name="mod_version">Version IceColdSandwich</string>
     <string name="link_volume_ringtones">Volumes liés</string>
 	<string name="link_volume_mutes">Modes Muet liés</string> 

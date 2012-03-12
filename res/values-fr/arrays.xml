@@ -273,13 +273,6 @@
     <item msgid="4042143101664725090">"Expiration du délai"</item>
     <item msgid="7664124146786465092">"Échec."</item>
   </string-array>
-  <string-array name="location_entries_gps_source">
-    <item>Utiliser le GPS interne</item>
-  </string-array>
-
-    <string-array name="location_values_gps_source" translatable="false">
-        <item>0</item>
-    </string-array>
 
     <!-- Arrays requred by Automatic Backlight -->
     <string-array name="entries_light_filter_window">
@@ -408,4 +401,38 @@
         <item>90</item>
     </string-array>
 
+	
+    <!-- Profile mode options. -->
+    <string-array name="profile_entries">
+        <item>Appliquer</item>
+        <item>Désactiver</item>
+        <item>Laisser inchangé</item>
+    </string-array>
+
+    <!-- Values for vibrate_entries matching constants in SoundSettings. Do not translate. -->
+    <string-array name="profile_values" translatable="false">
+        <item>OVERRIDE</item>
+        <item>SUPPRESS</item>
+        <item>DEFAULT</item>
+    </string-array>
+
+    <!-- Profile mode options. -->
+    <string-array name="profile_connection_entries">
+        <item>Désactiver</item>
+        <item>Activer</item>
+    </string-array>
+
+    <!-- Values for profile connections. Do not translate. -->
+    <string-array name="profile_connection_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="location_entries_gps_source">
+        <item>Utiliser GPS Interne GPS</item>
+    </string-array>
+
+    <string-array name="location_values_gps_source" translatable="false">
+        <item>0</item>
+    </string-array>
   </resources>

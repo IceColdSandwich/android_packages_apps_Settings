@@ -274,10 +274,6 @@
     <item msgid="7664124146786465092">"실패"</item>
   </string-array>
   
-  <string-array name="location_entries_gps_source">
-        <item>내장 GPS 사용</item>
-    </string-array>
-    
     <!-- Arrays requred by Automatic Backlight -->
     <string-array name="entries_light_filter_window">
         <item>2 초</item>
@@ -327,6 +323,22 @@
         <item>22</item>
         <item>24</item>
         <item>26</item>
+    </string-array>
+    
+    <!-- Profile mode options. -->
+    <string-array name="profile_entries">
+        <item>켜기</item>
+        <item>끄기</item>
+        <item>우선하지 않음</item>
+    </string-array>
+
+    <string-array name="profile_connection_entries">
+        <item>사용 안 함</item>
+        <item>사용 함</item>
+    </string-array>
+
+    <string-array name="location_entries_gps_source">
+        <item>내장 GPS 사용</item>
     </string-array>
    
 </resources>

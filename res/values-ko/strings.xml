@@ -1586,6 +1586,7 @@
     <string name="additional_system_update_settings_list_item_title" msgid="214987609894661992">"추가 시스템 업데이트"</string>
 
     <!-- additianal part for icecoldsandwich -->
+    <string name="ok">확인</string>
     <string name="quick_links_title">커스텀 롬</string>
     <string name="rom_control_title">롬 설정</string>
     <string name="mod_version">IceColdSandwich version</string>
@@ -1640,5 +1641,123 @@
     <string name="ll_reload">현재값 다시 불러오기</string>
     <string name="ll_bad_levels">밝기는 증가해야 함</string>
     <string name="ll_num_levels">단계 수 설정</string>
+    
+    <!-- Quiet hours #CM -->
+    <string name="quiet_hours_title">침묵 시간</string>
+    <string name="quiet_hours_summary">기기가 조용해야 하는 시간 보거나 바꿈</string>
+    <string name="quiet_hours_note_title">노트</string>
+    <string name="quiet_hours_note_summary">침묵 시간 동안에도 전화 수신음은 평소와 같이 작동</string>
+    <string name="quiet_hours_enabled">침묵 시간 사용</string>
+    <string name="quiet_hours_enabled_on">침묵 시간 활성화 됨</string>
+    <string name="quiet_hours_enabled_off">알림들이 평소와 같이 작동</string>
+    <string name="quiet_hours_start">침묵의 시작</string>
+    <string name="quiet_hours_start_summary">침묵이 시작되는 시간</string>
+    <string name="quiet_hours_end">침묵의 끝</string>
+    <string name="quiet_hours_end_summary">침묵이 끝나는 시간</string>
+    <string name="quiet_hours_mute">알림음 끔</string>
+    <string name="quiet_hours_mute_on">소리 재생 안함</string>
+    <string name="quiet_hours_mute_off">평소와 같이 소리 재생</string>
+    <string name="quiet_hours_still">진동 끔</string>
+    <string name="quiet_hours_still_on">진동 작동 안함</string>
+    <string name="quiet_hours_still_off">평소와 같이 진동 사용</string>
+    <string name="quiet_hours_dim">알림 LED 끔</string>
+    <string name="quiet_hours_dim_on">알림 LED 깜빡이지 않음</string>
+    <string name="quiet_hours_dim_off">평소와 같이 알림 LED 사용</string>
+    <string name="quiet_hours_haptic">햅틱 반응 끔</string>
+    <string name="quiet_hours_haptic_on">햅틱 반응 사용 안 함</string>
+    <string name="quiet_hours_haptic_off">평소와 같이 햅틱 반응 사용</string>
+    
+    <!-- PERSONAL Settings -->
+    <!-- Settings main menu category heading. Personal (Accounts, security, language, backup...). [CHAR LIMIT=40] -->
+
+    <!-- Profiles settings #CM -->
+    <string name="profiles_settings_title">프로필</string>
+    <string name="profiles_general_title">일반</string>
+    <string name="profiles_add">추가</string>
+    <string name="profile_menu_delete">삭제</string>
+    <string name="profile_settings_title">프로필</string>
+
+    <!-- Add Profile -->
+    <string name="add_profile_dialog_title">새 프로필 만들기</string>
+    <string name="profile_name_title">프로필 이름</string>
+    <string name="profile_profile_name_prompt">새 프로필의 이름을 입력하세요</string>
+    <string name="menu_new_profile">새 프로필</string>
+    <string name="menu_new_profile_summary">새 프로필 추가 및 설정</string>
+    <string name="new_profile_name">&lt;새 프로필&gt;</string>
+
+    <!-- Rename Profile Dialog  -->
+    <string name="rename_profile_dialog_title">프로필 이름 변경</string>
+    <string name="duplicate_profile_name">프로필 이름 복제!</string>
+
+    <!-- Reset Profiles -->
+    <string name="profile_reset_title">초기화</string>
+    <string name="profile_reset_message">모든 사용자 설정 프로필과 애플리케이션 그룹들을 삭제하고 기본 설정으로 되돌립니까?</string>
+
+    <!-- Delete confimation messages -->
+    <string name="profile_delete_confirm">정말 이 프로필을 삭제하시겠습니까?</string>
+    <string name="profile_app_delete_confirm">정말 이 애플리케이션을 제거하시겠습니까?</string>
+    <string name="profile_cannot_delete">활성화된 프로필은 삭제할 수 없습니다</string>
+
+    <!-- Profile Config screen PreferenceGroup titles -->
+    <string name="profile_connectionoverrides_title">접속 우선</string>
+    <string name="profile_volumeoverrides_title">소리 우선</string>
+    <string name="connection_state_disabled">꺼짐</string>
+    <string name="connection_state_enabled">켜짐</string>
+    <string name="volume_override_summary">(volume_override에 대한 설명인데 원문이 없음)</string>
+
+    <!-- Menu item for managing profiles -->
+    <string name="profile_profiles_manage">프로필</string>
+    <string name="profile_profile_manage">프로필 관리</string>
+    <string name="profile_applist_manage">애플리케이션 목록</string>
+    <string name="profile_appgroups_manage">애플리케이션 그룹 관리</string>
+    <string name="profile_appgroup_manage">프로필</string>
+
+    <!-- Profile settings screen, section header for settings related to notification profiles -->
+    <string name="profile_settings">프로필 설정</string>
+    <string name="profile_name">이름</string>
+
+    <!-- Profile Settings sound modes labels -->
+    <string name="sound_mode">소리 모드</string>
+    <string name="ringer_mode">벨소리 모드</string>
+    <string name="lights_mode">LED 모드</string>
+    <string name="vibrate_mode">진동 모드</string>
+    <string name="choose_soundtone">알림음 선택</string>
+    <string name="choose_ringtone">벨소리 선택</string>
+
+    <!-- Sound settings screen, setting option name to pick ringtone (a list dialog comes up)-->
+    <string name="soundtone_title">알림 소리</string>
+    <string name="soundtone_summary">(soundtone에 대한 설명인데 원문이 없음)</string>
+
+    <!-- Title for application group setting screen -->
+    <string name="profile_appgroup_title">애플리케이션 그룹: %s</string>
+    <string name="profile_appgroups_title">애플리케이션 그룹</string>
+    <string name="profile_applist_title">애플리케이션</string>
+    <string name="profile_new_appgroup">새 애플리케이션 그룹</string>
+    <string name="profile_delete_appgroup">이 애플리케이션 그룹 삭제</string>
+    <string name="profile_appgroup_name_prompt">새 애플리케이션 그룹의 이름을 입력하세요</string>
+    <string name="profile_add_app">애플리케이션 추가</string>
+    <string name="profile_delete_app">애플리케이션 제거</string>
+
+    <!-- Add application dialog box title -->
+    <string name="profile_choose_app">애플리케이션 선택</string>
+    <string name="profile_settings_header">프로필 설정</string>
+
+    <!-- Connection override toggles (not all are used at this time ) -->
+    <string name="possibleButtons">사용 가능한 버튼</string>
+    <string name="toggleWifi">Wi-Fi</string>
+    <string name="toggleWifiAp">Wi-Fi 핫스팟</string>
+    <string name="toggleBluetooth">블루투스</string>
+    <string name="toggleGPS">GPS</string>
+    <string name="toggleData">모바일 데이터</string>
+    <string name="toggleSync">데이터 동기화</string>
+    <string name="toggle2g3g">2G/3G</string>
+    <string name="toggleSound">소리 모드</string>
+    <string name="toggleBrightness">밝기</string>
+    <string name="toggleAutoRotate">회전</string>
+    <string name="toggleScreenTimeout">화면 꺼짐 시간</string>
+    <string name="toggleAirplane">비행기</string>
+    <string name="toggleFlashlight">손전등</string>
+    <string name="toggleLockScreen">잠금 화면</string>
+    <string name="toggleWimax">WiMAX</string>
 
 </resources>

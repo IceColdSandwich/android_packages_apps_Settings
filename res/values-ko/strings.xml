@@ -1601,28 +1601,28 @@
     <string name="volume_ring_only_description">벨소리</string>
     
     <!-- Display | Backlight -->
-    <string name="backlight_title">커스텀 백라이트 설정</string>
+    <string name="backlight_title">밝기 세부 조정</string>
     <string name="backlight_settings">자동 백라이트</string>
     <string name="backlight_settings_title">자동 백라이트</string>
     <string name="backlight_summary">밝기 단계와 필터 조절</string>
     <string name="light_filter_title">조도 센서 필터</string>
-    <string name="light_filter_enabled_title">사용함</string>
-    <string name="light_filter_enabled_summary">깜빡임을 방지하기 위해 센서 데이터에 가변 평균 필터를 적용</string>
+    <string name="light_filter_enabled_title">사용</string>
+    <string name="light_filter_enabled_summary">센서 데이터에 가변 평균 필터를 적용하여 깜빡임 방지</string>
     <string name="light_filter_window_title">감지 시간</string>
-    <string name="light_filter_window_summary">이 기간 동안의 평균을 필터링 된 값으로 사용</string>
-    <string name="light_filter_reset_title">역치값 초기화</string>
-    <string name="light_filter_reset_summary">현재 평균에서 크게 벗어난 측정값은 필터를 초기화 함.</string>
+    <string name="light_filter_window_summary">이 시간 동안 측정된 평균 값을 필터링 된 값으로 사용</string>
+    <string name="light_filter_reset_title">초기화 역치</string>
+    <string name="light_filter_reset_summary">측정값과 평균값의 차가 이 이상이면 필터를 초기화</string>
     <string name="light_filter_interval_title">측정 주기</string>
     <string name="light_filter_interval_summary">낮은 값은 정확도를 향상시키지만 좀 더 많은 CPU를 사용합니다.</string>
     <string name="light_levels_title">밝기 단계</string>
     <string name="light_levels_enabled_title">사용자 설정</string>
     <string name="light_levels_dim_title">최저 밝기</string>
     <string name="light_levels_dim_summary">화면이 가장 어두울 때 밝기</string>
-    <string name="light_levels_editor_title">단계 수정\u2026</string>
+    <string name="light_levels_editor_title">직접 단계 설정\u2026</string>
     <string name="light_decrease_enabled_title">밝기 감소 허용</string>
     <string name="light_decrease_enabled_summary">밝기 감소를 허용합니다. 깜빡임을 방지하기 위해 히스테리시스를 사용합니다.</string>
     <string name="light_decrease_hysteresis_title">히스테리시스 감소</string>
-    <string name="light_decrease_hysteresis_summary">센서 단계가 이 값보다 더 아래로 내려가야 바뀜</string>
+    <string name="light_decrease_hysteresis_summary">센서 단계가 이 값보다 더 내려가면 어두워짐</string>
     
     <!-- Light sensor levels -->
     <string name="ll_title">조도 센서 단계</string>
@@ -1636,8 +1636,8 @@
     <string name="ll_btn">버튼:</string>
     <string name="ll_kb">키보드:</string>
     <string name="ll_disabled">사용 안 함</string>
-    <string name="ll_default">기본값 불러오기</string>
-    <string name="ll_save">저장하고 적용</string>
+    <string name="ll_default">기본값 다시 불러오기</string>
+    <string name="ll_save">저장 &amp; 적용</string>
     <string name="ll_reload">현재값 다시 불러오기</string>
     <string name="ll_bad_levels">밝기는 증가해야 함</string>
     <string name="ll_num_levels">단계 수 설정</string>
@@ -1699,11 +1699,11 @@
     <string name="profile_cannot_delete">활성화된 프로필은 삭제할 수 없습니다</string>
 
     <!-- Profile Config screen PreferenceGroup titles -->
-    <string name="profile_connectionoverrides_title">접속 우선</string>
-    <string name="profile_volumeoverrides_title">소리 우선</string>
-    <string name="connection_state_disabled">꺼짐</string>
-    <string name="connection_state_enabled">켜짐</string>
-    <string name="volume_override_summary">(volume_override에 대한 설명인데 원문이 없음)</string>
+    <string name="profile_connectionoverrides_title">접속 프로필</string>
+    <string name="profile_volumeoverrides_title">소리 프로필</string>
+    <string name="connection_state_disabled">끔</string>
+    <string name="connection_state_enabled">켬</string>
+    <string name="volume_override_summary">소리 크기 : </string>
 
     <!-- Menu item for managing profiles -->
     <string name="profile_profiles_manage">프로필</string>
@@ -1726,7 +1726,7 @@
 
     <!-- Sound settings screen, setting option name to pick ringtone (a list dialog comes up)-->
     <string name="soundtone_title">알림 소리</string>
-    <string name="soundtone_summary">(soundtone에 대한 설명인데 원문이 없음)</string>
+    <string name="soundtone_summary">""</string>
 
     <!-- Title for application group setting screen -->
     <string name="profile_appgroup_title">애플리케이션 그룹: %s</string>

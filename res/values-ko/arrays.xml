@@ -329,12 +329,12 @@
     <string-array name="profile_entries">
         <item>켜기</item>
         <item>끄기</item>
-        <item>우선하지 않음</item>
+        <item>프로필 적용 안 함</item>
     </string-array>
 
     <string-array name="profile_connection_entries">
-        <item>사용 안 함</item>
-        <item>사용 함</item>
+        <item>끄기</item>
+        <item>켜기</item>
     </string-array>
 
     <string-array name="location_entries_gps_source">

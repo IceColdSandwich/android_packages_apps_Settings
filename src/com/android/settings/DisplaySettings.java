@@ -52,10 +52,12 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_ACCELEROMETER = "accelerometer";
     private static final String KEY_FONT_SIZE = "font_size";
     private static final String KEY_NOTIFICATION_PULSE = "notification_pulse";
+    private static final String KEY_DUAL_PANE = "dual_pane";
 
     private CheckBoxPreference mAccelerometer;
     private ListPreference mFontSizePref;
     private CheckBoxPreference mNotificationPulse;
+    private CheckBoxPreference mDualPane;
 
     private final Configuration mCurConfig = new Configuration();
     
@@ -85,6 +87,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         mScreenTimeoutPreference.setOnPreferenceChangeListener(this);
         disableUnusableTimeouts(mScreenTimeoutPreference);
         updateTimeoutPreferenceDescription(currentTimeout);
+
+        mDualPane = (CheckBoxPreference) findPreference(KEY_DUAL_PANE);
+        if (mDualPane != null) {
+            mDualPane.setChecked(Settings.System.getInt(resolver,Settings.System.DUAL_PANE_SETTINGS, 0) == 1);
+        }
 
         mFontSizePref = (ListPreference) findPreference(KEY_FONT_SIZE);
         mFontSizePref.setOnPreferenceChangeListener(this);
@@ -248,6 +255,9 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             boolean value = mNotificationPulse.isChecked();
             Settings.System.putInt(getContentResolver(), Settings.System.NOTIFICATION_LIGHT_PULSE,
                     value ? 1 : 0);
+            return true;
+        } else if (preference == mDualPane) {
+            Settings.System.putInt(getContentResolver(), Settings.System.DUAL_PANE_SETTINGS, mDualPane.isChecked() ? 1 : 0);
             return true;
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);

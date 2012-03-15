@@ -59,4 +59,9 @@
             android:title="@string/notification_pulse_title"
             android:persistent="false" />
 
+	<CheckBoxPreference
+            android:key="dual_pane"
+            android:title="@string/dual_pane_title"
+            android:summary="@string/dual_pane_summary" />
+
 </PreferenceScreen>

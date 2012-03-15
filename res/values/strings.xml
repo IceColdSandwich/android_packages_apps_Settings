@@ -3919,6 +3919,9 @@ found in the list of installed apps.</string>
     <!-- Representation of a numerical percentage. [CHAR LIMIT=8] -->
     <string name="percentage"><xliff:g id="number" example="30">%d</xliff:g>%%</string>
 
+    <string name="dual_pane_title">Dual-pane view</string>
+    <string name="dual_pane_summary">Apps supporting this setting will be displayed in a single view that places top level menus next to their submenus in a single window</string>
+
     <!-- A menu item in "About phone" that allows the user to update the phone with settings
     from their cell phone carrier. The use of the string is similar to the string
     "system_update_settings_list_item_title" in this project. [CHAR LIMIT=25] -->

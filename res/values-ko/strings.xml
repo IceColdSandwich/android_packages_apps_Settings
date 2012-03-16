@@ -1771,5 +1771,8 @@
     <string name="toggleFlashlight">손전등</string>
     <string name="toggleLockScreen">잠금 화면</string>
     <string name="toggleWimax">WiMAX</string>
+    
+    <string name="dual_pane_title">이중창 모드</string>
+    <string name="dual_pane_summary">이 모드를 지원하는 앱들은 한 화면에 상위 메뉴와 하위 메뉴를 동시에 보여줍니다.</string>
 
 </resources>

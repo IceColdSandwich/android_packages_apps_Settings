@@ -1669,6 +1669,9 @@
     <string name="quiet_hours_haptic_on">Le retour haptique sera désactivé</string>
     <string name="quiet_hours_haptic_off">Le retour haptique fonctionnera normalement</string>
 
+    <string name="dual_pane_title">Affichage Dual-pane</string>
+    <string name="dual_pane_summary">Les applications supportant ce paramètre affichent leur menu et leurs sous-menus côte à côte sur le même écran.</string>
+
 <!-- PERSONAL Settings -->
     <!-- Settings main menu category heading. Personal (Accounts, security, language, backup...). [CHAR LIMIT=40] -->
 

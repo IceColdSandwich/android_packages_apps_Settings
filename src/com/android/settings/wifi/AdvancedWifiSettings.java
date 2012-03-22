@@ -43,7 +43,12 @@ public class AdvancedWifiSettings extends SettingsPreferenceFragment
     private static final String KEY_FREQUENCY_BAND = "frequency_band";
     private static final String KEY_NOTIFY_OPEN_NETWORKS = "notify_open_networks";
     private static final String KEY_SLEEP_POLICY = "sleep_policy";
+    private static final String KEY_SLEEP_WIFI_SPEED = "sleep_wifi_speed";
     private static final String KEY_ENABLE_WIFI_WATCHDOG = "wifi_enable_watchdog_service";
+    private static final String SLEEP_WIFI_SPEED_FILE = "/sys/module/bcmdhd/parameters/uiFastWifi";
+    private static final String SLEEP_WIFI_SPEED_ENABLED = "0";
+
+    private CheckBoxPreference mWifiSleepSpeed;
 
     private WifiManager mWifiManager;
 
@@ -67,11 +72,21 @@ public class AdvancedWifiSettings extends SettingsPreferenceFragment
     }
 
     private void initPreferences() {
+
+        PreferenceScreen prefSet = getPreferenceScreen();
+
         CheckBoxPreference notifyOpenNetworks =
             (CheckBoxPreference) findPreference(KEY_NOTIFY_OPEN_NETWORKS);
         notifyOpenNetworks.setChecked(Secure.getInt(getContentResolver(),
                 Secure.WIFI_NETWORKS_AVAILABLE_NOTIFICATION_ON, 0) == 1);
         notifyOpenNetworks.setEnabled(mWifiManager.isWifiEnabled());
+
+        mWifiSleepSpeed = (CheckBoxPreference) findPreference(KEY_SLEEP_WIFI_SPEED);
+        if (Utils.fileExists(SLEEP_WIFI_SPEED_FILE)) {
+            mWifiSleepSpeed.setChecked(SLEEP_WIFI_SPEED_ENABLED.equals(Utils.fileReadOneLine(SLEEP_WIFI_SPEED_FILE)));
+        } else {
+            prefSet.removePreference(mWifiSleepSpeed);
+        }
 
         CheckBoxPreference watchdogEnabled =
             (CheckBoxPreference) findPreference(KEY_ENABLE_WIFI_WATCHDOG);
@@ -147,6 +162,9 @@ public class AdvancedWifiSettings extends SettingsPreferenceFragment
             Secure.putInt(getContentResolver(),
                     Secure.WIFI_WATCHDOG_ON,
                     ((CheckBoxPreference) preference).isChecked() ? 1 : 0);
+        } else if (KEY_SLEEP_WIFI_SPEED.equals(key)) {
+            Utils.fileWriteOneLine(SLEEP_WIFI_SPEED_FILE,
+                    mWifiSleepSpeed.isChecked() ? "1" : "0");
         } else {
             return super.onPreferenceTreeClick(screen, preference);
         }

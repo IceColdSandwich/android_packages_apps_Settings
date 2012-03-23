@@ -1773,6 +1773,10 @@
     <string name="toggleWimax">WiMAX</string>
     
     <string name="dual_pane_title">이중창 모드</string>
-    <string name="dual_pane_summary">이 모드를 지원하는 앱들은 한 화면에 상위 메뉴와 하위 메뉴를 동시에 보여줍니다.</string>
+    <string name="dual_pane_summary">한 화면에 상위 메뉴와 하위 메뉴를 동시에 보여줌 낮은 DPI에서 유용함</string>
+    
+    <string name="sleep_wifi_speed">절전형 WiFi 사용</string>
+    <!-- Checkbox summary for option to toggle wifi watchdog service -->
+    <string name="sleep_wifi_speed_summary">화면이 꺼졌을 땐 WiFi 전송 속도를 줄여 전력 소모 감소</string>
 
 </resources>

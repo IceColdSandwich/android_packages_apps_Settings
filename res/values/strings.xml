@@ -39,7 +39,6 @@
     <string name="turn_on_radio">Turn on radio</string>
     <!-- Phone Info screen. Button label to turn off the radio . Only shown in diagnostic screen, so precise translation is not needed. -->
     <string name="turn_off_radio">Turn off radio</string>
-
     <!-- Phone SMS over IMS on. Only shown in diagnostic screen, so precise translation is not needed. -->
     <string name="sms_over_ims_on">Turn on SMS over IMS</string>
     <!-- Phone SMS over IMS off. Only shown in diagnostic screen, so precise translation is not needed. -->
@@ -1312,6 +1311,9 @@
     <string name="wifi_enable_watchdog_service">Avoid poor connections</string>
     <!-- Checkbox summary for option to toggle wifi watchdog service -->
     <string name="wifi_enable_watchdog_service_summary">Don\'t use a Wi-Fi network unless it has a good Internet connection</string>
+    <string name="sleep_wifi_speed">WiFi power save when sleep</string>
+    <!-- Checkbox summary for option to toggle wifi watchdog service -->
+    <string name="sleep_wifi_speed_summary">Reduces WiFi transfer speed when the phone's screen is off to save power</string>
     <!-- Setting title for setting the wifi sleep policy. Do we keep Wi-Fi active when the screen turns off? -->
     <string name="wifi_setting_sleep_policy_title">Keep Wi-Fi on during sleep</string>
     <!-- Generic error message when the sleep policy could not be set. -->

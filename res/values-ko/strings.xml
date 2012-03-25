@@ -1644,7 +1644,7 @@
     
     <!-- Quiet hours #CM -->
     <string name="quiet_hours_title">침묵 시간</string>
-    <string name="quiet_hours_summary">기기가 조용해야 하는 시간 보거나 바꿈</string>
+    <string name="quiet_hours_summary">기기가 조용해야 하는 시간 설정</string>
     <string name="quiet_hours_note_title">노트</string>
     <string name="quiet_hours_note_summary">침묵 시간 동안에도 전화 수신음은 평소와 같이 작동</string>
     <string name="quiet_hours_enabled">침묵 시간 사용</string>
@@ -1666,6 +1666,11 @@
     <string name="quiet_hours_haptic">햅틱 반응 끔</string>
     <string name="quiet_hours_haptic_on">햅틱 반응 사용 안 함</string>
     <string name="quiet_hours_haptic_off">평소와 같이 햅틱 반응 사용</string>
+    <string name="quiet_hours_active_from">부터 활성화</string>
+    <string name="quiet_hours_active_to">까지</string>
+    <!-- time range preference -->
+    <string name="start_time_title">시작</string>
+    <string name="end_time_title">끝</string>
     
     <!-- PERSONAL Settings -->
     <!-- Settings main menu category heading. Personal (Accounts, security, language, backup...). [CHAR LIMIT=40] -->

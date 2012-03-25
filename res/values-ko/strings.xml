@@ -1628,23 +1628,23 @@
     <string name="ll_title">조도 센서 단계</string>
     <string name="ll_header_upper">까지</string>
     <string name="ll_header_lower">부터</string>
-    <string name="ll_header_lcd">화면</string>
-    <string name="ll_header_btn">버튼</string>
+    <string name="ll_header_lcd">화면 밝기</string>
+    <string name="ll_header_btn">버튼 밝기</string>
     <string name="ll_header_kb">키보드</string>
-    <string name="ll_lux">센서 (필터된 / 원래의):</string>
-    <string name="ll_lcd">화면:</string>
-    <string name="ll_btn">버튼:</string>
+    <string name="ll_lux">센서 값(필터된 / 원래의):</string>
+    <string name="ll_lcd">화면 밝기:</string>
+    <string name="ll_btn">버튼 밝기:</string>
     <string name="ll_kb">키보드:</string>
     <string name="ll_disabled">사용 안 함</string>
-    <string name="ll_default">기본값 다시 불러오기</string>
-    <string name="ll_save">저장 &amp; 적용</string>
-    <string name="ll_reload">현재값 다시 불러오기</string>
+    <string name="ll_default">기본값 불러오기</string>
+    <string name="ll_save">저장 후 적용</string>
+    <string name="ll_reload">현재값 불러오기</string>
     <string name="ll_bad_levels">밝기는 증가해야 함</string>
     <string name="ll_num_levels">단계 수 설정</string>
     
     <!-- Quiet hours #CM -->
     <string name="quiet_hours_title">침묵 시간</string>
-    <string name="quiet_hours_summary">기기가 조용해야 하는 시간 보거나 바꿈</string>
+    <string name="quiet_hours_summary">기기가 조용해야 하는 시간 설정</string>
     <string name="quiet_hours_note_title">노트</string>
     <string name="quiet_hours_note_summary">침묵 시간 동안에도 전화 수신음은 평소와 같이 작동</string>
     <string name="quiet_hours_enabled">침묵 시간 사용</string>
@@ -1666,6 +1666,11 @@
     <string name="quiet_hours_haptic">햅틱 반응 끔</string>
     <string name="quiet_hours_haptic_on">햅틱 반응 사용 안 함</string>
     <string name="quiet_hours_haptic_off">평소와 같이 햅틱 반응 사용</string>
+    <string name="quiet_hours_active_from">부터 활성화</string>
+    <string name="quiet_hours_active_to">까지</string>
+    <!-- time range preference -->
+    <string name="start_time_title">시작</string>
+    <string name="end_time_title">끝</string>
     
     <!-- PERSONAL Settings -->
     <!-- Settings main menu category heading. Personal (Accounts, security, language, backup...). [CHAR LIMIT=40] -->

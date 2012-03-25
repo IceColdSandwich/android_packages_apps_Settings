@@ -1684,15 +1684,17 @@
 
     <!-- Add Profile -->
     <string name="add_profile_dialog_title">새 프로필 만들기</string>
-    <string name="profile_name_title">프로필 이름</string>
+    <string name="profile_name_title">이름</string>
     <string name="profile_profile_name_prompt">새 프로필의 이름을 입력하세요</string>
     <string name="menu_new_profile">새 프로필</string>
     <string name="menu_new_profile_summary">새 프로필 추가 및 설정</string>
     <string name="new_profile_name">&lt;새 프로필&gt;</string>
 
-    <!-- Rename Profile Dialog  -->
-    <string name="rename_profile_dialog_title">프로필 이름 변경</string>
-    <string name="duplicate_profile_name">프로필 이름 복제!</string>
+    <!-- Rename Dialog  -->
+    <string name="rename_dialog_title">이름 변경</string>
+    <string name="rename_dialog_message">새 이름을 입력하세요</string>
+    <string name="duplicate_profile_name">같은 프로필 이름이 이미 있습니다!</string>
+    <string name="duplicate_appgroup_name">같은 그룹 이름이 이미 있습니다!</string>
 
     <!-- Reset Profiles -->
     <string name="profile_reset_title">초기화</string>
@@ -1714,8 +1716,8 @@
     <string name="profile_profiles_manage">프로필</string>
     <string name="profile_profile_manage">프로필 관리</string>
     <string name="profile_applist_manage">애플리케이션 목록</string>
-    <string name="profile_appgroups_manage">애플리케이션 그룹 관리</string>
-    <string name="profile_appgroup_manage">프로필</string>
+    <string name="profile_appgroups_manage">애플리케이션 그룹</string>
+    <string name="profile_appgroup_manage">애플리케이션 그룹 관리</string>
 
     <!-- Profile settings screen, section header for settings related to notification profiles -->
     <string name="profile_settings">프로필 설정</string>
@@ -1734,12 +1736,12 @@
     <string name="soundtone_summary">""</string>
 
     <!-- Title for application group setting screen -->
-    <string name="profile_appgroup_title">애플리케이션 그룹: %s</string>
     <string name="profile_appgroups_title">애플리케이션 그룹</string>
     <string name="profile_applist_title">애플리케이션</string>
     <string name="profile_new_appgroup">새 애플리케이션 그룹</string>
     <string name="profile_delete_appgroup">이 애플리케이션 그룹 삭제</string>
     <string name="profile_appgroup_name_prompt">새 애플리케이션 그룹의 이름을 입력하세요</string>
+    <string name="profile_appgroup_name_title">이름</string>
     <string name="profile_add_app">애플리케이션 추가</string>
     <string name="profile_delete_app">애플리케이션 제거</string>
 

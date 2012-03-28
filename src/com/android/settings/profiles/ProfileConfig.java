@@ -87,6 +87,7 @@ public class ProfileConfig extends SettingsPreferenceFragment
         if (WimaxHelper.isWimaxSupported(getActivity())) {
             mConnections.add(new ConnectionItem(ConnectionSettings.PROFILE_CONNECTION_WIMAX, getString(R.string.toggleWimax)));
         }
+        mConnections.add(new ConnectionItem(ConnectionSettings.PROFILE_CONNECTION_MOBILEDATA, getString(R.string.toggleData)));
 
         addPreferencesFromResource(R.xml.profile_config);
 

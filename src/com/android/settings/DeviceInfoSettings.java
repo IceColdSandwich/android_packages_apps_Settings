@@ -82,6 +82,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
         setStringSummary(KEY_BUILD_NUMBER, Build.DISPLAY);
         setStringSummary(KEY_MOD_VERSION, Build.MODVERSION);
         findPreference(KEY_KERNEL_VERSION).setSummary(getFormattedKernelVersion());
+        
 
         String cpuInfo = getCPUInfo();
         String memInfo = getMemInfo();

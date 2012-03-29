@@ -835,7 +835,6 @@
         <item>90</item>
     </string-array>
 
-
     <!-- Profile mode options. -->
     <string-array name="profile_entries">
         <item>On</item>

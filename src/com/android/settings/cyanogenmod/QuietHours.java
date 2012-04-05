@@ -41,6 +41,8 @@ public class QuietHours extends SettingsPreferenceFragment implements
 
     private static final String KEY_QUIET_HOURS_HAPTIC = "quiet_hours_haptic";
 
+    private static final String KEY_QUIET_HOURS_BLN = "quiet_hours_bln";
+
     private static final String KEY_QUIET_HOURS_NOTE = "quiet_hours_note";
 
     private static final String KEY_QUIET_HOURS_TIMERANGE = "quiet_hours_timerange";
@@ -56,6 +58,8 @@ public class QuietHours extends SettingsPreferenceFragment implements
     private CheckBoxPreference mQuietHoursDim;
 
     private CheckBoxPreference mQuietHoursHaptic;
+
+    private CheckBoxPreference mQuietHoursBln;
 
     private TimeRangePreference mQuietHoursTimeRange;
 
@@ -78,6 +82,7 @@ public class QuietHours extends SettingsPreferenceFragment implements
             mQuietHoursStill = (CheckBoxPreference) prefSet.findPreference(KEY_QUIET_HOURS_STILL);
             mQuietHoursHaptic = (CheckBoxPreference) prefSet.findPreference(KEY_QUIET_HOURS_HAPTIC);
             mQuietHoursDim = (CheckBoxPreference) findPreference(KEY_QUIET_HOURS_DIM);
+            mQuietHoursBln = (CheckBoxPreference) findPreference(KEY_QUIET_HOURS_BLN);
 
             // Remove the "Incoming calls behaviour" note if the device does not support phone calls
             if (mQuietHoursNote != null && getResources().getBoolean(com.android.internal.R.bool.config_voice_capable) == false) {
@@ -92,6 +97,7 @@ public class QuietHours extends SettingsPreferenceFragment implements
             mQuietHoursMute.setChecked(Settings.System.getInt(resolver, Settings.System.QUIET_HOURS_MUTE, 0) == 1);
             mQuietHoursStill.setChecked(Settings.System.getInt(resolver, Settings.System.QUIET_HOURS_STILL, 0) == 1);
             mQuietHoursHaptic.setChecked(Settings.System.getInt(resolver, Settings.System.QUIET_HOURS_HAPTIC, 0) == 1);
+            mQuietHoursBln.setChecked(Settings.System.getInt(resolver, Settings.System.QUIET_HOURS_BLN, 0) == 1);
 
             // Remove the notification light setting if the device does not support it 
             if (mQuietHoursDim != null && getResources().getBoolean(com.android.internal.R.bool.config_intrusiveNotificationLed) == false) {
@@ -125,6 +131,10 @@ public class QuietHours extends SettingsPreferenceFragment implements
         } else if (preference == mQuietHoursHaptic) {
             Settings.System.putInt(resolver, Settings.System.QUIET_HOURS_HAPTIC,
                     mQuietHoursHaptic.isChecked() ? 1 : 0);
+            return true;
+        } else if (preference == mQuietHoursBln) {
+            Settings.System.putInt(resolver, Settings.System.QUIET_HOURS_BLN,
+                    mQuietHoursBln.isChecked() ? 1 : 0);
             return true;
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);

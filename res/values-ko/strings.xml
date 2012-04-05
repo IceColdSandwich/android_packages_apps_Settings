@@ -1782,5 +1782,9 @@
     
     <string name="dual_pane_title">이중창 모드</string>
     <string name="dual_pane_summary">이 모드를 지원하는 앱들은 한 화면에 상위 메뉴와 하위 메뉴를 동시에 보여줍니다.</string>
+    
+    <!-- Sound settings screen, setting check box label -->
+    <string name="camera_sounds_title">카메라 소리</string>
+    <string name="camera_sounds_summary">경고: 지역에 따라서 무음 카메라는 불법일 수도 있습니다!</string>
 
 </resources>

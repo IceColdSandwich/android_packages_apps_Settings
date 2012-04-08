@@ -1670,8 +1670,6 @@
     <string name="media_volume_summary">Set volume for music and videos</string>
     <!-- Sound settings screen, alarm volume slider title -->
     <string name="alarm_volume_title">Alarm</string>
-    <!-- Sound settings screen, dock settings summary-->
-    <string name="dock_settings_summary">Audio settings for the attached dock</string>
     <!-- Sound settings screen, setting check box label -->
     <string name="dtmf_tone_enable_title">Dial pad touch tones</string>
     <!-- Sound settings screen, setting check box label -->

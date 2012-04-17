@@ -340,5 +340,17 @@
     <string-array name="location_entries_gps_source">
         <item>내장 GPS 사용</item>
     </string-array>
+    
+    <!-- DHCP lease times for tethering settings -->
+    <string-array name="tethering_lease_time_entries">
+        <item>30 분</item>
+        <!-- keep this in sync with DEFAULT_LEASE_TIME in system/netd/TetherController.h -->
+        <item>1 시간 (기본값)</item>
+        <item>2 시간</item>
+        <item>4 시간</item>
+        <item>6 시간</item>
+        <item>12 시간</item>
+        <item>24 시간</item>
+    </string-array>
    
 </resources>

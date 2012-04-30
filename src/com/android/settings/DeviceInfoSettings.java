@@ -66,6 +66,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
     private static final String KEY_DEVICE_CPU = "device_cpu";
     private static final String KEY_DEVICE_MEMORY = "device_memory";
     private static final String KEY_MOD_VERSION = "mod_version";
+    private static final String KEY_BUILD_DATE = "build_date";
 
     long[] mHits = new long[3];
 
@@ -82,6 +83,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
         setStringSummary(KEY_BUILD_NUMBER, Build.DISPLAY);
         setStringSummary(KEY_MOD_VERSION, Build.MODVERSION);
         findPreference(KEY_KERNEL_VERSION).setSummary(getFormattedKernelVersion());
+        setValueSummary(KEY_BUILD_DATE, "ro.build.date");
         
 
         String cpuInfo = getCPUInfo();

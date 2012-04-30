@@ -689,6 +689,7 @@
     <string name="baseband_version" msgid="1848990160763524801">"Smalbandversie"</string>
     <string name="kernel_version" msgid="9192574954196167602">"Kernel-versie"</string>
     <string name="build_number" msgid="3075795840572241758">"Build-nummer"</string>
+    <string name="build_date">Builddatum</string>
     <string name="device_info_not_available" msgid="8062521887156825182">"Niet beschikbaar"</string>
     <string name="device_status_activity_title" msgid="1411201799384697904">"Status"</string>
     <string name="device_status" msgid="607405385799807324">"Status"</string>

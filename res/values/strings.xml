@@ -1522,7 +1522,6 @@
     <!-- Hint text for network prefix length -->
     <string name="wifi_network_prefix_length_hint" translatable="false">24</string>
 
-
     <!-- Wi-Fi p2p / Wi-Fi Direct settings -->
     <!-- Used in the 1st-level settings screen to launch Wi-fi Direct settings [CHAR LIMIT=25] -->
     <string name="wifi_p2p_settings_title">Wi-Fi direct</string>
@@ -1542,7 +1541,6 @@
     <string name="wifi_p2p_menu_advanced">Advanced</string>
     <!-- Title for available p2p devices -->
     <string name="wifi_p2p_available_devices">Available devices</string>
-
     <!-- Wifi AP settings-->
     <!-- Label for wifi tether checkbox. Toggles Access Point on/off -->
     <string name="wifi_tether_checkbox_text">Portable Wi-Fi hotspot</string>
@@ -1653,6 +1651,8 @@
     <string name="ringtone_summary">""</string>
     <!-- Sound settings screen, volume title -->
     <string name="all_volume_title">Volumes</string>
+    <!-- Sound settings screen, system volume title -->
+    <string name="system_volume_title">System volume</string>
     <!-- Sound settings screen, music effects title [CHAR LIMIT=30]-->
     <string name="musicfx_title">Music effects</string>
     <!-- Sound settings screen, setting option name -->

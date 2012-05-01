@@ -74,6 +74,13 @@
 
     <!-- Do not nest these, or removals in code will break -->
 
+    <VolumePreference
+            android:key="system_volume"
+            android:title="@string/system_volume_title"
+            android:dialogTitle="@string/system_volume_title"
+            android:persistent="false"
+            android:streamType="system" />
+
     <CheckBoxPreference
             android:key="dtmf_tone"
             android:title="@string/dtmf_tone_enable_title"

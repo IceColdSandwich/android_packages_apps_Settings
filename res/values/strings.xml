@@ -505,6 +505,11 @@
     <string name="soundtone_title">Notification tone</string>
     <string name="soundtone_summary">""</string>
 
+    <!-- Sound settings screen, setting check box label -->
+    <string name="volume_adjust_sounds_enable_title">Volume adjust sound</string>
+    <!-- Sound settings screen, setting check box summary -->
+    <string name="volume_adjust_sounds_enable_summary">Play sound when adjusting volume with hard keys</string>
+
     <!-- Title for application group setting screen -->
     <string name="profile_appgroups_title">Application groups</string>
     <string name="profile_applist_title">Applications</string>

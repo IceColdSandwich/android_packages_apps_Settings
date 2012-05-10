@@ -64,4 +64,8 @@
             android:title="@string/dual_pane_title"
             android:summary="@string/dual_pane_summary" />
 
+        <CheckBoxPreference
+            android:key="battery_pulse"
+            android:title="@string/battery_pulse_title"
+            android:persistent="false" />
 </PreferenceScreen>

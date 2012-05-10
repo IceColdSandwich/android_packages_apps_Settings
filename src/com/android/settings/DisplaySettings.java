@@ -59,6 +59,9 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private CheckBoxPreference mNotificationPulse;
     private CheckBoxPreference mDualPane;
 
+    private static final String KEY_BATTERY_PULSE = "battery_pulse";
+    private CheckBoxPreference mBatteryPulse;
+
     private final Configuration mCurConfig = new Configuration();
     
     private ListPreference mScreenTimeoutPreference;
@@ -109,7 +112,17 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 Log.e(TAG, Settings.System.NOTIFICATION_LIGHT_PULSE + " not found");
             }
         }
-    }
+        mBatteryPulse = (CheckBoxPreference) findPreference(KEY_BATTERY_PULSE);
+        if (mBatteryPulse != null) {
+            if (getResources().getBoolean(
+                    com.android.internal.R.bool.config_intrusiveBatteryLed) == false) {
+                getPreferenceScreen().removePreference(mBatteryPulse);
+            } else {
+                mBatteryPulse.setChecked(Settings.System.getInt(resolver,
+                        Settings.System.BATTERY_LIGHT_PULSE, 1) == 1);
+                mBatteryPulse.setOnPreferenceChangeListener(this);
+            }
+        }    }
 
     private void updateTimeoutPreferenceDescription(long currentTimeout) {
         ListPreference preference = mScreenTimeoutPreference;
@@ -259,6 +272,13 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         } else if (preference == mDualPane) {
             Settings.System.putInt(getContentResolver(), Settings.System.DUAL_PANE_SETTINGS, mDualPane.isChecked() ? 1 : 0);
             return true;
+        }
+
+        } else if (preference == mBatteryPulse) {
+            boolean value = mBatteryPulse.isChecked();
+            Settings.System.putInt(getContentResolver(), Settings.System.BATTERY_LIGHT_PULSE,
+                    value ? 1 : 0);
+            return true;        
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }

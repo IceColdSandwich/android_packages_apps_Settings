@@ -272,8 +272,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         } else if (preference == mDualPane) {
             Settings.System.putInt(getContentResolver(), Settings.System.DUAL_PANE_SETTINGS, mDualPane.isChecked() ? 1 : 0);
             return true;
-        }
-
         } else if (preference == mBatteryPulse) {
             boolean value = mBatteryPulse.isChecked();
             Settings.System.putInt(getContentResolver(), Settings.System.BATTERY_LIGHT_PULSE,

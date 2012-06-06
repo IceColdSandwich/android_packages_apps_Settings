@@ -61,7 +61,6 @@ class AccessPoint extends Preference {
     String bssid;
     int security;
     int networkId;
-    int mode;
     boolean wpsAvailable = false;
 
     PskType pskType = PskType.UNKNOWN;
@@ -188,7 +187,6 @@ class AccessPoint extends Preference {
         bssid = config.BSSID;
         security = getSecurity(config);
         networkId = config.networkId;
-        mode = config.mode;
         mRssi = Integer.MAX_VALUE;
         mConfig = config;
     }
@@ -201,8 +199,6 @@ class AccessPoint extends Preference {
         if (security == SECURITY_PSK)
             pskType = getPskType(result);
         networkId = -1;
-        mode = result.capabilities.contains("[IBSS]") ?
-            WifiConfiguration.Mode.ADHOC : WifiConfiguration.Mode.INFRASTRUCTURE;
         mRssi = result.level;
         mScanResult = result;
     }
@@ -363,14 +359,6 @@ class AccessPoint extends Preference {
                     summary.append(context.getString(R.string.wifi_wps_available_second_item));
                 }
             }
-
-            if (mode == WifiConfiguration.Mode.ADHOC) {
-                if (summary.length() == 0) {
-                    summary.append(context.getString(R.string.wifi_adhoc_first_item));
-                } else {
-                    summary.append(context.getString(R.string.wifi_adhoc_second_item));
-                }
-            }
             setSummary(summary.toString());
         }
     }
@@ -388,6 +376,5 @@ class AccessPoint extends Preference {
         mConfig = new WifiConfiguration();
         mConfig.SSID = AccessPoint.convertToQuotedString(ssid);
         mConfig.allowedKeyManagement.set(KeyMgmt.NONE);
-        mConfig.mode = mode;
     }
 }

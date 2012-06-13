@@ -4086,6 +4086,9 @@ found in the list of installed apps.</string>
     <string name="quiet_hours_ringer_title">Mute phone ringtones</string>
     <string name="quiet_hours_still_title">Disable vibrations</string>
     <string name="quiet_hours_dim_title">Disable notification light</string>
+    <string name="quiet_hours_bln">Disable Bln</string>
+    <string name="quiet_hours_bln_on">Bln will be disabled</string>
+    <string name="quiet_hours_bln_off">Bln will function as normal</string>
     <string name="quiet_hours_active_from">Active from</string>
     <string name="quiet_hours_active_to">to</string>
 

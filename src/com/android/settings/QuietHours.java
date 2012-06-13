@@ -41,6 +41,8 @@ public class QuietHours extends SettingsPreferenceFragment implements
 
     private static final String KEY_QUIET_HOURS_DIM = "quiet_hours_dim";
 
+    private static final String KEY_QUIET_HOURS_BLN = "quiet_hours_bln";
+
     private static final String KEY_QUIET_HOURS_TIMERANGE = "quiet_hours_timerange";
 
     private CheckBoxPreference mQuietHoursEnabled;
@@ -52,6 +54,8 @@ public class QuietHours extends SettingsPreferenceFragment implements
     private CheckBoxPreference mQuietHoursStill;
 
     private CheckBoxPreference mQuietHoursDim;
+
+    private CheckBoxPreference mQuietHoursBln;
 
     private TimeRangePreference mQuietHoursTimeRange;
 
@@ -73,6 +77,7 @@ public class QuietHours extends SettingsPreferenceFragment implements
             mQuietHoursRinger = (CheckBoxPreference) prefSet.findPreference(KEY_QUIET_HOURS_RINGER);
             mQuietHoursStill = (CheckBoxPreference) prefSet.findPreference(KEY_QUIET_HOURS_STILL);
             mQuietHoursDim = (CheckBoxPreference) findPreference(KEY_QUIET_HOURS_DIM);
+            mQuietHoursBln = (CheckBoxPreference) findPreference(KEY_QUIET_HOURS_BLN);
 
             // Set the preference state and listeners where applicable
             mQuietHoursEnabled.setChecked(Settings.System.getInt(resolver, Settings.System.QUIET_HOURS_ENABLED, 0) == 1);
@@ -82,6 +87,7 @@ public class QuietHours extends SettingsPreferenceFragment implements
             mQuietHoursNotifications.setChecked(Settings.System.getInt(resolver, Settings.System.QUIET_HOURS_NOTIFICATIONS, 0) == 1);
             mQuietHoursRinger.setChecked(Settings.System.getInt(resolver, Settings.System.QUIET_HOURS_RINGER, 0) == 1);
             mQuietHoursStill.setChecked(Settings.System.getInt(resolver, Settings.System.QUIET_HOURS_STILL, 0) == 1);
+            mQuietHoursBln.setChecked(Settings.System.getInt(resolver, Settings.System.QUIET_HOURS_BLN, 0) == 1);
 
             // Remove the notification light setting if the device does not support it 
             if (mQuietHoursDim != null && getResources().getBoolean(com.android.internal.R.bool.config_intrusiveNotificationLed) == false) {
@@ -115,6 +121,10 @@ public class QuietHours extends SettingsPreferenceFragment implements
         } else if (preference == mQuietHoursDim) {
             Settings.System.putInt(resolver, Settings.System.QUIET_HOURS_DIM,
                     mQuietHoursDim.isChecked() ? 1 : 0);
+            return true;
+        } else if (preference == mQuietHoursBln) {
+            Settings.System.putInt(resolver, Settings.System.QUIET_HOURS_BLN,
+                    mQuietHoursBln.isChecked() ? 1 : 0);
             return true;
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);

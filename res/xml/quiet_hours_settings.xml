@@ -48,4 +48,11 @@
         android:title="@string/quiet_hours_dim_title"
         android:dependency="quiet_hours_enabled" />
 
+    <CheckBoxPreference
+        android:key="quiet_hours_bln"
+        android:title="@string/quiet_hours_bln"
+        android:summaryOn="@string/quiet_hours_bln_on"
+        android:summaryOff="@string/quiet_hours_bln_off"
+        android:dependency="quiet_hours_enabled" />
+
 </PreferenceScreen>

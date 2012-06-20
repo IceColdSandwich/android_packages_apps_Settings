@@ -1646,5 +1646,16 @@
     <string name="increasing_ring_interval_3seconds">3 Sekunden</string>
     <string name="increasing_ring_interval_5seconds">5 Sekunden</string>
     <string name="increasing_ring_interval_10seconds">10 Sekunden</string>
-</resources>
 
+    <!-- Advanced tethering settings -->
+    <string name="tethering_advanced_text">Erweitert</string>
+    <string name="tethering_lease_time_text">DHCP-Lease-Gültigkeit</string>
+    <string name="dhcp_lease_30mn">30 Minuten</string>
+    <string name="dhcp_lease_1h">1 Stunde (Standard)</string>
+    <string name="dhcp_lease_2h">2 Stunden</string>
+    <string name="dhcp_lease_4h">4 Stunden</string>
+    <string name="dhcp_lease_6h">6 Stunden</string>
+    <string name="dhcp_lease_12h">12 Stunden</string>
+    <string name="dhcp_lease_24h">24 Stunden</string>
+
+</resources>

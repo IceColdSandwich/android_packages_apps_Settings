@@ -615,7 +615,7 @@
     <string name="lock_sounds_enable_title" msgid="450098505659399520">"Son au verrouillage écran"</string>
     <string name="haptic_feedback_enable_title" msgid="2438293710530828760">"Vibrer au toucher"</string>
     <string name="audio_record_proc_title" msgid="4271091199976457534">"Suppression du bruit"</string>
-    <string name="volume_media_description" msgid="7949355934788807863">"Musique, vidéo, jeux et autres fichiers multimédias"</string>
+    <string name="volume_media_description" msgid="7949355934788807863">"Musique, vidéo, jeux et multimédia"</string>
     <string name="volume_ring_description" msgid="5936851631698298989">"Sonnerie et notifications"</string>
     <string name="volume_notification_description" msgid="5810902320215328321">"Notifications"</string>
     <string name="volume_alarm_description" msgid="8322615148532654841">"Alarmes"</string>
@@ -662,6 +662,18 @@
     <string name="automatic_brightness" msgid="5014143533884135461">"Ajuster automatiquement la luminosité"</string>
     <string name="title_font_size" msgid="4405544325522105222">"Taille de la police"</string>
     <string name="dialog_title_font_size" msgid="2231507851258955038">"Taille de police"</string>
+
+    <!-- Advanced tethering settings -->
+    <string name="tethering_advanced_text">Paramètres avancés</string>
+    <string name="tethering_lease_time_text">Expiration DHCP</string>
+    <string name="dhcp_lease_30mn">30 minutes</string>
+    <string name="dhcp_lease_1h">1 heure (défaut)</string>
+    <string name="dhcp_lease_2h">2 heures</string>
+    <string name="dhcp_lease_4h">4 heures</string>
+    <string name="dhcp_lease_6h">6 heures</string>
+    <string name="dhcp_lease_12h">12 heures</string>
+    <string name="dhcp_lease_24h">24 heures</string>
+
     <string name="sim_lock_settings" msgid="3392331196873564292">"Paramètres verrouillage SIM"</string>
     <string name="sim_lock_settings_category" msgid="5136244267576697004">"Configurer verrouillage carte SIM"</string>
     <string name="sim_lock_settings_title" msgid="9018585580955414596">"Verrouillage de la SIM"</string>

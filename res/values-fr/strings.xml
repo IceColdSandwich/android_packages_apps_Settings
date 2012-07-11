@@ -1768,8 +1768,7 @@
     <!-- Body of dialog shown when user enables collection of data statistics [CHAR LIMIT=NONE] -->
     <string name="data_usage_enable_mobile_statistics_dialog">En activant cette option, la consommation d\'énergie sera plus élevée sur les réseaux haut-débit tels que LTE...</string>
 
-    <string name="themes_title">Thèmes</string>
-	
+
     <!-- Quiet hours #CM -->
     <string name="quiet_hours_title">Mode Veille</string>
     <string name="quiet_hours_summary">Configurer les heures pendant lesquelles l\'appareil doit rester silencieux</string>
@@ -1833,7 +1832,7 @@
     <string name="anonymous_statistics_title">Statistiques AOKP</string>
     <string name="anonymous_statistics_summary">Aider à améliorer AOKP en acceptant de fournir des statistiques anonymes</string>
     <string name="anonymous_statistics_warning_title">A propos</string>
-    <string name="anonymous_statistics_warning">En acceptant les statistiques AOKP, vous autorisez la transmission de données non personnelles aux développeurs AOKP pour retracer les processus uniques d\'installation sur les appareils. Les informations envoyées intègrent un identifiant unique qui ne compromet pas vos données confidentielles ou personnelles. Les données sont transmises une fois par semaine, au cours du démarrage.\n\nAppuyez sur Voir les données afin d'afficher un exemple des données transmises.</string>
+    <string name="anonymous_statistics_warning">En acceptant les statistiques AOKP, vous autorisez la transmission de données non personnelles aux développeurs AOKP pour retracer les processus uniques d\'installation sur les appareils. Les informations envoyées intègrent un identifiant unique qui ne compromet pas vos données confidentielles ou personnelles. Les données sont transmises une fois par semaine, au cours du démarrage.\n\nAppuyez sur Voir les données afin d\'afficher un exemple des données transmises.</string>
     <string name="enable_reporting_title">Activer le rapport</string>
     <string name="preview_data_title">Voir les données</string>
     <string name="preview_data_summary">%s</string>

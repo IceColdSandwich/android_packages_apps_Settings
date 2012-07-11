@@ -364,7 +364,7 @@
     <string name="lockpassword_continue_label" msgid="4602203784934526940">"Weiter"</string>
     <string name="lockpassword_password_too_long" msgid="5487426077939378487">"Das Passwort muss kürzer als <xliff:g id="NUMBER">%d</xliff:g> Zeichen sein."</string>
     <string name="lockpassword_pin_too_long" msgid="6382649850551200693">"Die PIN muss kürzer als <xliff:g id="NUMBER">%d</xliff:g> Stellen sein."</string>
-    <string name="lockpassword_pin_contains_non_digits" msgid="3379277100136600632">"PIN darf nur die Ziffern 0 - 9 enthalten."</string>
+    <string name="lockpassword_pin_contains_non_digits" msgid="3379277100136600632">"PIN darf nur die Ziffern 0 - 9 enthalten."</string>
     <string name="lockpassword_pin_recently_used" msgid="2729073062730842496">"Geräteadministrator lässt die Verwendung einer früheren PIN nicht zu"</string>
     <string name="lockpassword_illegal_character" msgid="6204396794254688549">"Das Passwort enthält ein ungültiges Zeichen."</string>
     <string name="lockpassword_password_requires_alpha" msgid="5668524505560400449">"Das Passwort muss mindestens einen Buchstaben enthalten."</string>
@@ -743,7 +743,7 @@
     <string name="sd_mount_summary" product="default" msgid="4673411327373419641"></string>
     <string name="sd_format" product="nosdcard" msgid="2148179271623099054">"USB-Speicher löschen"</string>
     <string name="sd_format" product="default" msgid="2576054280507119870">"SD-Karte löschen"</string>
-    <string name="sd_format_summary" product="nosdcard" msgid="6331905044907914603">"Löscht alle Daten, z. B. Musik und Fotos, aus dem internen USB-Speicher"</string>
+    <string name="sd_format_summary" product="nosdcard" msgid="6331905044907914603">"Löscht alle Daten, z. B. Musik und Fotos, aus dem internen USB-Speicher"</string>
     <string name="sd_format_summary" product="default" msgid="212703692181793109">"Löscht sämtliche Daten wie Musik und Fotos von der SD-Karte"</string>
     <string name="read_only" msgid="6702420168629076340">" (schreibgeschützt)"</string>
     <string name="dlg_confirm_unmount_title" product="nosdcard" msgid="3077285629197874055">"USB-Speicher trennen?"</string>
@@ -1646,4 +1646,16 @@
     <string name="increasing_ring_interval_3seconds">3 Sekunden</string>
     <string name="increasing_ring_interval_5seconds">5 Sekunden</string>
     <string name="increasing_ring_interval_10seconds">10 Sekunden</string>
+
+    <!-- Advanced tethering settings -->
+    <string name="tethering_advanced_text">Erweitert</string>
+    <string name="tethering_lease_time_text">DHCP-Lease-Gültigkeit</string>
+    <string name="dhcp_lease_30mn">30 Minuten</string>
+    <string name="dhcp_lease_1h">1 Stunde (Standard)</string>
+    <string name="dhcp_lease_2h">2 Stunden</string>
+    <string name="dhcp_lease_4h">4 Stunden</string>
+    <string name="dhcp_lease_6h">6 Stunden</string>
+    <string name="dhcp_lease_12h">12 Stunden</string>
+    <string name="dhcp_lease_24h">24 Stunden</string>
+
 </resources>

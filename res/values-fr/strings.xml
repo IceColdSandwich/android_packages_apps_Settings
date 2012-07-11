@@ -663,6 +663,17 @@
     <string name="title_font_size" msgid="4405544325522105222">"Taille de la police"</string>
     <string name="dialog_title_font_size" msgid="2231507851258955038">"Taille de police"</string>
 
+    <!-- Advanced tethering settings -->
+    <string name="tethering_advanced_text">Paramètres avancés</string>
+    <string name="tethering_lease_time_text">Expiration DHCP</string>
+    <string name="dhcp_lease_30mn">30 minutes</string>
+    <string name="dhcp_lease_1h">1 heure (défaut)</string>
+    <string name="dhcp_lease_2h">2 heures</string>
+    <string name="dhcp_lease_4h">4 heures</string>
+    <string name="dhcp_lease_6h">6 heures</string>
+    <string name="dhcp_lease_12h">12 heures</string>
+    <string name="dhcp_lease_24h">24 heures</string>
+
     <string name="sim_lock_settings" msgid="3392331196873564292">"Paramètres verrouillage SIM"</string>
     <string name="sim_lock_settings_category" msgid="5136244267576697004">"Configurer verrouillage carte SIM"</string>
     <string name="sim_lock_settings_title" msgid="9018585580955414596">"Verrouillage de la SIM"</string>

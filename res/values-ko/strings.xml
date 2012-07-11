@@ -1786,5 +1786,8 @@
     <!-- Sound settings screen, setting check box label -->
     <string name="camera_sounds_title">카메라 소리</string>
     <string name="camera_sounds_summary">경고: 지역에 따라서 무음 카메라는 불법일 수도 있습니다!</string>
+    <!-- Advanced tethering settings -->
+    <string name="tethering_advanced_text">고급</string>
+    <string name="tethering_lease_time_text">DHCP 임대 시간</string>
 
 </resources>

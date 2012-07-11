@@ -890,6 +890,29 @@
         <item>0</item>
     </string-array>
 
+    <!-- DHCP lease times for tethering settings -->
+    <string-array name="tethering_lease_time_entries">
+        <item>@string/dhcp_lease_30mn</item>
+        <!-- keep this in sync with DEFAULT_LEASE_TIME in system/netd/TetherController.h -->
+        <item>@string/dhcp_lease_1h</item>
+        <item>@string/dhcp_lease_2h</item>
+        <item>@string/dhcp_lease_4h</item>
+        <item>@string/dhcp_lease_6h</item>
+        <item>@string/dhcp_lease_12h</item>
+        <item>@string/dhcp_lease_24h</item>
+    </string-array>
+
+    <!-- Do not translate. -->
+    <string-array name="tethering_lease_time_values" translatable="false">
+        <item>1800</item>
+        <item>-1</item>
+        <item>7200</item>
+        <item>14400</item>
+        <item>21600</item>
+        <item>43200</item>
+        <item>86400</item>
+    </string-array>
+
     <string-array name="increasing_ring_interval_entries" translatable="false">
         <item>@string/increasing_ring_interval_eachring</item>
         <item>@string/increasing_ring_interval_half_second</item>

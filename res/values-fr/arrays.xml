@@ -17,7 +17,6 @@
 ** limitations under the License.
 */
  -->
-
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string-array name="timezone_filters">
@@ -294,7 +293,7 @@
     </string-array>
 
     <string-array name="entries_light_filter_reset">
-        <item>Disabled</item>
+        <item>Désactivé</item>
         <item>400 lux</item>
         <item>500 lux</item>
         <item>600 lux</item>
@@ -429,7 +428,7 @@
     </string-array>
 
     <string-array name="location_entries_gps_source">
-        <item>Utiliser GPS Interne GPS</item>
+        <item>Utiliser GPS interne</item>
     </string-array>
 
     <string-array name="location_values_gps_source" translatable="false">

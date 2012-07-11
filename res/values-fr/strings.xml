@@ -1610,7 +1610,8 @@
     <skip />
     <string name="additional_system_update_settings_list_item_title" msgid="214987609894661992">"Mises à jour supplémentaires du système"</string>
     <string name="quick_links_title">Personnalisation</string>
-   <string name="rom_control_title">Poste de pilotage de la ROM</string>
+    <string name="rom_control_title">Poste de pilotage de la ROM</string>
+    <string name="themes_title">Thèmes</string>
    
     <!-- Display | Backlight -->
 	<string name="backlight_title">Réglages du rétroéclairage</string>
@@ -1634,7 +1635,7 @@
     <string name="light_decrease_enabled_title">Diminution de lumière autorisée</string>
     <string name="light_decrease_enabled_summary">Activer pour autoriser la réduction de lumière. Utilise l\'hystérésis pour réduire le scintillement</string>
     <string name="light_decrease_hysteresis_title">Diminuer l\'hystérésis</string>
-    <string name="light_decrease_hysteresis_summary">Sensor levels overlap this much downwards</string>
+    <string name="light_decrease_hysteresis_summary">Permet de baisser encore plus les niveaux du senseur</string>
     
     <!-- Light sensor levels -->
     <string name="ll_title">Niveaux du capteur de lumière</string>
@@ -1658,6 +1659,9 @@
 	    <!-- ======================================================================================= -->
     <!-- NEW STUFF -->
     <!-- ======================================================================================= -->
+	
+    <!-- Toggle switch title for enabling or disabling collection mobile data statistics. [CHAR LIMIT=32] -->
+
     <!-- Quiet hours #CM -->
     <string name="quiet_hours_title">Mode Veille</string>
     <string name="quiet_hours_summary">Afficher ou changer les heures pendant lesquelles l\'appareil doit être silencieux.</string>
@@ -1781,4 +1785,110 @@
 	<string name="mod_version">Version IceColdSandwich</string>
     <string name="link_volume_ringtones">Volumes liés</string>
 	<string name="link_volume_mutes">Modes Muet liés</string> 
+
+    <string name="data_usage_enable_mobile_statistics">Statistiques des données</string>
+
+    <!-- Body of dialog shown when user disables collection of data statistics. [CHAR LIMIT=NONE] -->
+    <string name="data_usage_disable_mobile_statistics_dialog">En désactivant cette option, les informations pour la statistique d\'utilisation des données ne seront plus collectées.</string>
+	
+    <!-- Body of dialog shown when user enables collection of data statistics [CHAR LIMIT=NONE] -->
+    <string name="data_usage_enable_mobile_statistics_dialog">En activant cette option, la consommation d\'énergie sera plus élevée sur les réseaux haut-débit tels que LTE...</string>
+
+    <string name="themes_title">Thèmes</string>
+	
+        <!-- Quiet hours #CM -->
+    <string name="quiet_hours_title">Mode Veille</string>
+    <string name="quiet_hours_summary">Configurer les heureus pendant lesquelles l\'appareil doit rester silencieux</string>
+    <string name="quiet_hours_enabled_title">Activer le mode Veille</string>
+    <string name="quiet_hours_start">Début du mode Veille</string>
+    <string name="quiet_hours_start_summary">Heure à laquelle le mode Veille démarre</string>
+    <string name="quiet_hours_end">Fin du mode Veille</string>
+    <string name="quiet_hours_end_summary">Heure à laquelle le mode Veille prend fin</string>
+    <string name="quiet_hours_notifications_title">Sons de notifications en mode Muet</string>
+    <string name="quiet_hours_ringer_title">Sonneries en mode Muet</string>
+    <string name="quiet_hours_still_title">Désactiver les vibrations</string>
+    <string name="quiet_hours_dim_title">Désactiver les clignotements</string>
+    <string name="quiet_hours_bln">Désactiver Bln</string>
+    <string name="quiet_hours_bln_on">Bln sera désactivé</string>
+    <string name="quiet_hours_bln_off">Bln fonctionnera normalement</string>
+    <string name="quiet_hours_active_from">Activé de</string>
+    <string name="quiet_hours_active_to">à</string>
+
+    <!-- time range preference -->
+    <string name="start_time_title">Début</string>
+    <string name="end_time_title">Fin</string>
+
+    <string name="increasing_ring_title">Sonnerie ascendante</string>
+    <!-- Sound settings screen, the caption of the checkbox for making incoming calls increase in volume -->
+    <string name="checkbox_increasing_ring">Activer</string>
+    <!-- Sound settings screen, the title of the volume bar to adjust the minimum increasing ring volume -->
+    <string name="increasing_ring_min_volume_title">Volume début de sonnerie</string>
+    <string name="increasing_ring_volume_notice">Note:\nAs le volume de début est plus élevé que le volume de la sonnerie, le son joué utilisera le volume de la sonnerie.</string>
+    <string name="increasing_ring_interval_title">Augmenter l\'intervalle</string>
+    <string name="increasing_ring_interval_eachring">A chaque sonnerie</string>
+    <string name="increasing_ring_interval_half_second">0.5 seconde</string>
+    <string name="increasing_ring_interval_1second">1 seconde</string>
+    <string name="increasing_ring_interval_2seconds">2 secondes</string>
+    <string name="increasing_ring_interval_3seconds">3 secondes</string>
+    <string name="increasing_ring_interval_5seconds">5 secondes</string>
+    <string name="increasing_ring_interval_10seconds">10 secondes</string>
+	
+    <!-- Sound settings screen, setting check box label -->
+    <string name="camera_sounds_title">Sons Appareil photo</string>
+    <string name="camera_sounds_summary">ATTENTION: Désactiver le son de déclenchement de la photo est illégal dans certains lieux!</string>
+
+    <!-- Sound settings screen, setting check box label -->
+    <string name="volume_adjust_sounds_enable_title">Son Ajustement Volume</string>
+    <!-- Sound settings screen, setting check box summary -->
+    <string name="volume_adjust_sounds_enable_summary">Jouer un son lorsque le volume est ajusté au moyen du bouton matériel</string>
+	
+    <!-- Display settings screen, battery light repeat pulsing title -->
+    <string name="battery_pulse_title">Clignotement batterie faible</string>
+
+    <string name="dock_usb_audio_enable_title">Utiliser l\'audio de la station d\'accueil</string>
+    <!-- Enable Dock USB Audio, setting option summary text when check box is selected -->
+    <string name="dock_usb_audio_enable_summary_on">Utiliser l\'audio passif provenant de la station d\'accueil</string>
+    <!-- Enable Dock USB Audio, setting option summary text when check box is clear -->
+    <string name="dock_usb_audio_enable_summary_off">Ne pas utiliser l\'audio passif provenant de la station d\'accueil</string>
+	<string name="dock_force_undock_title">Forcer le retrait</string>
+	<string name="dock_force_undock_summary_no_dock" product="default">Le téléphone n\'est pas inséré</string>
+	<string name="dock_force_undock_summary" product="default">Extraire le téléphone</string>
+
+    <!-- Anonymous Statistics #CM -->
+    <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
+    <string name="anonymous_statistics_title">Statistiques AOKP</string>
+    <string name="anonymous_statistics_summary">Aider à améliorer AOKP en acceptant de fournir des statistiques anonymes</string>
+    <string name="anonymous_statistics_warning_title">A propos</string>
+    <string name="anonymous_statistics_warning">En acceptant les statistiques AOKP, vous autorisez la transmission de données non personnelles aux développeurs AOKP pour retracer les processus uniques d\'installation sur les appareils. Les informations envoyées intègrent un identifiant unique qui ne compromet pas vos données confidentielles ou personnelles. Les données sont transmises une fois par semaine, au cours du démarrage.\n\nAppuyez sur Voir les données afin d'afficher un exemple des données transmises.</string>
+    <string name="enable_reporting_title">Activer le rapport</string>
+    <string name="preview_data_title">Voir les données</string>
+    <string name="preview_data_summary">%s</string>
+    <string name="view_stats_title">Voir les statistiques</string>
+    <string name="anonymous_learn_more">En savoir plus</string>
+
+    <!-- Anonymous Statistics - Notification -->
+    <string name="anonymous_notification_desc">Activer ou désactiver les statistiques AOKP</string>
+
+    <!-- Anonymous Statistics - Preview -->
+    <string name="preview_id_title">ID unique</string>
+    <string name="preview_device_title">Appareil</string>
+    <string name="preview_version_title">Version</string>
+    <string name="preview_country_title">Pays</string>
+    <string name="preview_carrier_title">Opérateur</string>
+
+    <!--  About device screen, Hardware info -->
+    <string name="hardware_info">Information matérielle</string>
+    <!--  About device Screen, hardware info, rear camera -->
+    <string name="device_rear_camera">Caméra arrière</string>
+    <!--  About device Screen, hardware info, front camera -->
+    <string name="device_front_camera">Caméra avant</string>
+    <!--  About device Screen, hardware info, screen res -->
+    <string name="device_screen_resolution">Résolution d\'écran</string>
+    <!--  About device Screen, hardware info, GPU info -->
+    <string name="gpu_info">Processeur graphique</string>
+    <!-- About device screen, Cpu info. -->
+    <string name="cpu_info">Processeur</string>
+    <!-- About phone screen, Free memory info -->
+    <string name="mem_info">Mémoire</string>
+    <!-- About phone screen, status item label -->
 </resources>

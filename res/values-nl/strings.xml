@@ -1689,4 +1689,6 @@
     <string name="toggleFlashlight">Zaklamp</string>
     <string name="toggleLockScreen">Vergrendelscherm</string>
 
+    <string name="accessibility_home_button_answers_call_title">Thuisknop neemt oproep aan</string>
+
 </resources>

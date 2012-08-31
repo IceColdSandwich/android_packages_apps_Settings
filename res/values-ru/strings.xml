@@ -1189,6 +1189,7 @@
     <string name="accessibility_system_title" msgid="7187919089874130484">"Система"</string>
     <string name="accessibility_toggle_large_text_title" msgid="6618674985313017711">"Большой текст"</string>
     <string name="accessibility_power_button_ends_call_title" msgid="5468375366375940894">"Кнопка питания завершает вызов"</string>
+    <string name="accessibility_home_button_answers_call_title">"Кнопка Домой отвечает на вызов"</string>
     <string name="accessibility_speak_password_title" msgid="3344423945644925355">"Озвучивать пароли"</string>
     <string name="accessibility_touch_exploration_title" msgid="4171477646863806078">"Изучение касанием"</string>
     <string name="accessibility_touch_exploration_summary" msgid="1163951209315238103">"Функция \"Изучение касанием\" позволяет прослушивать или просматривать описание элементов, которых вы касаетесь."\n\n" Эта функция предназначена для пользователей с нарушением зрения."</string>

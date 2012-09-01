@@ -1164,6 +1164,7 @@
     <string name="accessibility_system_title" msgid="7187919089874130484">"시스템"</string>
     <string name="accessibility_toggle_large_text_title" msgid="6618674985313017711">"텍스트 확대"</string>
     <string name="accessibility_power_button_ends_call_title" msgid="5468375366375940894">"전원 버튼으로 통화 종료"</string>
+    <string name="accessibility_home_button_answers_call_title">홈 버튼으로 전화 받기</string>
     <string name="accessibility_speak_password_title" msgid="3344423945644925355">"비밀번호 말하기"</string>
     <string name="accessibility_touch_exploration_title" msgid="4171477646863806078">"터치하여 탐색"</string>
     <string name="accessibility_touch_exploration_summary" msgid="1163951209315238103">"터치하여 탐색 기능을 사용하면 손가락 아래에 표시된 항목에 대한 설명을 듣거나 볼 수 있습니다."\n\n"이 기능은 시각 장애인을 위한 것입니다."</string>
